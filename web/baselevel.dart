@@ -30,6 +30,8 @@ class BaseLevel extends Level {
 
   void downPressed() { }
 
+  void rPressed() { }
+
   void addBlocks() {
     int lastX = 0;
     while ((blocks.length == 0 || (lastX = blocks[blocks.length - 1].x) < Game.WIDTH - scrollX) && blockString.length > 0) {
@@ -41,9 +43,8 @@ class BaseLevel extends Level {
         blocks.add(block);
         sprite.addChild(block.sprite);
         blockString = blockString.substring(matchGroup.length);
-        //print('add ' + matchGroup + ', total ' + blocks.length.toString());
       } else {
-        print("REGEX ERROR");
+        print("BASELEVEL PARSING ERROR: blockString " + blockString);
         break;
       }
     }
@@ -51,7 +52,6 @@ class BaseLevel extends Level {
 
   void removeOffscreenBlocks() {
     while (blocks.length > 0 && blocks[0].x < -scrollX) {
-      print('remove, total ' + blocks.length.toString());
       blocks.removeAt(0);
     }
   }
@@ -62,6 +62,10 @@ class BaseLevel extends Level {
     updateSprite();
     addBlocks();
     removeOffscreenBlocks();
+    if (!alive) {
+      player.pos -= new Vector(0, 5);
+      game.setLevel(new MiniLevel(MiniLevel.LEVEL_1, this));
+    }
   }
 
   void updateSprite() {

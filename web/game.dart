@@ -5,35 +5,45 @@ class Game {
   //static const num TILE_SIZE = 30;
   static const int WIDTH = 32, HEIGHT = 18;
 
-  Level level;
+  Level currentLevel;
 
   Game() {
-    //baseLevel = new BaseLevel();
-    //stage.addChild(baseLevel.sprite);
-    level = new MiniLevel(MiniLevel.LEVEL_1);
-    stage.addChild(level.sprite);
+    setLevel(new BaseLevel());
+    //currentLevel = new MiniLevel(MiniLevel.LEVEL_1);
+    //stage.addChild(currentLevel.sprite);
 
     stage.onEnterFrame.listen(enterFrame);
     html.document.onKeyDown.listen(keyDown);
   }
 
+  void setLevel(Level level) {
+    if (currentLevel != null) {
+      stage.removeChild(currentLevel.sprite);
+    }
+    currentLevel = level;
+    stage.addChild(level.sprite);
+  }
+
   void enterFrame(EnterFrameEvent event) {
-    level.update(event.passedTime);
+    currentLevel.update(event.passedTime);
   }
 
   void keyDown(html.KeyboardEvent event) {
     switch (event.keyCode) {
       case html.KeyCode.LEFT:
-        level.leftPressed();
+        currentLevel.leftPressed();
         break;
       case html.KeyCode.UP:
-        level.upPressed();
+        currentLevel.upPressed();
         break;
       case html.KeyCode.RIGHT:
-        level.rightPressed();
+        currentLevel.rightPressed();
         break;
       case html.KeyCode.DOWN:
-        level.downPressed();
+        currentLevel.downPressed();
+        break;
+      case html.KeyCode.R:
+        currentLevel.rPressed();
         break;
     }
   }
@@ -51,6 +61,8 @@ abstract class Level {
   void rightPressed();
 
   void downPressed();
+
+  void rPressed();
 
   void update(num time);
 

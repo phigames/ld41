@@ -18,55 +18,123 @@ class MiniLevel extends Level {
     #####
     """;
 
+  Sprite blockSprite;
+  String blockString;
   MiniLevelPlayer player;
   List<List<MiniLevelBlock>> blocks;
+  BaseLevel baseLevel;
 
-  MiniLevel(String blockString) {
+  MiniLevel(this.blockString, this.baseLevel) {
     sprite = new Sprite();
-    player = new MiniLevelPlayer(1, 2);
-    sprite.addChild(player.sprite);
+    blockSprite = new Sprite();
+    sprite.addChild(blockSprite);
+    reset();
+    sprite.addChild(
+      new TextField("press [R] to restart", new TextFormat("Roboto", 1, 0xFF000000, align: "center"))
+        ..x = 0
+        ..y = Game.HEIGHT - 2
+        ..width = Game.WIDTH
+    );
+  }
+
+  void reset() {
+    blockSprite.removeChildren();
     blocks = new List<List<MiniLevelBlock>>();
-    for (int i = 0; i < 5; i++) {
+    List<String> lines = blockString.trim().split("\n");
+    for (int i = 0; i < lines.length; i++) {
       blocks.add(new List<MiniLevelBlock>());
-      for (int j = 0; j < 5; j++) {
-        blocks[i].add(new MiniLevelBlock(i, j, false));
-        sprite.addChild(blocks[i][j].sprite);
+      List<String> chars = lines[i].trim().split('');
+      for (int j = 0; j < chars.length; j++) {
+        MiniLevelBlock block;
+        switch (chars[j]) {
+          case "#":
+            block = new MiniLevelBlock(i, j, false);
+            break;
+          case "o":
+            block = new MiniLevelBlock(i, j, true);
+            break;
+          case " ":
+            block = null;
+            break;
+          case "P":
+            block = player = new MiniLevelPlayer(i, j);
+            break;
+          case "G":
+            block = new MiniLevelGoal(i, j);
+            break;
+          default:
+            print("MINILEVEL PARSING ERROR: char " + chars[j]);
+        }
+        blocks[i].add(block);
+        if (block != null) {
+          blockSprite.addChild(block.sprite);
+        }
       }
     }
-    sprite.removeChild(blocks[1][2].sprite);
-    blocks[1][2] = null;
-    sprite.removeChild(blocks[2][2].sprite);
-    blocks[2][2] = new MiniLevelBlock(2, 2, true);
-    sprite.addChild(blocks[2][2].sprite);
-    sprite.removeChild(blocks[3][2].sprite);
-    blocks[3][2] = null;
+    blockSprite.x = (Game.WIDTH - blockSprite.width) / 2;
+    blockSprite.y = (Game.HEIGHT - blockSprite.height) / 2;
   }
 
   void leftPressed() {
     player.move(-1, 0, blocks);
+    checkWon();
   }
 
   void upPressed() {
     player.move(0, -1, blocks);
+    checkWon();
   }
 
   void rightPressed() {
     player.move(1, 0, blocks);
+    checkWon();
   }
 
   void downPressed() {
     player.move(0, 1, blocks);
+    checkWon();
+  }
+
+  void rPressed() {
+    reset();
   }
 
   void update(num time) { }
+
+  void checkWon() {
+    if (player.won) {
+      game.setLevel(baseLevel);
+    } 
+  }
 
 }
 
 class MiniLevelPlayer extends MiniLevelBlock {
 
+  bool won;
+
   MiniLevelPlayer(int x, int y) : super(x, y, true, false) {
     sprite.graphics.rect(0, 0, 1, 1);
     sprite.graphics.fillColor(0xFFFF0000);
+    won = false;
+  }
+
+}
+
+class MiniLevelGoal extends MiniLevelBlock {
+
+  MiniLevelGoal(int x, int y) : super(x, y, false, false) {
+    sprite.graphics.rect(0, 0, 1, 1);
+    sprite.graphics.fillColor(0xFFFF00FF);
+  }
+
+  @override
+  bool move(int dx, int dy, List<List<MiniLevelBlock>> blocks) {
+    if (blocks[x - dx][y - dy] is MiniLevelPlayer) {
+      (blocks[x - dx][y - dy] as MiniLevelPlayer).won = true;
+      return true;
+    }
+    return false;
   }
 
 }
@@ -91,7 +159,6 @@ class MiniLevelBlock {
   }
 
   bool move(int dx, int dy, List<List<MiniLevelBlock>> blocks) {
-    print('move');
     if (movable) {
       MiniLevelBlock adjacientBlock = blocks[x + dx][y + dy];
       if (adjacientBlock == null || adjacientBlock.move(dx, dy, blocks)) {
