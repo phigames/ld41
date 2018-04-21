@@ -12,15 +12,18 @@ class Game {
     stage.addChild(baseLevel.sprite);
 
     stage.onEnterFrame.listen(enterFrame);
-    stage.onKeyDown.listen(keyDown);
+    html.document.onKeyDown.listen(keyDown);
   }
 
   void enterFrame(EnterFrameEvent event) {
     baseLevel.update(event.passedTime);
   }
 
-  void keyDown(KeyboardEvent event) {
-    
+  void keyDown(html.KeyboardEvent event) {
+    print('asdf');
+    if (event.keyCode == html.KeyCode.UP) {
+      baseLevel.upPressed();
+    }
   }
 
 }
