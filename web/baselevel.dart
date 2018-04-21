@@ -2,18 +2,46 @@ part of ld41;
 
 class BaseLevel {
 
+  static final RegExp blockRegex = new RegExp(r"\d");
+
   Sprite sprite;
+  String blockString;
+  List<BaseLevelBlock> blocks;
   BaseLevelPlayer player;
 
   BaseLevel() {
     sprite = new Sprite();
+    blockString = "33333333333334444444222222";
+    blocks = new List<BaseLevelBlock>();
+    addBlock();
+    while (blocks[blocks.length - 1].x < Game.WIDTH && blockString.length > 0) {
+      addBlock();
+    }
     player = new BaseLevelPlayer();
     sprite.addChild(player.sprite);
   }
 
+  void addBlock() {
+    Match match = blockRegex.matchAsPrefix(blockString);
+    if (match != null) {
+      String matchGroup = match.group(0);
+      int blockHeight = int.parse(matchGroup);
+      BaseLevelBlock block = new BaseLevelBlock(blocks.length, blockHeight, false, false);
+      blocks.add(block);
+      sprite.addChild(block.sprite);
+      blockString = blockString.substring(matchGroup.length);
+    } else {
+      print("REGEX ERROR");
+    }
+  }
+
   void update(num time) {
     bool alive = player.move();
-    sprite.x = -player.pos.x + 100;
+    updateSprite();
+  }
+
+  void updateSprite() {
+    sprite.x = (-player.pos.x + 5);
   }
 
 }
@@ -25,7 +53,7 @@ class BaseLevelPlayer {
 
   BaseLevelPlayer() {
     sprite = new Sprite();
-    sprite.graphics.rect(0, 0, Game.TILE_SIZE, Game.TILE_SIZE);
+    sprite.graphics.rect(0, 0, 1, 1);
     sprite.graphics.fillColor(0xFFFF0000);
     pos = new Vector(5, 5);
     updateSprite();
@@ -38,8 +66,8 @@ class BaseLevelPlayer {
   }
 
   void updateSprite() {
-    sprite.x = pos.x * Game.TILE_SIZE;
-    sprite.y = pos.y * Game.TILE_SIZE;
+    sprite.x = pos.x;
+    sprite.y = pos.y;
   }
 
 }
@@ -49,11 +77,11 @@ class BaseLevelBlock {
   int x, height;
   Sprite sprite;
 
-  BaseLevelBlock(x, height, spike, respawn) {
+  BaseLevelBlock(this.x, this.height, spike, respawn) {
     sprite = new Sprite();
-    sprite.graphics.rect(0, 0, Game.TILE_SIZE, -height);
+    sprite.graphics.rect(0, 0, 1, -height);
     sprite.graphics.fillColor(0xFF000000);
-    sprite.x = x * Game.TILE_SIZE;
+    sprite.x = x;
     sprite.y = Game.HEIGHT;
   }
 

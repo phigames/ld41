@@ -2,8 +2,8 @@ part of ld41;
 
 class Game {
 
-  static const num WIDTH = 800, HEIGHT = 450;
-  static const num TILE_SIZE = 30;
+  //static const num TILE_SIZE = 30;
+  static const int WIDTH = 32, HEIGHT = 18;
 
   BaseLevel baseLevel;
 
