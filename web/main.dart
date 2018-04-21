@@ -6,6 +6,7 @@ import 'package:stagexl/stagexl.dart';
 import 'dart:math';
 
 part 'game.dart';
+part 'baselevel.dart';
 
 Stage stage;
 RenderLoop renderLoop;
@@ -17,7 +18,7 @@ Game game;
 Future<Null> main() async {
   stage = new Stage(
     html.querySelector('#stage'),
-    width: 1280, height: 800,
+    width: Game.WIDTH, height: Game.HEIGHT,
     options: new StageOptions()
       ..backgroundColor = Color.White
       ..renderEngine = RenderEngine.WebGL);
