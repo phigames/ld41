@@ -26,6 +26,7 @@ class MiniLevel extends Level {
 
   MiniLevel(this.blockString, this.baseLevel) {
     sprite = new Sprite();
+    transitionFromBaseLevel(0.5);
     blockSprite = new Sprite();
     sprite.addChild(blockSprite);
     reset();
@@ -35,6 +36,19 @@ class MiniLevel extends Level {
         ..y = Game.HEIGHT - 2
         ..width = Game.WIDTH
     );
+  }
+
+  void transitionFromBaseLevel(num duration) {
+    /* for (int i = 0; i < baseLevel.sprite.children.length; i++) {
+      DisplayObject child = baseLevel.sprite.children[i];
+      stage.juggler.add(
+        new Tween(child, duration, Transition.easeInCubic)
+          ..animate.x.to(random.nextInt(Game.WIDTH))
+          ..animate.y.to(Game.HEIGHT * 2)
+          ..animate.
+          ..onComplete = () => sprite.removeChild(child)
+      );
+    } */
   }
 
   void reset() {

@@ -19,7 +19,7 @@ class BaseLevel extends Level {
 
   BaseLevel() {
     sprite = new Sprite();
-    blockString = "333333r333333333333333444s4444444444s33333331234";
+    blockString = "33333333333333r333333333333333444444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
     blocks = new List<BaseLevelBlock>();
     respawnBlocks = new List<BaseLevelBlock>();
     scrollX = 0;

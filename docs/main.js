@@ -1085,9 +1085,6 @@
           throw H.wrapException(P.RangeError$range(startIndex, 0, receiver.length, null, null));
         return H.stringContainsUnchecked(receiver, other, startIndex);
       },
-      contains$1: function($receiver, other) {
-        return this.contains$2($receiver, other, 0);
-      },
       toString$0: function(receiver) {
         return receiver;
       },
@@ -1202,17 +1199,6 @@
           if ($length !== this.get$length(this))
             throw H.wrapException(new P.ConcurrentModificationError(this));
         }
-      },
-      contains$1: function(_, element) {
-        var $length, i;
-        $length = this.get$length(this);
-        for (i = 0; i < $length; ++i) {
-          if (J.$eq$(this.elementAt$1(0, i), element))
-            return true;
-          if ($length !== this.get$length(this))
-            throw H.wrapException(new P.ConcurrentModificationError(this));
-        }
-        return false;
       },
       map$1: function(_, f) {
         return new H.MappedListIterable(this, f, [H.getRuntimeTypeArgument(this, "ListIterable", 0), null]);
@@ -2523,7 +2509,7 @@
     },
     Primitives_dateNow: [function() {
       return Date.now();
-    }, "call$0", "_js_helper_Primitives_dateNow$closure", 0, 0, 32],
+    }, "call$0", "_js_helper_Primitives_dateNow$closure", 0, 0, 30],
     Primitives_initTicker: function() {
       var $window, performance;
       if ($.Primitives_timerFrequency != null)
@@ -4052,9 +4038,6 @@
         t2._cell = t1._first;
         return t2;
       },
-      contains$1: function(_, element) {
-        return this._map.containsKey$1(0, element);
-      },
       forEach$1: function(_, f) {
         var t1, cell, modifications;
         t1 = this._map;
@@ -4097,13 +4080,13 @@
       }
     },
     initHooks_closure0: {
-      "^": "Closure:14;getUnknownTag",
+      "^": "Closure:31;getUnknownTag",
       call$2: function(o, tag) {
         return this.getUnknownTag(o, tag);
       }
     },
     initHooks_closure1: {
-      "^": "Closure:15;prototypeForTag",
+      "^": "Closure:33;prototypeForTag",
       call$1: function(tag) {
         return this.prototypeForTag(tag);
       }
@@ -4645,14 +4628,14 @@
     _AsyncRun__scheduleImmediateJsOverride: [function(callback) {
       ++init.globalState.topEventLoop._activeJsAsyncCount;
       self.scheduleImmediate(H.convertDartClosureToJS(new P._AsyncRun__scheduleImmediateJsOverride_internalCallback(callback), 0));
-    }, "call$1", "async__AsyncRun__scheduleImmediateJsOverride$closure", 2, 0, 3],
+    }, "call$1", "async__AsyncRun__scheduleImmediateJsOverride$closure", 2, 0, 4],
     _AsyncRun__scheduleImmediateWithSetImmediate: [function(callback) {
       ++init.globalState.topEventLoop._activeJsAsyncCount;
       self.setImmediate(H.convertDartClosureToJS(new P._AsyncRun__scheduleImmediateWithSetImmediate_internalCallback(callback), 0));
-    }, "call$1", "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", 2, 0, 3],
+    }, "call$1", "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", 2, 0, 4],
     _AsyncRun__scheduleImmediateWithTimer: [function(callback) {
       P.Timer__createTimer(C.Duration_0, callback);
-    }, "call$1", "async__AsyncRun__scheduleImmediateWithTimer$closure", 2, 0, 3],
+    }, "call$1", "async__AsyncRun__scheduleImmediateWithTimer$closure", 2, 0, 4],
     _asyncStart: function(bodyFunction, completer) {
       P._awaitOnObject(null, bodyFunction);
       return completer.get$future();
@@ -4838,7 +4821,7 @@
       P._rootHandleUncaughtError(null, null, t1, error, stackTrace);
     }, function(error) {
       return P._nullErrorHandler(error, null);
-    }, "call$2", "call$1", "async___nullErrorHandler$closure", 2, 2, 8, 0],
+    }, "call$2", "call$1", "async___nullErrorHandler$closure", 2, 2, 9, 0],
     _nullDoneHandler: [function() {
     }, "call$0", "async___nullDoneHandler$closure", 0, 0, 1],
     _runUserCode: function(userCode, onSuccess, onError) {
@@ -4869,13 +4852,6 @@
     },
     _cancelAndErrorClosure: function(subscription, future) {
       return new P._cancelAndErrorClosure_closure(subscription, future);
-    },
-    _cancelAndValue: function(subscription, future, value) {
-      var cancelFuture = subscription.cancel$0(0);
-      if (!!J.getInterceptor(cancelFuture).$isFuture && cancelFuture !== $.$get$Future__nullFuture())
-        cancelFuture.whenComplete$1(new P._cancelAndValue_closure(future, value));
-      else
-        future._complete$1(value);
     },
     _addErrorWithReplacement: function(sink, error, stackTrace) {
       $.Zone__current.toString;
@@ -4958,7 +4934,7 @@
       }
     },
     _AsyncRun__initializeScheduleImmediate_closure: {
-      "^": "Closure:33;_box_0,div,span",
+      "^": "Closure:34;_box_0,div,span",
       call$1: function(callback) {
         var t1, t2;
         ++init.globalState.topEventLoop._activeJsAsyncCount;
@@ -4989,13 +4965,13 @@
       }
     },
     _awaitOnObject_closure0: {
-      "^": "Closure:6;bodyFunction",
+      "^": "Closure:7;bodyFunction",
       call$2: function(error, stackTrace) {
         this.bodyFunction.call$2(1, new H.ExceptionAndStackTrace(error, stackTrace));
       }
     },
     _wrapJsFunctionForAsync_closure: {
-      "^": "Closure:13;$protected",
+      "^": "Closure:20;$protected",
       call$2: function(errorCode, result) {
         this.$protected(errorCode, result);
       }
@@ -5099,7 +5075,7 @@
       "^": "Object;$ti"
     },
     Future_wait_handleError: {
-      "^": "Closure:4;_box_0,eagerError,cleanUp,result",
+      "^": "Closure:3;_box_0,eagerError,cleanUp,result",
       call$2: function(theError, theStackTrace) {
         var t1, t2;
         t1 = this._box_0;
@@ -5160,7 +5136,7 @@
         t1._asyncComplete$1(value);
       }, function($receiver) {
         return this.complete$1($receiver, null);
-      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 7, 0],
+      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 8, 0],
       _completeError$2: function(error, stackTrace) {
         this.future._asyncCompleteError$2(error, stackTrace);
       }
@@ -5174,7 +5150,7 @@
         t1._complete$1(value);
       }, function($receiver) {
         return this.complete$1($receiver, null);
-      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 7, 0],
+      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 8, 0],
       _completeError$2: function(error, stackTrace) {
         this.future._completeError$2(error, stackTrace);
       }
@@ -5342,7 +5318,7 @@
         P._Future__propagateToListeners(this, listeners);
       }, function(error) {
         return this._completeError$2(error, null);
-      }, "_completeError$1", "call$2", "call$1", "get$_completeError", 2, 2, 8, 0],
+      }, "_completeError$1", "call$2", "call$1", "get$_completeError", 2, 2, 9, 0],
       _asyncComplete$1: function(value) {
         var t1;
         if (H.checkSubtype(value, "$isFuture", this.$ti, "$asFuture")) {
@@ -5530,7 +5506,7 @@
       }
     },
     _Future__chainForeignFuture_closure0: {
-      "^": "Closure:20;target",
+      "^": "Closure:25;target",
       call$2: function(error, stackTrace) {
         this.target._completeError$2(error, stackTrace);
       },
@@ -5659,14 +5635,6 @@
       map$1: function(_, convert) {
         return new P._MapStream(convert, this, [H.getRuntimeTypeArgument(this, "Stream", 0), null]);
       },
-      contains$1: function(_, needle) {
-        var t1, future;
-        t1 = {};
-        future = new P._Future(0, $.Zone__current, null, [P.bool]);
-        t1.subscription = null;
-        t1.subscription = this.listen$4$cancelOnError$onDone$onError(new P.Stream_contains_closure(t1, this, needle, future), true, new P.Stream_contains_closure0(future), future.get$_completeError());
-        return future;
-      },
       forEach$1: function(_, action) {
         var t1, future;
         t1 = {};
@@ -5690,39 +5658,6 @@
         future = new P._Future(0, $.Zone__current, null, [[P.List, t1]]);
         this.listen$4$cancelOnError$onDone$onError(new P.Stream_toList_closure(this, result), true, new P.Stream_toList_closure0(result, future), future.get$_completeError());
         return future;
-      }
-    },
-    Stream_contains_closure: {
-      "^": "Closure;_box_0,$this,needle,future",
-      call$1: function(element) {
-        var t1, t2;
-        t1 = this._box_0;
-        t2 = this.future;
-        P._runUserCode(new P.Stream_contains__closure(this.needle, element), new P.Stream_contains__closure0(t1, t2), P._cancelAndErrorClosure(t1.subscription, t2));
-      },
-      $signature: function() {
-        return H.computeSignature(function(T) {
-          return {func: 1, args: [T]};
-        }, this.$this, "Stream");
-      }
-    },
-    Stream_contains__closure: {
-      "^": "Closure:0;needle,element",
-      call$0: function() {
-        return J.$eq$(this.element, this.needle);
-      }
-    },
-    Stream_contains__closure0: {
-      "^": "Closure:16;_box_0,future",
-      call$1: function(isMatch) {
-        if (isMatch === true)
-          P._cancelAndValue(this._box_0.subscription, this.future, true);
-      }
-    },
-    Stream_contains_closure0: {
-      "^": "Closure:0;future",
-      call$0: function() {
-        this.future._complete$1(false);
       }
     },
     Stream_forEach_closure: {
@@ -6182,15 +6117,9 @@
       }
     },
     _cancelAndErrorClosure_closure: {
-      "^": "Closure:6;subscription,future",
+      "^": "Closure:7;subscription,future",
       call$2: function(error, stackTrace) {
         P._cancelAndError(this.subscription, this.future, error, stackTrace);
-      }
-    },
-    _cancelAndValue_closure: {
-      "^": "Closure:0;future,value",
-      call$0: function() {
-        return this.future._complete$1(this.value);
       }
     },
     _ForwardingStream: {
@@ -6258,7 +6187,7 @@
       }],
       _handleError$2: [function(error, stackTrace) {
         this._stream._handleError$3(error, stackTrace, this);
-      }, "call$2", "get$_handleError", 4, 0, 17],
+      }, "call$2", "get$_handleError", 4, 0, 13],
       _handleDone$0: [function() {
         this._async$_close$0();
       }, "call$0", "get$_handleDone", 0, 0, 1],
@@ -6866,17 +6795,6 @@
             throw H.wrapException(new P.ConcurrentModificationError(receiver));
         }
       },
-      contains$1: function(receiver, element) {
-        var $length, i;
-        $length = this.get$length(receiver);
-        for (i = 0; i < this.get$length(receiver); ++i) {
-          if (J.$eq$(this.$index(receiver, i), element))
-            return true;
-          if ($length !== this.get$length(receiver))
-            throw H.wrapException(new P.ConcurrentModificationError(receiver));
-        }
-        return false;
-      },
       map$1: function(receiver, f) {
         return new H.MappedListIterable(receiver, f, [H.getRuntimeTypeArgument(receiver, "ListMixin", 0), null]);
       },
@@ -6917,7 +6835,7 @@
       $asEfficientLengthIterable: null
     },
     Maps_mapToString_closure: {
-      "^": "Closure:4;_box_0,result",
+      "^": "Closure:3;_box_0,result",
       call$2: function(k, v) {
         var t1, t2;
         t1 = this._box_0;
@@ -7102,7 +7020,13 @@
       return new H.JSSyntaxRegExp(source, H.JSSyntaxRegExp_makeNative(source, false, true, false), null, null);
     },
     bool: {
-      "^": "Object;"
+      "^": "Object;",
+      get$hashCode: function(_) {
+        return P.Object.prototype.get$hashCode.call(this, this);
+      },
+      toString$0: function(_) {
+        return this ? "true" : "false";
+      }
     },
     "+bool": 0,
     DateTime: {
@@ -7231,7 +7155,7 @@
       }
     },
     Duration_toString_sixDigits: {
-      "^": "Closure:9;",
+      "^": "Closure:10;",
       call$1: function(n) {
         if (n >= 100000)
           return "" + n;
@@ -7247,7 +7171,7 @@
       }
     },
     Duration_toString_twoDigits: {
-      "^": "Closure:9;",
+      "^": "Closure:10;",
       call$1: function(n) {
         if (n >= 10)
           return "" + n;
@@ -7496,13 +7420,6 @@
       map$1: function(_, f) {
         return H.MappedIterable_MappedIterable(this, f, H.getRuntimeTypeArgument(this, "Iterable", 0), null);
       },
-      contains$1: function(_, element) {
-        var t1;
-        for (t1 = this.get$iterator(this); t1.moveNext$0();)
-          if (J.$eq$(t1.get$current(), element))
-            return true;
-        return false;
-      },
       forEach$1: function(_, f) {
         var t1;
         for (t1 = this.get$iterator(this); t1.moveNext$0();)
@@ -7637,7 +7554,7 @@
     },
     Element__determineMouseWheelEventType: [function(e) {
       return "wheel";
-    }, "call$1", "html_Element__determineMouseWheelEventType$closure", 2, 0, 34],
+    }, "call$1", "html_Element__determineMouseWheelEventType$closure", 2, 0, 32],
     _ElementFactoryProvider_createElement_tag: function(tag, typeExtension) {
       return document.createElement(tag);
     },
@@ -8035,9 +7952,6 @@
     },
     DomTokenList: {
       "^": "Interceptor;length=,value=",
-      contains$1: function(receiver, token) {
-        return receiver.contains(token);
-      },
       "%": "DOMTokenList"
     },
     Element: {
@@ -8423,9 +8337,6 @@
       },
       append$1: function(receiver, node) {
         return receiver.appendChild(node);
-      },
-      contains$1: function(receiver, other) {
-        return receiver.contains(other);
       },
       $isNode: 1,
       $isEventTarget: 1,
@@ -9041,7 +8952,7 @@
       "^": "Interceptor;",
       parentNode$0: [function(receiver) {
         return receiver.parentNode();
-      }, "call$0", "get$parentNode", 0, 0, 18],
+      }, "call$0", "get$parentNode", 0, 0, 14],
       "%": "TreeWalker"
     },
     UIEvent: {
@@ -9858,7 +9769,7 @@
       }
     },
     _AcceptStructuredClone_walk_closure: {
-      "^": "Closure:4;_box_0,$this",
+      "^": "Closure:3;_box_0,$this",
       call$2: function(key, value) {
         var t1, t2;
         t1 = this._box_0.copy;
@@ -9868,7 +9779,7 @@
       }
     },
     convertDartToNative_Dictionary_closure: {
-      "^": "Closure:19;object",
+      "^": "Closure:15;object",
       call$2: function(key, value) {
         this.object[key] = value;
       }
@@ -10643,11 +10554,11 @@
     "^": "",
     Transition_linear: [function(ratio) {
       return ratio;
-    }, "call$1", "animation_Transition_linear$closure", 2, 0, 12],
+    }, "call$1", "animation_Transition_linear$closure", 2, 0, 5],
     Transition_easeOutCubic: [function(ratio) {
       ratio = 1 - ratio;
       return 1 - ratio * ratio * ratio;
-    }, "call$1", "animation_Transition_easeOutCubic$closure", 2, 0, 12],
+    }, "call$1", "animation_Transition_easeOutCubic$closure", 2, 0, 5],
     _AnimatableLink: {
       "^": "Object;animatable,nextAnimatableLink"
     },
@@ -10748,12 +10659,12 @@
                 switch (t2._propertyID) {
                   case 0:
                     t2 = t3._tweenObject;
-                    t2._display$_x = value;
+                    t2._x = value;
                     t2._transformationMatrixRefresh = true;
                     break;
                   case 1:
                     t2 = t3._tweenObject;
-                    t2._display$_y = value;
+                    t2._y = value;
                     t2._transformationMatrixRefresh = true;
                     break;
                   case 2:
@@ -10839,9 +10750,9 @@
       _getValue$1: function(propertyID) {
         switch (propertyID) {
           case 0:
-            return this._tweenObject._display$_x;
+            return this._tweenObject._x;
           case 1:
-            return this._tweenObject._display$_y;
+            return this._tweenObject._y;
           case 2:
             return this._tweenObject._pivotX;
           case 3:
@@ -10949,7 +10860,7 @@
       }
     },
     BitmapDataLoadInfo_closure: {
-      "^": "Closure:35;devicePixelRatio",
+      "^": "Closure:16;devicePixelRatio",
       call$2: function(a, b) {
         var t1, t2;
         t1 = this.devicePixelRatio;
@@ -10966,17 +10877,17 @@
     DisplayObject: {
       "^": "EventDispatcher;",
       get$x: function(_) {
-        return this._display$_x;
+        return this._x;
       },
       set$x: ["super$DisplayObject$x", function(_, value) {
-        this._display$_x = value;
+        this._x = value;
         this._transformationMatrixRefresh = true;
       }],
       get$y: function(_) {
-        return this._display$_y;
+        return this._y;
       },
       set$y: function(_, value) {
-        this._display$_y = value;
+        this._y = value;
         this._transformationMatrixRefresh = true;
       },
       get$root: function(_) {
@@ -11016,10 +10927,10 @@
             t1 = skewX + rotation;
             mc = -scaleY * Math.sin(t1);
             md = scaleY * Math.cos(t1);
-            t1 = this._display$_x;
+            t1 = this._x;
             t2 = this._pivotX;
             t3 = this._pivotY;
-            matrix.setTo$6(ma, mb, mc, md, t1 - t2 * ma - t3 * mc, this._display$_y - t2 * mb - t3 * md);
+            matrix.setTo$6(ma, mb, mc, md, t1 - t2 * ma - t3 * mc, this._y - t2 * mb - t3 * md);
           } else if (rotation !== 0) {
             cr = Math.cos(rotation);
             sr = Math.sin(rotation);
@@ -11027,12 +10938,12 @@
             mb = scaleX * sr;
             mc = -scaleY * sr;
             md = scaleY * cr;
-            t1 = this._display$_x;
+            t1 = this._x;
             t2 = this._pivotX;
             t3 = this._pivotY;
-            matrix.setTo$6(ma, mb, mc, md, t1 - t2 * ma - t3 * mc, this._display$_y - t2 * mb - t3 * md);
+            matrix.setTo$6(ma, mb, mc, md, t1 - t2 * ma - t3 * mc, this._y - t2 * mb - t3 * md);
           } else
-            matrix.setTo$6(scaleX, 0, 0, scaleY, this._display$_x - this._pivotX * scaleX, this._display$_y - this._pivotY * scaleY);
+            matrix.setTo$6(scaleX, 0, 0, scaleY, this._x - this._pivotX * scaleX, this._y - this._pivotY * scaleY);
         }
         return this._transformationMatrix;
       },
@@ -11175,11 +11086,6 @@
       removeChildren$0: function() {
         return this.removeChildren$2(null, null);
       },
-      contains$1: function(_, child) {
-        for (; true;)
-          child = C.JSString_methods.get$parent(child);
-        return false;
-      },
       get$bounds: function() {
         var t1, left, $top, right, bottom, i, t2, rectangle, left0, top0, right0, bottom0;
         t1 = this._children;
@@ -11321,7 +11227,7 @@
       }
     },
     Sprite: {
-      "^": "DisplayObjectContainer;_graphics,dropTarget,hitArea,_children,_mouseChildren,_tabChildren,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_display$_x,_display$_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
+      "^": "DisplayObjectContainer;_graphics,dropTarget,hitArea,_children,_mouseChildren,_tabChildren,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_x,_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
       get$graphics: function() {
         var t1 = this._graphics;
         if (!(t1 != null)) {
@@ -11388,7 +11294,7 @@
       }
     },
     Stage: {
-      "^": "DisplayObjectContainer;_display$_canvas,_renderContext,_renderLoop,_console,_sourceWidth,_sourceHeight,_stageWidth,_stageHeight,_pixelRatio,_invalid,_avgFrameTime,_avgDrawCalls,_avgVertexCount,_avgIdexCount,_contentRectangle,_clientTransformation,_stageTransformation,_consoleTransformation,_renderEvent,_renderState,_inputEventMode,_stageRenderMode,_stageScaleMode,_stageAlign,_mouseCursor,_mousePosition,_mouseTarget,_drags,_touchPoints,_mouseButtons,juggler<,focus,backgroundColor,preventDefaultOnTouch,preventDefaultOnMouse,preventDefaultOnWheel,preventDefaultOnKeyboard,_children,_mouseChildren,_tabChildren,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_display$_x,_display$_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
+      "^": "DisplayObjectContainer;_display$_canvas,_renderContext,_renderLoop,_console,_sourceWidth,_sourceHeight,_stageWidth,_stageHeight,_pixelRatio,_invalid,_avgFrameTime,_avgDrawCalls,_avgVertexCount,_avgIdexCount,_contentRectangle,_clientTransformation,_stageTransformation,_consoleTransformation,_renderEvent,_renderState,_inputEventMode,_stageRenderMode,_stageScaleMode,_stageAlign,_mouseCursor,_mousePosition,_mouseTarget,_drags,_touchPoints,_mouseButtons,juggler<,focus,backgroundColor,preventDefaultOnTouch,preventDefaultOnMouse,preventDefaultOnWheel,preventDefaultOnKeyboard,_children,_mouseChildren,_tabChildren,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_x,_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
       hitTestInput$2: function(localX, localY) {
         var target = this.super$DisplayObjectContainer$hitTestInput(localX, localY);
         return target != null ? target : this;
@@ -11816,7 +11722,7 @@
             target.dispatchEvent$1(0, new R.MouseEvent0(0, 0, mouseButton.buttonDown, 0, t1, t2, t3, t4, t5, t6, t7, false, mouseButton.mouseClickEventType, true, C.EventPhase_1, null, null, false, false));
           }
         }
-      }, "call$1", "get$_onMouseEvent", 2, 0, 21],
+      }, "call$1", "get$_onMouseEvent", 2, 0, 17],
       _onMouseWheelEvent$1: [function($event) {
         var t1, stagePoint, localPoint, target, t2, t3, t4, t5, t6, t7, t8, mouseEvent;
         t1 = J.getInterceptor$x($event);
@@ -11839,7 +11745,7 @@
           $event.stopPropagation();
         if (mouseEvent._isDefaultPrevented)
           $event.preventDefault();
-      }, "call$1", "get$_onMouseWheelEvent", 2, 0, 22],
+      }, "call$1", "get$_onMouseWheelEvent", 2, 0, 18],
       _onTouchEvent$1: [function($event) {
         var t1, eventType, altKey, ctrlKey, shiftKey, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, _i, changedTouch, identifier, stagePoint, localPoint, target, touchPoint, touchPointID, primaryTouchPoint, p, oldTargetList, newTargetList, p0, t13, t14, commonCount, t15, ot, i, target0, touchEventType, isTap;
         t1 = J.getInterceptor$x($event);
@@ -11927,10 +11833,10 @@
               target.dispatchEvent$1(0, new R.TouchEvent0(touchPointID, primaryTouchPoint, localPoint.x, localPoint.y, stagePoint.x, stagePoint.y, altKey, ctrlKey, shiftKey, false, "touchTap", true, C.EventPhase_1, null, null, false, false));
           }
         }
-      }, "call$1", "get$_onTouchEvent", 2, 0, 23],
+      }, "call$1", "get$_onTouchEvent", 2, 0, 19],
       _onKeyEvent$1: [function($event) {
         return;
-      }, "call$1", "get$_onKeyEvent", 2, 0, 10],
+      }, "call$1", "get$_onKeyEvent", 2, 0, 11],
       Stage$4$height$options$width: function(canvas, height, options, width) {
         var t1, t2, t3, t4;
         if (!J.getInterceptor(canvas).$isCanvasElement)
@@ -12053,7 +11959,7 @@
       }
     },
     StageConsole: {
-      "^": "DisplayObject;_fontImage,_glyphs,_matrix,_lines,_consoleWidth,_consoleHeight,displayObjectID,_display$_x,_display$_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
+      "^": "DisplayObject;_fontImage,_glyphs,_matrix,_lines,_consoleWidth,_consoleHeight,displayObjectID,_x,_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
       print$1: function(_, line) {
         var t1, t2;
         this._lines.push(line);
@@ -12098,7 +12004,7 @@
         fontBitmapData.get$renderTexture().set$filtering(C.RenderTextureFiltering_9728);
         for (t1 = [P.int], t2 = this._glyphs, i = 0; i < 64; ++i)
           t2.push(fontBitmapData.get$renderTextureQuad().cut$1(new U.Rectangle0(i * 7, 0, 7, 14, t1)));
-      }, "call$1", "get$_calculateGlyphs", 2, 0, 24]
+      }, "call$1", "get$_calculateGlyphs", 2, 0, 21]
     },
     StageOptions: {
       "^": "Object;renderEngine,inputEventMode,stageRenderMode,stageScaleMode,stageAlign,backgroundColor,transparent,antialias,maxPixelRatio,preventDefaultOnTouch,preventDefaultOnMouse,preventDefaultOnWheel,preventDefaultOnKeyboard"
@@ -12114,6 +12020,18 @@
     }
   }], ["stagexl.drawing", "package:stagexl/src/drawing.dart",, U, {
     "^": "",
+    GraphicsCommandBeginPath: {
+      "^": "GraphicsCommand;_drawing$_graphics",
+      updateContext$1: function(context) {
+        context.beginPath$0(0);
+      }
+    },
+    GraphicsCommandClosePath: {
+      "^": "GraphicsCommand;_drawing$_graphics",
+      updateContext$1: function(context) {
+        context.closePath$0(0);
+      }
+    },
     GraphicsCommandFill: {
       "^": "GraphicsCommand;"
     },
@@ -12121,6 +12039,30 @@
       "^": "GraphicsCommandFill;_color,_drawing$_graphics",
       updateContext$1: function(context) {
         context.fillColor$1(this._color);
+      }
+    },
+    GraphicsCommandLineTo: {
+      "^": "GraphicsCommand;_drawing$_x,_drawing$_y,_drawing$_graphics",
+      get$x: function(_) {
+        return this._drawing$_x;
+      },
+      get$y: function(_) {
+        return this._drawing$_y;
+      },
+      updateContext$1: function(context) {
+        context.lineTo$2(0, this._drawing$_x, this._drawing$_y);
+      }
+    },
+    GraphicsCommandMoveTo: {
+      "^": "GraphicsCommand;_drawing$_x,_drawing$_y,_drawing$_graphics",
+      get$x: function(_) {
+        return this._drawing$_x;
+      },
+      get$y: function(_) {
+        return this._drawing$_y;
+      },
+      updateContext$1: function(context) {
+        context.moveTo$2(0, this._drawing$_x, this._drawing$_y);
       }
     },
     GraphicsCommandRect: {
@@ -12218,6 +12160,9 @@
     },
     _GraphicsContextBase: {
       "^": "GraphicsContext;",
+      beginPath$0: function(_) {
+        this._path = new U._GraphicsPath(null, H.setRuntimeTypeInfo([], [U._GraphicsPathSegment]));
+      },
       closePath$0: function(_) {
         var t1, t2;
         t1 = this._path;
@@ -12273,6 +12218,9 @@
     },
     _GraphicsContextCanvas: {
       "^": "GraphicsContext;renderState,_drawing$_renderContext,_canvasContext",
+      beginPath$0: function(_) {
+        this._canvasContext.beginPath();
+      },
       closePath$0: function(_) {
         this._canvasContext.closePath();
       },
@@ -13002,7 +12950,7 @@
         if (!t1.get$_mayAddEvent())
           H.throwExpression(t1._addEventError$0());
         t1._sendData$1(new L.RenderContextEvent());
-      }, "call$1", "get$_onContextLost", 2, 0, 5],
+      }, "call$1", "get$_onContextLost", 2, 0, 6],
       _onContextRestored$1: [function(contextEvent) {
         var t1;
         this._contextValid = true;
@@ -13013,7 +12961,7 @@
         if (!t1.get$_mayAddEvent())
           H.throwExpression(t1._addEventError$0());
         t1._sendData$1(new L.RenderContextEvent());
-      }, "call$1", "get$_onContextRestored", 2, 0, 5]
+      }, "call$1", "get$_onContextRestored", 2, 0, 6]
     },
     RenderFilter: {
       "^": "Object;"
@@ -13031,7 +12979,7 @@
       }
     },
     _globalFrameRequest_closure: {
-      "^": "Closure:26;",
+      "^": "Closure:23;",
       call$1: function(frameTime) {
         var currentFrameTime, t1, deltaTime, t2, _i;
         if (typeof frameTime !== "number")
@@ -13064,7 +13012,7 @@
         if (this._running && J.$ge$n(deltaTime, 0))
           if (typeof deltaTime === "number")
             this.advanceTime$1(deltaTime);
-      }, "call$1", "get$_onGlobalFrame", 2, 0, 27]
+      }, "call$1", "get$_onGlobalFrame", 2, 0, 24]
     },
     _MaskState: {
       "^": "Object;"
@@ -14517,12 +14465,12 @@
         this._onLoadSubscription.cancel$0(0);
         this._onErrorSubscription.cancel$0(0);
         this._completer.complete$1(0, this.image);
-      }, "call$1", "get$_onImageLoad", 2, 0, 11],
+      }, "call$1", "get$_onImageLoad", 2, 0, 12],
       _onImageError$1: [function($event) {
         this._onLoadSubscription.cancel$0(0);
         this._onErrorSubscription.cancel$0(0);
         this._completer.completeError$1(new T.LoadError("Failed to load " + H.S(this.image.src) + ".", null));
-      }, "call$1", "get$_onImageError", 2, 0, 11]
+      }, "call$1", "get$_onImageError", 2, 0, 12]
     }
   }], ["stagexl.internal.jenkins_hash", "package:stagexl/src/internal/jenkins_hash.dart",, O, {
     "^": "",
@@ -14706,7 +14654,7 @@
       }
     },
     TextField: {
-      "^": "InteractiveObject;_text,_defaultTextFormat,_autoSize,_type,_caretIndex,_caretLine,_caretTime,_caretX,_caretY,_caretWidth,_caretHeight,_wordWrap,_multiline,_displayAsPassword,_background,_border,_passwordChar,_backgroundColor,_borderColor,_maxChars,_width,_height,_textWidth,_textHeight,_textLineMetrics,_refreshPending,_cacheAsBitmap,_renderTexture,_renderTextureQuad,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_display$_x,_display$_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
+      "^": "InteractiveObject;_text,_defaultTextFormat,_autoSize,_type,_caretIndex,_caretLine,_caretTime,_caretX,_caretY,_caretWidth,_caretHeight,_wordWrap,_multiline,_displayAsPassword,_background,_border,_passwordChar,_backgroundColor,_borderColor,_maxChars,_width,_height,_textWidth,_textHeight,_textLineMetrics,_refreshPending,_cacheAsBitmap,_renderTexture,_renderTextureQuad,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_x,_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
       get$renderTexture: function() {
         return this._renderTexture;
       },
@@ -14813,8 +14761,8 @@
           offsetY = t2 + line * t3;
           width = canvasContext.measureText(textLineMetrics._text).width;
           width.toString;
-          textLineMetrics._x = offsetX;
-          textLineMetrics._y = offsetY;
+          textLineMetrics._text$_x = offsetX;
+          textLineMetrics._text$_y = offsetY;
           textLineMetrics._width = width;
           textLineMetrics._height = textFormatSize;
           textLineMetrics._ascent = fontStyleMetricsAscent;
@@ -14870,16 +14818,16 @@
           switch (textFormatAlign) {
             case "center":
             case "justify":
-              textLineMetrics._x = textLineMetrics._x + (availableWidth - textLineMetrics._width) / 2;
+              textLineMetrics._text$_x = textLineMetrics._text$_x + (availableWidth - textLineMetrics._width) / 2;
               break;
             case "right":
             case "end":
-              textLineMetrics._x = textLineMetrics._x + (availableWidth - textLineMetrics._width);
+              textLineMetrics._text$_x = textLineMetrics._text$_x + (availableWidth - textLineMetrics._width);
               break;
             default:
-              textLineMetrics._x += textFormatStrokeWidth;
+              textLineMetrics._text$_x += textFormatStrokeWidth;
           }
-          textLineMetrics._y += heightOffset;
+          textLineMetrics._text$_y += heightOffset;
         }
         if (this._type === "input") {
           for (line = t2 - 1, t2 = this._caretIndex; line >= 0; --line) {
@@ -14888,13 +14836,13 @@
             if (t2 >= t3) {
               text = C.JSString_methods.substring$2(textLineMetrics._text, 0, t2 - t3);
               this._caretLine = line;
-              t3 = textLineMetrics._x;
+              t3 = textLineMetrics._text$_x;
               t4 = canvasContext.measureText(text).width;
               t4.toString;
               if (typeof t4 !== "number")
                 return H.iae(t4);
               this._caretX = t3 + t4;
-              this._caretY = textLineMetrics._y - fontStyleMetricsAscent * 0.9;
+              this._caretY = textLineMetrics._text$_y - fontStyleMetricsAscent * 0.9;
               this._caretWidth = 2;
               this._caretHeight = textFormatSize;
               break;
@@ -14912,8 +14860,8 @@
           this._caretY += shiftY;
           for (line = 0; line < t1.length; ++line) {
             textLineMetrics = t1[line];
-            textLineMetrics._x += shiftX;
-            textLineMetrics._y += shiftY;
+            textLineMetrics._text$_x += shiftX;
+            textLineMetrics._text$_y += shiftY;
           }
         }
       },
@@ -14979,7 +14927,7 @@
           context.strokeStyle = V.color2rgb(textFormat.strokeColor);
           for (t1 = this._textLineMetrics, i = 0; i < t1.length; ++i) {
             lm = t1[i];
-            context.strokeText(lm._text, lm._x, lm._y);
+            context.strokeText(lm._text, lm._text$_x, lm._text$_y);
           }
         }
         context.lineWidth = lineWidth;
@@ -14989,7 +14937,7 @@
         context.fillStyle = t1;
         for (t1 = this._textLineMetrics, i = 0; i < t1.length; ++i) {
           lm = t1[i];
-          context.fillText(lm._text, lm._x, lm._y);
+          context.fillText(lm._text, lm._text$_x, lm._text$_y);
         }
         context.restore();
       },
@@ -15083,7 +15031,7 @@
             this._refreshPending |= 3;
           }
         }
-      }, "call$1", "get$_onKeyDown", 2, 0, 28],
+      }, "call$1", "get$_onKeyDown", 2, 0, 26],
       _onTextInput$1: [function(textEvent) {
         var t1, t2, caretIndex, newText;
         if (this._type === "input") {
@@ -15107,7 +15055,7 @@
           this._caretTime = 0;
           this._refreshPending |= 3;
         }
-      }, "call$1", "get$_onTextInput", 2, 0, 29],
+      }, "call$1", "get$_onTextInput", 2, 0, 27],
       _onMouseDown$1: [function(mouseEvent) {
         var mouseX, mouseY, canvasContext, t1, line, textLineMetrics, text, lineX, t2, t3, t4, bestDistance, bestIndex, c, width, distance;
         mouseX = mouseEvent.get$localX();
@@ -15117,8 +15065,8 @@
         for (t1 = this._textLineMetrics, line = 0; line < t1.length; ++line) {
           textLineMetrics = t1[line];
           text = textLineMetrics._text;
-          lineX = textLineMetrics._x;
-          t2 = textLineMetrics._y;
+          lineX = textLineMetrics._text$_x;
+          t2 = textLineMetrics._text$_y;
           t3 = textLineMetrics._ascent;
           t4 = textLineMetrics._descent;
           if (t2 - t3 <= mouseY && t2 + t4 >= mouseY) {
@@ -15138,7 +15086,7 @@
             this._refreshPending |= 3;
           }
         }
-      }, "call$1", "get$_onMouseDown", 2, 0, 30],
+      }, "call$1", "get$_onMouseDown", 2, 0, 28],
       TextField$2: function(text, textFormat) {
         var t1;
         this._text = text;
@@ -15170,12 +15118,12 @@
       }
     },
     TextLineMetrics: {
-      "^": "Object;_text,_textIndex,_x,_y,_width,_height,_ascent,_descent,_leading,_indent",
+      "^": "Object;_text,_textIndex,_text$_x,_text$_y,_width,_height,_ascent,_descent,_leading,_indent",
       get$x: function(_) {
-        return this._x;
+        return this._text$_x;
       },
       get$y: function(_) {
-        return this._y;
+        return this._text$_y;
       },
       get$width: function(_) {
         return this._width;
@@ -15241,14 +15189,14 @@
           }
       });
       return P._asyncStart($async$main, $async$completer);
-    }, "call$0", "main__main$closure", 0, 0, 25],
+    }, "call$0", "main__main$closure", 0, 0, 22],
     BaseLevel: {
       "^": "Level;blockString,blocks,respawnBlocks,player,scrollX,sprite",
       leftPressed$0: function() {
       },
       upPressed$0: function() {
         var t1 = this.player;
-        if (t1.onGround)
+        if (t1.onGround === true)
           t1.velocityY = -30;
       },
       rightPressed$0: function() {
@@ -15258,7 +15206,7 @@
       rPressed$0: function() {
       },
       addBlocks$1: function(animate) {
-        var t1, t2, t3, t4, lastX, t5, t6, t7, match, blockHeight, spikes, respawn, block, t8, command, t9, t10, tweenProperty;
+        var t1, t2, t3, t4, lastX, t5, t6, t7, match, blockHeight, spikes, respawn, block, t8, command, t9, tweenProperty;
         t1 = [U.GraphicsCommand];
         t2 = [A.DisplayObject];
         t3 = [A.BitmapFilter];
@@ -15288,10 +15236,10 @@
             blockHeight = H.Primitives_parseInt(t5[1], null, null);
             if (2 >= t5.length)
               return H.ioore(t5, 2);
-            spikes = J.contains$1$asx(t5[2], "s");
+            spikes = J.$eq$(t5[2], "s");
             if (2 >= t5.length)
               return H.ioore(t5, 2);
-            respawn = J.contains$1$asx(t5[2], "r");
+            respawn = J.$eq$(t5[2], "r");
             t6 = lastX + 1;
             block = new N.BaseLevelBlock(t6, blockHeight, spikes, respawn, null);
             t7 = H.setRuntimeTypeInfo([], t2);
@@ -15299,50 +15247,218 @@
             $.DisplayObject__nextID = t8 + 1;
             t8 = new A.Sprite(null, null, null, t7, true, true, false, true, "auto", true, 0, t8, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t3), null, "", null, T.Matrix$fromIdentity(), true, null, null);
             block.sprite = t8;
-            t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-            t8._graphics = t7;
-            command = new U.GraphicsCommandRect(0, 0, 1, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
-            command._drawing$_graphics = t7;
-            t7._originalCommands.push(command);
-            C.JSArray_methods.set$length(t7._compiledCommands, 0);
-            t7._bounds = null;
-            t7 = respawn === true;
-            if (t7) {
-              t9 = t8._graphics;
-              if (!(t9 != null)) {
-                t9 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                t8._graphics = t9;
-              }
-              command = new U.GraphicsCommandFillColor(4278190335, null);
-              command._drawing$_graphics = t9;
-              t9._originalCommands.push(command);
-              C.JSArray_methods.set$length(t9._compiledCommands, 0);
-              t9._bounds = null;
-            } else {
-              t9 = t8._graphics;
-              if (!(t9 != null)) {
-                t9 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                t8._graphics = t9;
+            if (spikes) {
+              t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+              t8._graphics = t7;
+              command = new U.GraphicsCommandRect(0, 0, 1, J.toDouble$0$n(J.$add$ns(J.$negate$n(blockHeight), 1)), null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
               }
               command = new U.GraphicsCommandFillColor(4278190080, null);
-              command._drawing$_graphics = t9;
-              t9._originalCommands.push(command);
-              C.JSArray_methods.set$length(t9._compiledCommands, 0);
-              t9._bounds = null;
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandBeginPath(null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandMoveTo(0, J.toDouble$0$n(J.$add$ns(J.$negate$n(blockHeight), 1)), null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandLineTo(0.25, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandLineTo(0.5, J.toDouble$0$n(J.$add$ns(J.$negate$n(blockHeight), 1)), null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandLineTo(0.75, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandLineTo(1, J.toDouble$0$n(J.$add$ns(J.$negate$n(blockHeight), 1)), null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandClosePath(null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandFillColor(4278190080, null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+            } else {
+              t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+              t8._graphics = t7;
+              command = new U.GraphicsCommandRect(0, 0, 1, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              t7 = t8._graphics;
+              if (!(t7 != null)) {
+                t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                t8._graphics = t7;
+              }
+              command = new U.GraphicsCommandFillColor(4278190080, null);
+              command._drawing$_graphics = t7;
+              t7._originalCommands.push(command);
+              C.JSArray_methods.set$length(t7._compiledCommands, 0);
+              t7._bounds = null;
+              if (respawn) {
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandBeginPath(null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandMoveTo(0.4, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandLineTo(0.4, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 1)), null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandLineTo(1, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.7)), null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandLineTo(0.6, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.7)), null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandLineTo(0.6, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandClosePath(null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+                t7 = t8._graphics;
+                if (!(t7 != null)) {
+                  t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
+                  t8._graphics = t7;
+                }
+                command = new U.GraphicsCommandFillColor(4278190080, null);
+                command._drawing$_graphics = t7;
+                t7._originalCommands.push(command);
+                C.JSArray_methods.set$length(t7._compiledCommands, 0);
+                t7._bounds = null;
+              }
             }
-            t8._display$_x = t6;
+            t8._x = t6;
             t8._transformationMatrixRefresh = true;
-            t8._display$_y = 18;
+            t8._y = 18;
             if (animate) {
               t8._rotation = 1.5707963267948966;
               t6 = $.stage.juggler;
               t8 = new K.Tween(t8, K.animation_Transition_easeOutCubic$closure(), H.setRuntimeTypeInfo([], t4), null, null, null, 0, 0, 0, false, false);
               t8._totalTime = Math.max(0.0001, 0.5);
-              t9 = t8.get$animate(t8);
-              t10 = t9._tween;
-              tweenProperty = new K.TweenProperty(t9, 8, 0 / 0, 0 / 0, 0 / 0);
-              if (!t10._started)
-                t10._tweenPropertyList.push(tweenProperty);
+              t7 = t8.get$animate(t8);
+              t9 = t7._tween;
+              tweenProperty = new K.TweenProperty(t7, 8, 0 / 0, 0 / 0, 0 / 0);
+              if (!t9._started)
+                t9._tweenPropertyList.push(tweenProperty);
               tweenProperty._targetValue = 0;
               if (!t8._started) {
                 t8._currentTime = t8._currentTime + t8._delay - 0.1;
@@ -15352,7 +15468,7 @@
             }
             this.blocks.push(block);
             this.sprite.addChild$1(block.sprite);
-            if (t7)
+            if (respawn)
               this.respawnBlocks.push(block);
             t6 = this.blockString;
             if (0 >= t5.length)
@@ -15387,21 +15503,32 @@
         var t1, t2, t3, collidingBlock, alive, t4, t5, t6;
         t1 = this.player;
         t2 = this.blocks;
-        t3 = t1.velocityY + 150 * time;
+        t3 = t1.velocityY;
+        if (typeof t3 !== "number")
+          return t3.$add();
+        t3 += 150 * time;
         t1.velocityY = t3;
         t1.y = t1.y + t3 * time;
         collidingBlock = t1.getCollidingBlock$1(t2);
         if (collidingBlock != null) {
           t1.velocityY = 0;
-          t3 = J.get$height$x(collidingBlock);
+          t3 = collidingBlock.height;
           if (typeof t3 !== "number")
             return H.iae(t3);
           t1.y = 18 - t3 - 1;
           t1.onGround = true;
-        } else
+          alive = !collidingBlock.spikes || false;
+        } else {
           t1.onGround = false;
-        t1.x = t1.x + t1.velocityX * time;
-        alive = t1.getCollidingBlock$1(t2) == null || false;
+          alive = true;
+        }
+        t3 = t1.x;
+        t4 = t1.velocityX;
+        if (typeof t4 !== "number")
+          return t4.$mul();
+        t1.x = t3 + t4 * time;
+        if (t1.getCollidingBlock$1(t2) != null)
+          alive = false;
         t1.updateSprite$0();
         t1 = -this.player.x + 5;
         this.scrollX = t1;
@@ -15414,71 +15541,78 @@
           if (0 >= t2.length)
             return H.ioore(t2, 0);
           t2 = t2[0];
-          t1.x = t2.x;
+          t3 = t2.x;
           t2 = t2.height;
           if (typeof t2 !== "number")
             return H.iae(t2);
-          t1.y = 18 - t2 - 1;
+          t1.resetPhysics$2(t3, 18 - t2 - 1);
           t2 = $.game;
-          t1 = new N.MiniLevel(null, "    #####\r\n    #Po #\r\n    #o oG\r\n    #   #\r\n    #####\r\n    ", null, null, this, null);
-          t3 = [A.DisplayObject];
-          t4 = H.setRuntimeTypeInfo([], t3);
+          t3 = new N.MiniLevel(null, "    #####\r\n    #Po #\r\n    #o oG\r\n    #   #\r\n    #####\r\n    ", null, null, this, null);
+          t1 = [A.DisplayObject];
+          t4 = H.setRuntimeTypeInfo([], t1);
           t5 = $.DisplayObject__nextID;
           $.DisplayObject__nextID = t5 + 1;
           t6 = [A.BitmapFilter];
           t5 = new A.Sprite(null, null, null, t4, true, true, false, true, "auto", true, 0, t5, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-          t1.sprite = t5;
-          t3 = H.setRuntimeTypeInfo([], t3);
+          t3.sprite = t5;
+          t1 = H.setRuntimeTypeInfo([], t1);
           t4 = $.DisplayObject__nextID;
           $.DisplayObject__nextID = t4 + 1;
-          t6 = new A.Sprite(null, null, null, t3, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-          t1.blockSprite = t6;
+          t6 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+          t3.blockSprite = t6;
           t5.addChild$1(t6);
-          t1.reset$0(0);
-          t6 = t1.sprite;
-          t5 = Y.TextField$("press [R] to restart", new Y.TextFormat("Roboto", 1, 4278190080, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+          t3.reset$0(0);
+          t6 = t3.sprite;
+          t5 = Y.TextField$("press [R] to restart", new Y.TextFormat("Comfortaa", 1, 4278190080, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
           t5.set$x(0, 0);
           t5.set$y(0, 16);
           t5._width = 32;
           t5._refreshPending |= 3;
           t6.addChild$1(t5);
-          t2.setLevel$1(t1);
+          t2.setLevel$1(t3);
         }
       },
       BaseLevel$0: function() {
-        var t1, t2, t3, t4, command;
+        var t1, t2, t3, t4, t5, t6, command;
         t1 = [A.DisplayObject];
         t2 = H.setRuntimeTypeInfo([], t1);
         t3 = $.DisplayObject__nextID;
         $.DisplayObject__nextID = t3 + 1;
         t4 = [A.BitmapFilter];
         this.sprite = new A.Sprite(null, null, null, t2, true, true, false, true, "auto", true, 0, t3, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-        this.blockString = "333333r333333333r33333344444r44444444r33333331234";
+        this.blockString = "33333333333333r333333333333333444444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
         t3 = [N.BaseLevelBlock];
         this.blocks = H.setRuntimeTypeInfo([], t3);
         this.respawnBlocks = H.setRuntimeTypeInfo([], t3);
         this.scrollX = 0;
         this.addBlocks$1(false);
-        t3 = new N.BaseLevelPlayer(null, 5, 5, null, null, null);
+        t3 = this.respawnBlocks;
+        if (0 >= t3.length)
+          return H.ioore(t3, 0);
+        t3 = t3[0];
+        t2 = t3.x;
+        t3 = t3.height;
+        if (typeof t3 !== "number")
+          return H.iae(t3);
+        t3 = 18 - t3 - 1;
+        t5 = new N.BaseLevelPlayer(null, t2, t3, null, null, null);
         t1 = H.setRuntimeTypeInfo([], t1);
-        t2 = $.DisplayObject__nextID;
-        $.DisplayObject__nextID = t2 + 1;
-        t4 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-        t3.sprite = t4;
-        t2 = t4.get$graphics();
-        t2.toString;
+        t6 = $.DisplayObject__nextID;
+        $.DisplayObject__nextID = t6 + 1;
+        t4 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t6, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+        t5.sprite = t4;
+        t6 = t4.get$graphics();
+        t6.toString;
         command = U.GraphicsCommandRect$(0, 0, 1, 1);
-        command._setGraphics$1(t2);
-        t2._originalCommands.push(command);
-        C.JSArray_methods.set$length(t2._compiledCommands, 0);
-        t2._bounds = null;
+        command._setGraphics$1(t6);
+        t6._originalCommands.push(command);
+        C.JSArray_methods.set$length(t6._compiledCommands, 0);
+        t6._bounds = null;
         t4.get$graphics().fillColor$1(4294901760);
-        t3.velocityX = 13;
-        t3.velocityY = 0;
-        t3.onGround = false;
-        t3.updateSprite$0();
-        this.player = t3;
-        this.sprite.addChild$1(t3.sprite);
+        t5.resetPhysics$2(t2, t3);
+        t5.updateSprite$0();
+        this.player = t5;
+        this.sprite.addChild$1(t5.sprite);
         this.sprite.set$x(0, this.scrollX);
       },
       static: {
@@ -15491,9 +15625,16 @@
     },
     BaseLevelPlayer: {
       "^": "Object;sprite,x>,y>,velocityX,velocityY,onGround",
+      resetPhysics$2: function(x, y) {
+        this.x = x;
+        this.y = y;
+        this.velocityX = 13;
+        this.velocityY = 0;
+        this.onGround = false;
+      },
       getCollidingBlock$1: function(blocks) {
-        var t1, _i, t2, block, t3, t4;
-        for (t1 = blocks.length, _i = 0; t2 = blocks.length, _i < t2; t2 === t1 || (0, H.throwConcurrentModificationError)(blocks), ++_i) {
+        var t1, spikesBlock, _i, t2, block, t3, t4;
+        for (t1 = blocks.length, spikesBlock = null, _i = 0; t2 = blocks.length, _i < t2; t2 === t1 || (0, H.throwConcurrentModificationError)(blocks), ++_i) {
           block = blocks[_i];
           t3 = this.x;
           t4 = block.x;
@@ -15509,9 +15650,14 @@
               t3 = false;
           else
             t3 = false;
-          if (t3)
-            return block;
+          if (t3) {
+            if (!block.spikes)
+              return block;
+            spikesBlock = block;
+          }
         }
+        if (spikesBlock != null)
+          return spikesBlock;
         return;
       },
       updateSprite$0: function() {
@@ -15533,7 +15679,7 @@
       },
       enterFrame$1: [function($event) {
         this.currentLevel.update$1(0, $event.get$passedTime());
-      }, "call$1", "get$enterFrame", 2, 0, 31],
+      }, "call$1", "get$enterFrame", 2, 0, 29],
       keyDown$1: [function($event) {
         switch (J.get$keyCode$x($event)) {
           case 37:
@@ -15552,7 +15698,7 @@
             this.currentLevel.rPressed$0();
             break;
         }
-      }, "call$1", "get$keyDown", 2, 0, 10]
+      }, "call$1", "get$keyDown", 2, 0, 11]
     },
     Level: {
       "^": "Object;"
@@ -15922,9 +16068,6 @@
   J.get$error$x = function(receiver) {
     return J.getInterceptor$x(receiver).get$error(receiver);
   };
-  J.get$height$x = function(receiver) {
-    return J.getInterceptor$x(receiver).get$height(receiver);
-  };
   J.get$iterator$ax = function(receiver) {
     return J.getInterceptor$ax(receiver).get$iterator(receiver);
   };
@@ -16006,9 +16149,6 @@
   };
   J.complete$1$x = function(receiver, a0) {
     return J.getInterceptor$x(receiver).complete$1(receiver, a0);
-  };
-  J.contains$1$asx = function(receiver, a0) {
-    return J.getInterceptor$asx(receiver).contains$1(receiver, a0);
   };
   J.contains$2$asx = function(receiver, a0, a1) {
     return J.getInterceptor$asx(receiver).contains$2(receiver, a0, a1);
@@ -16285,12 +16425,12 @@
     t1.toString;
     return new P._BroadcastStream(t1, [H.getTypeArgumentByIndex(t1, 0)]);
   }, "Mouse_onCursorChanged", "BaseLevel_BLOCK_REGEXP", "$get$BaseLevel_BLOCK_REGEXP", function() {
-    return P.RegExp_RegExp("(\\d)([rs]*)", true, false);
+    return P.RegExp_RegExp("(\\d)([rs]?)", true, false);
   }, "BaseLevel_BLOCK_REGEXP"]);
   Isolate = Isolate.$finishIsolateConstructor(Isolate);
   $ = new Isolate();
   init.metadata = [null, 0];
-  init.types = [{func: 1}, {func: 1, v: true}, {func: 1, args: [,]}, {func: 1, v: true, args: [{func: 1, v: true}]}, {func: 1, args: [,,]}, {func: 1, v: true, args: [P.ContextEvent]}, {func: 1, args: [, P.StackTrace]}, {func: 1, v: true, opt: [,]}, {func: 1, v: true, args: [P.Object], opt: [P.StackTrace]}, {func: 1, ret: P.String, args: [P.int]}, {func: 1, v: true, args: [W.KeyboardEvent]}, {func: 1, v: true, args: [W.Event0]}, {func: 1, ret: P.num, args: [P.num]}, {func: 1, args: [P.int,,]}, {func: 1, args: [, P.String]}, {func: 1, args: [P.String]}, {func: 1, args: [P.bool]}, {func: 1, v: true, args: [, P.StackTrace]}, {func: 1, ret: W.Node}, {func: 1, args: [P.String,,]}, {func: 1, args: [,], opt: [,]}, {func: 1, v: true, args: [W.MouseEvent]}, {func: 1, v: true, args: [W.WheelEvent]}, {func: 1, v: true, args: [W.TouchEvent]}, {func: 1, v: true, args: [A.BitmapData]}, {func: 1, ret: [P.Future, P.Null]}, {func: 1, args: [P.num]}, {func: 1, v: true, args: [P.num]}, {func: 1, v: true, args: [R.KeyboardEvent0]}, {func: 1, v: true, args: [R.TextEvent0]}, {func: 1, v: true, args: [R.MouseEvent0]}, {func: 1, v: true, args: [R.EnterFrameEvent]}, {func: 1, ret: P.num}, {func: 1, args: [{func: 1, v: true}]}, {func: 1, ret: P.String, args: [W.EventTarget]}, {func: 1, args: [P.num, P.num]}];
+  init.types = [{func: 1}, {func: 1, v: true}, {func: 1, args: [,]}, {func: 1, args: [,,]}, {func: 1, v: true, args: [{func: 1, v: true}]}, {func: 1, ret: P.num, args: [P.num]}, {func: 1, v: true, args: [P.ContextEvent]}, {func: 1, args: [, P.StackTrace]}, {func: 1, v: true, opt: [,]}, {func: 1, v: true, args: [P.Object], opt: [P.StackTrace]}, {func: 1, ret: P.String, args: [P.int]}, {func: 1, v: true, args: [W.KeyboardEvent]}, {func: 1, v: true, args: [W.Event0]}, {func: 1, v: true, args: [, P.StackTrace]}, {func: 1, ret: W.Node}, {func: 1, args: [P.String,,]}, {func: 1, args: [P.num, P.num]}, {func: 1, v: true, args: [W.MouseEvent]}, {func: 1, v: true, args: [W.WheelEvent]}, {func: 1, v: true, args: [W.TouchEvent]}, {func: 1, args: [P.int,,]}, {func: 1, v: true, args: [A.BitmapData]}, {func: 1, ret: [P.Future, P.Null]}, {func: 1, args: [P.num]}, {func: 1, v: true, args: [P.num]}, {func: 1, args: [,], opt: [,]}, {func: 1, v: true, args: [R.KeyboardEvent0]}, {func: 1, v: true, args: [R.TextEvent0]}, {func: 1, v: true, args: [R.MouseEvent0]}, {func: 1, v: true, args: [R.EnterFrameEvent]}, {func: 1, ret: P.num}, {func: 1, args: [, P.String]}, {func: 1, ret: P.String, args: [W.EventTarget]}, {func: 1, args: [P.String]}, {func: 1, args: [{func: 1, v: true}]}];
   function convertToFastObject(properties) {
     function MyClass() {
     }
