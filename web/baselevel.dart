@@ -2,21 +2,30 @@ part of ld41;
 
 class BaseLevel extends Level {
 
-  static final RegExp blockRegex = new RegExp(r"\d");
+  static const LEFT_MARGIN = 5;
 
-  BaseLevelPlayer player;
+  /* 4[rs]
+   * 4 = height
+   * s = spikes
+   * r = respawn
+   */
+  static final RegExp BLOCK_REGEXP = new RegExp(r"(\d)([rs]*)");
+
   String blockString;
   List<BaseLevelBlock> blocks;
+  List<BaseLevelBlock> respawnBlocks;
+  BaseLevelPlayer player;
   num scrollX;
 
   BaseLevel() {
     sprite = new Sprite();
-    player = new BaseLevelPlayer();
-    blockString = "333333333333333333333444444444444433333331234";
+    blockString = "333333r333333333r33333344444r44444444r33333331234";
     blocks = new List<BaseLevelBlock>();
-    sprite.addChild(player.sprite);
+    respawnBlocks = new List<BaseLevelBlock>();
     scrollX = 0;
-    addBlocks();
+    addBlocks(false);
+    player = new BaseLevelPlayer(5, 5);
+    sprite.addChild(player.sprite);
     updateSprite();
   }
 
@@ -32,17 +41,22 @@ class BaseLevel extends Level {
 
   void rPressed() { }
 
-  void addBlocks() {
+  void addBlocks(bool animate) {
     int lastX = 0;
     while ((blocks.length == 0 || (lastX = blocks[blocks.length - 1].x) < Game.WIDTH - scrollX) && blockString.length > 0) {
-      Match match = blockRegex.matchAsPrefix(blockString);
+      Match match = BLOCK_REGEXP.matchAsPrefix(blockString);
       if (match != null) {
-        String matchGroup = match.group(0);
-        int blockHeight = int.parse(matchGroup);
-        BaseLevelBlock block = new BaseLevelBlock(lastX + 1, blockHeight, false, false);
+        int blockHeight = int.parse(match.group(1));
+        bool spikes = match.group(2).contains("s");
+        bool respawn = match.group(2).contains("r");
+        BaseLevelBlock block = new BaseLevelBlock(lastX + 1, blockHeight, spikes, respawn, animate);
         blocks.add(block);
         sprite.addChild(block.sprite);
-        blockString = blockString.substring(matchGroup.length);
+        if (respawn) {
+          respawnBlocks.add(block);
+        }
+        // remove added blocks from blockString
+        blockString = blockString.substring(match.group(0).length);
       } else {
         print("BASELEVEL PARSING ERROR: blockString " + blockString);
         break;
@@ -51,19 +65,27 @@ class BaseLevel extends Level {
   }
 
   void removeOffscreenBlocks() {
-    while (blocks.length > 0 && blocks[0].x < -scrollX) {
-      blocks.removeAt(0);
+    while (blocks.length > 0 && // if there are blocks left and ...
+          respawnBlocks.length > 1 && // ... there is more than one respawn block left and ...
+          respawnBlocks[1].x - LEFT_MARGIN < -scrollX - 1) { // ... the player has passed the second respawn block
+      BaseLevelBlock removedBlock = blocks.removeAt(0);
+      sprite.removeChild(removedBlock.sprite);
+      if (removedBlock.respawn) {
+        respawnBlocks.remove(removedBlock);
+      }
     }
+    print(blocks.length);
   }
 
   void update(num time) {
-    bool alive = player.updateMovement(blocks);
-    scrollX = (-player.pos.x + 5);
+    bool alive = player.updateMovement(time, blocks);
+    scrollX = (-player.x + LEFT_MARGIN);
     updateSprite();
-    addBlocks();
+    addBlocks(true);
     removeOffscreenBlocks();
     if (!alive) {
-      player.pos -= new Vector(0, 5);
+      player.x = respawnBlocks[0].x;
+      player.y = Game.HEIGHT - respawnBlocks[0].height - 1;
       game.setLevel(new MiniLevel(MiniLevel.LEVEL_1, this));
     }
   }
@@ -76,20 +98,20 @@ class BaseLevel extends Level {
 
 class BaseLevelPlayer {
 
-  static const num GRAVITY = 0.03;
-  static const num JUMP = -0.4;
+  static const num GRAVITY = 150;
+  static const num JUMP = -30;
+  static const num SPEED = 13; // 780 blocks/min -> ♩ = 195?
 
   Sprite sprite;
-  Vector pos;
+  num x, y;
   num velocityX, velocityY;
   bool onGround;
 
-  BaseLevelPlayer() {
+  BaseLevelPlayer(this.x, this.y) {
     sprite = new Sprite();
     sprite.graphics.rect(0, 0, 1, 1);
     sprite.graphics.fillColor(0xFFFF0000);
-    pos = new Vector(5, 5);
-    velocityX = 0.2;
+    velocityX = SPEED;
     velocityY = 0;
     onGround = false;
     updateSprite();
@@ -101,22 +123,22 @@ class BaseLevelPlayer {
     }
   }
 
-  bool updateMovement(List<BaseLevelBlock> blocks) {
+  bool updateMovement(num time, List<BaseLevelBlock> blocks) {
     bool alive = true;
     // move y
-    velocityY += GRAVITY;
-    pos += new Vector(0, velocityY);
+    velocityY += GRAVITY * time;
+    y += velocityY * time;
     BaseLevelBlock collidingBlock = getCollidingBlock(blocks);
     // hit the floor?
     if (collidingBlock != null) {
       velocityY = 0;
-      pos = new Vector(pos.x, Game.HEIGHT - collidingBlock.height - 1);
+      y = Game.HEIGHT - collidingBlock.height - 1;
       onGround = true;
     } else {
       onGround = false;
     }
     // move x
-    pos += new Vector(velocityX, 0);
+    x += velocityX * time;
     collidingBlock = getCollidingBlock(blocks);
     // hit a block from the side?
     if (collidingBlock != null) {
@@ -128,7 +150,7 @@ class BaseLevelPlayer {
 
   BaseLevelBlock getCollidingBlock(List<BaseLevelBlock> blocks) {
     for (BaseLevelBlock block in blocks) {
-      if (pos.x > block.x - 1 && pos.x < block.x + 1 && pos.y + 1 > Game.HEIGHT - block.height) {
+      if (x > block.x - 1 && x < block.x + 1 && y + 1 > Game.HEIGHT - block.height) {
         return block;
       }
     }
@@ -136,8 +158,8 @@ class BaseLevelPlayer {
   }
 
   void updateSprite() {
-    sprite.x = pos.x;
-    sprite.y = pos.y;
+    sprite.x = x;
+    sprite.y = y;
   }
 
 }
@@ -145,14 +167,27 @@ class BaseLevelPlayer {
 class BaseLevelBlock {
 
   int x, height;
+  bool spikes, respawn;
   Sprite sprite;
 
-  BaseLevelBlock(this.x, this.height, spike, respawn) {
+  BaseLevelBlock(this.x, this.height, this.spikes, this.respawn, bool animate) {
     sprite = new Sprite();
     sprite.graphics.rect(0, 0, 1, -height);
-    sprite.graphics.fillColor(0xFF000000);
+    if (respawn) {
+      sprite.graphics.fillColor(0xFF0000FF);
+    } else {
+      sprite.graphics.fillColor(0xFF000000);
+    }
     sprite.x = x;
     sprite.y = Game.HEIGHT;
+    if (animate) {
+      sprite.rotation = PI / 2;
+      stage.juggler.add(
+        new Tween(sprite, 0.5, Transition.easeOutCubic)
+          ..animate.rotation.to(0)
+          ..delay = 0.1
+      );
+    }
   }
 
 }

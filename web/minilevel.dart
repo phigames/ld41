@@ -109,6 +109,55 @@ class MiniLevel extends Level {
 
 }
 
+class MiniLevelBlock {
+
+  Sprite sprite;
+  int x, y;
+  bool movable;
+
+  MiniLevelBlock(this.x, this.y, this.movable, [bool draw = true]) {
+    sprite = new Sprite();
+    if (draw) {
+      sprite.graphics.rect(0, 0, 1, 1);
+      if (movable) {
+        sprite.graphics.fillColor(0xFF00FF00);
+      } else {
+        sprite.graphics.fillColor(0xFF0000FF);
+      }
+    }
+    updateSprite(false);
+  }
+
+  bool move(int dx, int dy, List<List<MiniLevelBlock>> blocks) {
+    if (movable) {
+      MiniLevelBlock adjacientBlock = blocks[x + dx][y + dy];
+      if (adjacientBlock == null || adjacientBlock.move(dx, dy, blocks)) {
+        blocks[x][y] = null;
+        blocks[x + dx][y + dy] = this;
+        x = x + dx;
+        y = y + dy;
+        updateSprite(true);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  void updateSprite(bool animate) {
+    if (animate) {
+      stage.juggler.add(
+        new Tween(sprite, 0.1, Transition.easeOutCubic)
+          ..animate.x.to(x)
+          ..animate.y.to(y)
+      );
+    } else {
+      sprite.x = x;
+      sprite.y = y;
+    }
+  }
+
+}
+
 class MiniLevelPlayer extends MiniLevelBlock {
 
   bool won;
@@ -135,47 +184,6 @@ class MiniLevelGoal extends MiniLevelBlock {
       return true;
     }
     return false;
-  }
-
-}
-
-class MiniLevelBlock {
-
-  Sprite sprite;
-  int x, y;
-  bool movable;
-
-  MiniLevelBlock(this.x, this.y, this.movable, [bool draw = true]) {
-    sprite = new Sprite();
-    if (draw) {
-      sprite.graphics.rect(0, 0, 1, 1);
-      if (movable) {
-        sprite.graphics.fillColor(0xFF00FF00);
-      } else {
-        sprite.graphics.fillColor(0xFF0000FF);
-      }
-    }
-    updateSprite();
-  }
-
-  bool move(int dx, int dy, List<List<MiniLevelBlock>> blocks) {
-    if (movable) {
-      MiniLevelBlock adjacientBlock = blocks[x + dx][y + dy];
-      if (adjacientBlock == null || adjacientBlock.move(dx, dy, blocks)) {
-        blocks[x][y] = null;
-        blocks[x + dx][y + dy] = this;
-        x = x + dx;
-        y = y + dy;
-        updateSprite();
-        return true;
-      }
-    }
-    return false;
-  }
-
-  void updateSprite() {
-    sprite.x = x;
-    sprite.y = y;
   }
 
 }
