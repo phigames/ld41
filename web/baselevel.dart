@@ -16,17 +16,31 @@ class BaseLevel extends Level {
   List<BaseLevelBlock> respawnBlocks;
   BaseLevelPlayer player;
   num scrollX;
+  TextField countdownText;
+  num countdownTime;
 
   BaseLevel() {
     sprite = new Sprite();
-    blockString = "33333333333333r333333333333333444444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
+    blockString = "333333r3333333333333333333333344r4444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
     blocks = new List<BaseLevelBlock>();
     respawnBlocks = new List<BaseLevelBlock>();
-    scrollX = 0;
-    addBlocks(false);
-    player = new BaseLevelPlayer(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
+    //player = new BaseLevelPlayer(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
+    player = new BaseLevelPlayer(LEFT_MARGIN + 1, Game.HEIGHT - 4);
     sprite.addChild(player.sprite);
     updateSprite();
+    addBlocks(false);
+    countdownText = new TextField("", new TextFormat("Comfortaa", 4, BaseLevelBlock.COLOR_BLOCK, align: "center"));
+    resetCountdown();
+    sprite.addChild(countdownText);
+  }
+
+  void resetCountdown() {
+    countdownText.x = player.x + 0.5;
+    countdownText.y = player.y - 5;
+    countdownText.pivotX = 5;
+    countdownText.pivotY = 2;
+    countdownText.width = 10;
+    countdownTime = 3;
   }
 
   void leftPressed() { }
@@ -74,22 +88,26 @@ class BaseLevel extends Level {
         respawnBlocks.remove(removedBlock);
       }
     }
-    print(blocks.length);
   }
 
   void update(num time) {
-    bool alive = player.updatePhysics(time, blocks);
-    scrollX = (-player.x + LEFT_MARGIN);
-    updateSprite();
-    addBlocks(true);
-    removeOffscreenBlocks();
-    if (!alive) {
-      player.resetPhysics(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
-      game.setLevel(new MiniLevel(MiniLevel.LEVEL_1, this));
+    if (countdownTime > 0) {
+      countdownTime -= time;
+      countdownText.text = countdownTime.ceil().toString();
+    } else {
+      bool alive = player.updatePhysics(time, blocks);
+      updateSprite();
+      addBlocks(true);
+      removeOffscreenBlocks();
+      if (!alive) {
+        player.resetPhysics(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
+        game.setLevel(new MiniLevel(MiniLevel.LEVEL_1, this));
+      }
     }
   }
 
   void updateSprite() {
+    scrollX = (-player.x + LEFT_MARGIN);
     sprite.x = scrollX;
   }
 
@@ -97,6 +115,7 @@ class BaseLevel extends Level {
 
 class BaseLevelPlayer {
 
+  static const int COLOR = 0xFF3984C6;
   static const num GRAVITY = 150;
   static const num JUMP = -30;
   static const num SPEED = 13; // 780 blocks/min -> ♩ = 195?
@@ -109,7 +128,7 @@ class BaseLevelPlayer {
   BaseLevelPlayer(this.x, this.y) {
     sprite = new Sprite();
     sprite.graphics.rect(0, 0, 1, 1);
-    sprite.graphics.fillColor(0xFFFF0000);
+    sprite.graphics.fillColor(COLOR);
     resetPhysics(x, y);
     updateSprite();
   }
@@ -141,6 +160,10 @@ class BaseLevelPlayer {
       onGround = true;
       if (collidingBlock.spikes) {
         alive = false;
+      }
+      // allow hold-to-jump
+      if (game.upPressed) {
+        jump();
       }
     } else {
       onGround = false;
@@ -183,6 +206,10 @@ class BaseLevelPlayer {
 
 class BaseLevelBlock {
 
+  static const int COLOR_BLOCK = 0xFF333333;
+  static const int COLOR_SPIKES = 0xFF666666;
+  static const int COLOR_RESPAWN = 0xFF666666;
+
   int x, height;
   bool spikes, respawn;
   Sprite sprite;
@@ -191,7 +218,7 @@ class BaseLevelBlock {
     sprite = new Sprite();
     if (spikes) {
       sprite.graphics.rect(0, 0, 1, -height + 1);
-      sprite.graphics.fillColor(0xFF000000);
+      sprite.graphics.fillColor(COLOR_BLOCK);
       sprite.graphics.beginPath();
       sprite.graphics.moveTo(0, -height + 1);
       sprite.graphics.lineTo(0.25, -height);
@@ -199,10 +226,10 @@ class BaseLevelBlock {
       sprite.graphics.lineTo(0.75, -height);
       sprite.graphics.lineTo(1, -height + 1);
       sprite.graphics.closePath();
-      sprite.graphics.fillColor(0xFF000000);
+      sprite.graphics.fillColor(COLOR_SPIKES);
     } else {
       sprite.graphics.rect(0, 0, 1, -height);
-      sprite.graphics.fillColor(0xFF000000);
+      sprite.graphics.fillColor(COLOR_BLOCK);
       if (respawn) {
         sprite.graphics.beginPath();
         sprite.graphics.moveTo(0.4, -height);
@@ -211,7 +238,7 @@ class BaseLevelBlock {
         sprite.graphics.lineTo(0.6, -height - 0.7);
         sprite.graphics.lineTo(0.6, -height);
         sprite.graphics.closePath();
-        sprite.graphics.fillColor(0xFF000000);
+        sprite.graphics.fillColor(COLOR_RESPAWN);
       }
     }
     sprite.x = x;

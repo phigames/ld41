@@ -2509,7 +2509,7 @@
     },
     Primitives_dateNow: [function() {
       return Date.now();
-    }, "call$0", "_js_helper_Primitives_dateNow$closure", 0, 0, 30],
+    }, "call$0", "_js_helper_Primitives_dateNow$closure", 0, 0, 31],
     Primitives_initTicker: function() {
       var $window, performance;
       if ($.Primitives_timerFrequency != null)
@@ -4080,13 +4080,13 @@
       }
     },
     initHooks_closure0: {
-      "^": "Closure:31;getUnknownTag",
+      "^": "Closure:22;getUnknownTag",
       call$2: function(o, tag) {
         return this.getUnknownTag(o, tag);
       }
     },
     initHooks_closure1: {
-      "^": "Closure:33;prototypeForTag",
+      "^": "Closure:34;prototypeForTag",
       call$1: function(tag) {
         return this.prototypeForTag(tag);
       }
@@ -4628,14 +4628,14 @@
     _AsyncRun__scheduleImmediateJsOverride: [function(callback) {
       ++init.globalState.topEventLoop._activeJsAsyncCount;
       self.scheduleImmediate(H.convertDartClosureToJS(new P._AsyncRun__scheduleImmediateJsOverride_internalCallback(callback), 0));
-    }, "call$1", "async__AsyncRun__scheduleImmediateJsOverride$closure", 2, 0, 4],
+    }, "call$1", "async__AsyncRun__scheduleImmediateJsOverride$closure", 2, 0, 6],
     _AsyncRun__scheduleImmediateWithSetImmediate: [function(callback) {
       ++init.globalState.topEventLoop._activeJsAsyncCount;
       self.setImmediate(H.convertDartClosureToJS(new P._AsyncRun__scheduleImmediateWithSetImmediate_internalCallback(callback), 0));
-    }, "call$1", "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", 2, 0, 4],
+    }, "call$1", "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", 2, 0, 6],
     _AsyncRun__scheduleImmediateWithTimer: [function(callback) {
       P.Timer__createTimer(C.Duration_0, callback);
-    }, "call$1", "async__AsyncRun__scheduleImmediateWithTimer$closure", 2, 0, 4],
+    }, "call$1", "async__AsyncRun__scheduleImmediateWithTimer$closure", 2, 0, 6],
     _asyncStart: function(bodyFunction, completer) {
       P._awaitOnObject(null, bodyFunction);
       return completer.get$future();
@@ -4934,7 +4934,7 @@
       }
     },
     _AsyncRun__initializeScheduleImmediate_closure: {
-      "^": "Closure:34;_box_0,div,span",
+      "^": "Closure:20;_box_0,div,span",
       call$1: function(callback) {
         var t1, t2;
         ++init.globalState.topEventLoop._activeJsAsyncCount;
@@ -4971,7 +4971,7 @@
       }
     },
     _wrapJsFunctionForAsync_closure: {
-      "^": "Closure:20;$protected",
+      "^": "Closure:25;$protected",
       call$2: function(errorCode, result) {
         this.$protected(errorCode, result);
       }
@@ -5075,7 +5075,7 @@
       "^": "Object;$ti"
     },
     Future_wait_handleError: {
-      "^": "Closure:3;_box_0,eagerError,cleanUp,result",
+      "^": "Closure:4;_box_0,eagerError,cleanUp,result",
       call$2: function(theError, theStackTrace) {
         var t1, t2;
         t1 = this._box_0;
@@ -5506,7 +5506,7 @@
       }
     },
     _Future__chainForeignFuture_closure0: {
-      "^": "Closure:25;target",
+      "^": "Closure:13;target",
       call$2: function(error, stackTrace) {
         this.target._completeError$2(error, stackTrace);
       },
@@ -6187,7 +6187,7 @@
       }],
       _handleError$2: [function(error, stackTrace) {
         this._stream._handleError$3(error, stackTrace, this);
-      }, "call$2", "get$_handleError", 4, 0, 13],
+      }, "call$2", "get$_handleError", 4, 0, 32],
       _handleDone$0: [function() {
         this._async$_close$0();
       }, "call$0", "get$_handleDone", 0, 0, 1],
@@ -6835,7 +6835,7 @@
       $asEfficientLengthIterable: null
     },
     Maps_mapToString_closure: {
-      "^": "Closure:3;_box_0,result",
+      "^": "Closure:4;_box_0,result",
       call$2: function(k, v) {
         var t1, t2;
         t1 = this._box_0;
@@ -7258,6 +7258,9 @@
         return explanation;
       },
       static: {
+        RangeError$: function(message) {
+          return new P.RangeError(null, null, false, null, null, message);
+        },
         RangeError$value: function(value, $name, message) {
           return new P.RangeError(null, null, true, value, $name, "Value not in range");
         },
@@ -7554,7 +7557,7 @@
     },
     Element__determineMouseWheelEventType: [function(e) {
       return "wheel";
-    }, "call$1", "html_Element__determineMouseWheelEventType$closure", 2, 0, 32],
+    }, "call$1", "html_Element__determineMouseWheelEventType$closure", 2, 0, 33],
     _ElementFactoryProvider_createElement_tag: function(tag, typeExtension) {
       return document.createElement(tag);
     },
@@ -7693,7 +7696,7 @@
       },
       getContext3d$6$alpha$antialias$depth$premultipliedAlpha$preserveDrawingBuffer$stencil: function(receiver, alpha, antialias, depth, premultipliedAlpha, preserveDrawingBuffer, stencil) {
         var options, context;
-        options = P.LinkedHashMap__makeLiteral(["alpha", false, "depth", false, "stencil", true, "antialias", false, "premultipliedAlpha", true, "preserveDrawingBuffer", false]);
+        options = P.LinkedHashMap__makeLiteral(["alpha", false, "depth", false, "stencil", true, "antialias", antialias, "premultipliedAlpha", true, "preserveDrawingBuffer", false]);
         context = this.getContext$2(receiver, "webgl", options);
         return context == null ? this.getContext$2(receiver, "experimental-webgl", options) : context;
       },
@@ -9769,7 +9772,7 @@
       }
     },
     _AcceptStructuredClone_walk_closure: {
-      "^": "Closure:3;_box_0,$this",
+      "^": "Closure:4;_box_0,$this",
       call$2: function(key, value) {
         var t1, t2;
         t1 = this._box_0.copy;
@@ -9840,7 +9843,15 @@
       return 536870911 & hash + ((16383 & hash) << 15);
     },
     _JSRandom: {
-      "^": "Object;"
+      "^": "Object;",
+      nextInt$1: function(max) {
+        if (max <= 0 || max > 4294967296)
+          throw H.wrapException(P.RangeError$("max must be in range 0 < max \u2264 2^32, was " + max));
+        return Math.random() * max >>> 0;
+      },
+      nextDouble$0: function() {
+        return Math.random();
+      }
     },
     Point0: {
       "^": "Object;x>,y>,$ti",
@@ -10554,11 +10565,21 @@
     "^": "",
     Transition_linear: [function(ratio) {
       return ratio;
-    }, "call$1", "animation_Transition_linear$closure", 2, 0, 5],
+    }, "call$1", "animation_Transition_linear$closure", 2, 0, 3],
+    Transition_easeOutQuadratic: [function(ratio) {
+      if (typeof ratio !== "number")
+        return H.iae(ratio);
+      ratio = 1 - ratio;
+      return 1 - ratio * ratio;
+    }, "call$1", "animation_Transition_easeOutQuadratic$closure", 2, 0, 3],
+    Transition_easeInOutQuadratic: [function(ratio) {
+      ratio *= 2;
+      return ratio < 1 ? 0.5 * (ratio * ratio) : 0.5 * K.Transition_easeOutQuadratic(ratio - 1) + 0.5;
+    }, "call$1", "animation_Transition_easeInOutQuadratic$closure", 2, 0, 3],
     Transition_easeOutCubic: [function(ratio) {
       ratio = 1 - ratio;
       return 1 - ratio * ratio * ratio;
-    }, "call$1", "animation_Transition_easeOutCubic$closure", 2, 0, 5],
+    }, "call$1", "animation_Transition_easeOutCubic$closure", 2, 0, 3],
     _AnimatableLink: {
       "^": "Object;animatable,nextAnimatableLink"
     },
@@ -10703,15 +10724,14 @@
                     t2._transformationMatrixRefresh = true;
                     break;
                   case 9:
-                    if (value <= 0)
-                      value = 0;
-                    if (value >= 1)
-                      value = 1;
-                    t3._tweenObject._alpha = value;
+                    t3._tweenObject.set$alpha(0, value);
                     break;
                 }
               }
             }
+            t1 = this._onComplete;
+            if (t1 != null && this._currentTime === this._totalTime)
+              t1.call$0();
           }
         }
         return this._currentTime < this._totalTime;
@@ -10723,6 +10743,12 @@
         if (t1 >= t2)
           this.advanceTime$1(t1 - t2);
       }, "call$0", "get$complete", 0, 0, 1],
+      set$delay: function(_, value) {
+        if (!this._started) {
+          this._currentTime = this._currentTime + this._delay - value;
+          this._delay = value;
+        }
+      },
       Tween$3: function(tweenObject, time, transition) {
         if (!J.getInterceptor(this._tweenObject).$isTweenObject)
           throw H.wrapException(P.ArgumentError$("tweenObject"));
@@ -10880,7 +10906,8 @@
         return this._x;
       },
       set$x: ["super$DisplayObject$x", function(_, value) {
-        this._x = value;
+        if (typeof value === "number")
+          this._x = value;
         this._transformationMatrixRefresh = true;
       }],
       get$y: function(_) {
@@ -10889,6 +10916,23 @@
       set$y: function(_, value) {
         this._y = value;
         this._transformationMatrixRefresh = true;
+      },
+      set$pivotX: function(value) {
+        this._pivotX = value;
+        this._transformationMatrixRefresh = true;
+      },
+      set$pivotY: function(value) {
+        this._pivotY = value;
+        this._transformationMatrixRefresh = true;
+      },
+      set$rotation: function(value) {
+        this._rotation = value;
+        this._transformationMatrixRefresh = true;
+      },
+      set$alpha: function(_, value) {
+        if (value <= 0)
+          value = 0;
+        this._alpha = value >= 1 ? 1 : value;
       },
       get$root: function(_) {
         var obj, obj0;
@@ -10946,6 +10990,11 @@
             matrix.setTo$6(scaleX, 0, 0, scaleY, this._x - this._pivotX * scaleX, this._y - this._pivotY * scaleY);
         }
         return this._transformationMatrix;
+      },
+      removeFromParent$0: function() {
+        var t1 = this._parent;
+        if (t1 != null)
+          t1.removeChild$1(this);
       },
       get$bounds: function() {
         return new U.Rectangle0(0, 0, 0, 0, [P.num]);
@@ -11017,23 +11066,18 @@
     DisplayObjectContainer: {
       "^": "InteractiveObject;",
       addChild$1: function(child) {
-        var t1;
         if (child === this)
           throw H.wrapException(P.ArgumentError$("An object cannot be added as a child of itself."));
+        else if (child._parent === this)
+          this._addLocalChild$1(child);
         else {
-          t1 = child._parent;
-          if (t1 === this)
-            this._addLocalChild$1(child);
-          else {
-            if (t1 != null)
-              t1.removeChild$1(child);
-            this._throwIfAncestors$1(child);
-            this._children.push(child);
-            child._parent = this;
-            child.dispatchEvent$1(0, new R.Event("added", true, C.EventPhase_1, null, null, false, false));
-            if (this.get$stage() != null)
-              this._dispatchStageEvents$2(child, "addedToStage");
-          }
+          child.removeFromParent$0();
+          this._throwIfAncestors$1(child);
+          this._children.push(child);
+          child._parent = this;
+          child.dispatchEvent$1(0, new R.Event("added", true, C.EventPhase_1, null, null, false, false));
+          if (this.get$stage() != null)
+            this._dispatchStageEvents$2(child, "addedToStage");
         }
       },
       removeChild$1: function(child) {
@@ -11364,48 +11408,49 @@
           this._stageRenderMode = C.StageRenderMode_3;
       },
       _createRenderContext$2: function(canvas, options) {
-        var t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, renderingContext, exception;
+        var t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, renderingContext, exception;
         t1 = options.renderEngine;
         if (t1 === C.RenderEngine_0)
           try {
-            t1 = new T.Matrix3D(new Float32Array(H._checkLength(16)));
-            t1.setIdentity$0();
-            t2 = H.setRuntimeTypeInfo([], [L._MaskState]);
-            t3 = P.String;
-            t4 = [t3, P.int];
-            t5 = [t3, P.UniformLocation];
-            t6 = new L.RenderProgramSimple(-1, null, null, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t4), new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t5), new L.RenderBufferIndex(new Int16Array(H._checkLength(0)), 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(new Float32Array(H._checkLength(0)), 35048, 0, 0, -1, null, null, null), new L.RenderStatistics(0, 0, 0));
-            t7 = new Int16Array(H._checkLength(0));
-            t8 = new Float32Array(H._checkLength(0));
-            t9 = new Int16Array(H._checkLength(0));
-            t10 = new Float32Array(H._checkLength(0));
-            t11 = new Int16Array(H._checkLength(16384));
-            t12 = new Float32Array(H._checkLength(32768));
-            t13 = H.setRuntimeTypeInfo(new Array(8), [L.RenderTexture]);
-            t14 = H.setRuntimeTypeInfo([], [L.RenderFrameBuffer]);
-            t15 = [L.RenderContextEvent];
-            t1 = new L.RenderContextWebGL(canvas, null, t1, t2, null, null, null, null, true, 0, t6, new L.RenderProgramTinted(-1, null, null, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t4), new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t5), new L.RenderBufferIndex(t7, 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(t8, 35048, 0, 0, -1, null, null, null), new L.RenderStatistics(0, 0, 0)), new L.RenderProgramTriangle(-1, null, null, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t4), new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t5), new L.RenderBufferIndex(t9, 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(t10, 35048, 0, 0, -1, null, null, null), new L.RenderStatistics(0, 0, 0)), new L.RenderBufferIndex(t11, 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(t12, 35048, 0, 0, -1, null, null, null), t13, t14, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, [t3, L.RenderProgram]), new L.RenderStatistics(0, 0, 0), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t15), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t15));
-            t2 = P.ContextEvent;
-            W._EventStreamSubscription$(canvas, "webglcontextlost", t1.get$_onContextLost(), false, t2);
-            W._EventStreamSubscription$(canvas, "webglcontextrestored", t1.get$_onContextRestored(), false, t2);
-            renderingContext = C.CanvasElement_methods.getContext3d$6$alpha$antialias$depth$premultipliedAlpha$preserveDrawingBuffer$stencil(canvas, false, false, false, true, false, true);
+            t1 = options.antialias;
+            t2 = new T.Matrix3D(new Float32Array(H._checkLength(16)));
+            t2.setIdentity$0();
+            t3 = H.setRuntimeTypeInfo([], [L._MaskState]);
+            t4 = P.String;
+            t5 = [t4, P.int];
+            t6 = [t4, P.UniformLocation];
+            t7 = new L.RenderProgramSimple(-1, null, null, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t5), new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t6), new L.RenderBufferIndex(new Int16Array(H._checkLength(0)), 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(new Float32Array(H._checkLength(0)), 35048, 0, 0, -1, null, null, null), new L.RenderStatistics(0, 0, 0));
+            t8 = new Int16Array(H._checkLength(0));
+            t9 = new Float32Array(H._checkLength(0));
+            t10 = new Int16Array(H._checkLength(0));
+            t11 = new Float32Array(H._checkLength(0));
+            t12 = new Int16Array(H._checkLength(16384));
+            t13 = new Float32Array(H._checkLength(32768));
+            t14 = H.setRuntimeTypeInfo(new Array(8), [L.RenderTexture]);
+            t15 = H.setRuntimeTypeInfo([], [L.RenderFrameBuffer]);
+            t16 = [L.RenderContextEvent];
+            t2 = new L.RenderContextWebGL(canvas, null, t2, t3, null, null, null, null, true, 0, t7, new L.RenderProgramTinted(-1, null, null, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t5), new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t6), new L.RenderBufferIndex(t8, 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(t9, 35048, 0, 0, -1, null, null, null), new L.RenderStatistics(0, 0, 0)), new L.RenderProgramTriangle(-1, null, null, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t5), new H.JsLinkedHashMap(0, null, null, null, null, null, 0, t6), new L.RenderBufferIndex(t10, 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(t11, 35048, 0, 0, -1, null, null, null), new L.RenderStatistics(0, 0, 0)), new L.RenderBufferIndex(t12, 35048, 0, 0, -1, null, null, null), new L.RenderBufferVertex(t13, 35048, 0, 0, -1, null, null, null), t14, t15, new H.JsLinkedHashMap(0, null, null, null, null, null, 0, [t4, L.RenderProgram]), new L.RenderStatistics(0, 0, 0), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t16), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t16));
+            t3 = P.ContextEvent;
+            W._EventStreamSubscription$(canvas, "webglcontextlost", t2.get$_onContextLost(), false, t3);
+            W._EventStreamSubscription$(canvas, "webglcontextrestored", t2.get$_onContextRestored(), false, t3);
+            renderingContext = C.CanvasElement_methods.getContext3d$6$alpha$antialias$depth$premultipliedAlpha$preserveDrawingBuffer$stencil(canvas, false, t1, false, true, false, true);
             if (!J.getInterceptor(renderingContext).$isRenderingContext)
               H.throwExpression(new P.StateError("Failed to get WebGL context."));
-            t1._renderingContext = renderingContext;
+            t2._renderingContext = renderingContext;
             renderingContext.enable(3042);
-            t1._renderingContext.disable(2960);
-            t1._renderingContext.disable(2929);
-            t1._renderingContext.disable(2884);
-            t1._renderingContext.pixelStorei(37441, 1);
-            t1._renderingContext.blendFunc(1, 771);
-            t1._activeRenderProgram = t6;
-            t6.activate$1(0, t1);
-            t1._contextValid = true;
-            t2 = $.RenderContextWebGL__globalContextIdentifier + 1;
-            $.RenderContextWebGL__globalContextIdentifier = t2;
-            t1._contextIdentifier = t2;
-            t1.reset$0(0);
-            return t1;
+            t2._renderingContext.disable(2960);
+            t2._renderingContext.disable(2929);
+            t2._renderingContext.disable(2884);
+            t2._renderingContext.pixelStorei(37441, 1);
+            t2._renderingContext.blendFunc(1, 771);
+            t2._activeRenderProgram = t7;
+            t7.activate$1(0, t2);
+            t2._contextValid = true;
+            t1 = $.RenderContextWebGL__globalContextIdentifier + 1;
+            $.RenderContextWebGL__globalContextIdentifier = t1;
+            t2._contextIdentifier = t1;
+            t2.reset$0(0);
+            return t2;
           } catch (exception) {
             H.unwrapException(exception);
             t1 = T.Matrix$fromIdentity();
@@ -11836,7 +11881,7 @@
       }, "call$1", "get$_onTouchEvent", 2, 0, 19],
       _onKeyEvent$1: [function($event) {
         return;
-      }, "call$1", "get$_onKeyEvent", 2, 0, 11],
+      }, "call$1", "get$_onKeyEvent", 2, 0, 5],
       Stage$4$height$options$width: function(canvas, height, options, width) {
         var t1, t2, t3, t4;
         if (!J.getInterceptor(canvas).$isCanvasElement)
@@ -12026,6 +12071,21 @@
         context.beginPath$0(0);
       }
     },
+    GraphicsCommandCircle: {
+      "^": "GraphicsCommand;_drawing$_x,_drawing$_y,_radius,_antiClockwise,_drawing$_graphics",
+      get$x: function(_) {
+        return this._drawing$_x;
+      },
+      get$y: function(_) {
+        return this._drawing$_y;
+      },
+      updateContext$1: function(context) {
+        var t1 = this._radius;
+        context.moveTo$2(0, this._drawing$_x + t1, this._drawing$_y);
+        context.arc$6(0, this._drawing$_x, this._drawing$_y, t1, 0, 6.283185307179586, false);
+        context.closePath$0(0);
+      }
+    },
     GraphicsCommandClosePath: {
       "^": "GraphicsCommand;_drawing$_graphics",
       updateContext$1: function(context) {
@@ -12176,13 +12236,10 @@
         this._path.moveTo$2(0, x, y);
       },
       lineTo$2: function(_, x, y) {
-        var t1, t2;
-        t1 = this._path;
-        t2 = t1._currentSegment;
-        if (t2 == null)
-          t1.moveTo$2(0, x, y);
-        else
-          t2.addVertex$2(x, y);
+        this._path.lineTo$2(0, x, y);
+      },
+      arc$6: function(_, x, y, radius, startAngle, endAngle, antiClockwise) {
+        this._path.arc$6(0, x, y, radius, startAngle, endAngle, false);
       }
     },
     _GraphicsContextBounds: {
@@ -12229,6 +12286,11 @@
       },
       lineTo$2: function(_, x, y) {
         this._canvasContext.lineTo(x, y);
+      },
+      arc$6: function(_, x, y, radius, startAngle, endAngle, antiClockwise) {
+        var t1 = this._canvasContext;
+        t1.toString;
+        t1.arc(x, y, radius, startAngle, endAngle, false);
       },
       fillColor$1: function(color) {
         var t1 = this._canvasContext;
@@ -12398,6 +12460,37 @@
         this._currentSegment = t1;
         t1.addVertex$2(x, y);
         this.segments.push(this._currentSegment);
+      },
+      lineTo$2: function(_, x, y) {
+        var t1 = this._currentSegment;
+        if (t1 == null)
+          this.moveTo$2(0, x, y);
+        else
+          t1.addVertex$2(x, y);
+      },
+      arc$6: function(_, x, y, radius, startAngle, endAngle, antiClockwise) {
+        var start, delta, steps, t1, cosR, sinR, tx, ty, ax, ay, s, bx, by;
+        start = C.JSInt_methods.$mod(startAngle, 6.283185307179586);
+        delta = C.JSNumber_methods.$mod(endAngle, 6.283185307179586) - start;
+        if (endAngle < startAngle) {
+          if (delta <= 0)
+            delta += 6.283185307179586;
+        } else
+          delta = endAngle - startAngle >= 6.283185307179586 ? 6.283185307179586 : C.JSDouble_methods.$mod(delta, 6.283185307179586);
+        steps = C.JSNumber_methods.ceil$0(Math.abs(60 * delta / 6.283185307179586));
+        t1 = delta / steps;
+        cosR = Math.cos(t1);
+        sinR = Math.sin(t1);
+        tx = x - x * cosR + y * sinR;
+        ty = y - x * sinR - y * cosR;
+        ax = x + Math.cos(start) * radius;
+        ay = y + Math.sin(start) * radius;
+        this.lineTo$2(0, ax, ay);
+        for (s = 1; s <= steps; ++s, ay = by, ax = bx) {
+          bx = ax * cosR - ay * sinR + tx;
+          by = ax * sinR + ay * cosR + ty;
+          this._currentSegment.addVertex$2(bx, by);
+        }
       },
       fillColor$2: function(renderState, color) {
         var t1, t2, _i, segment;
@@ -12950,7 +13043,7 @@
         if (!t1.get$_mayAddEvent())
           H.throwExpression(t1._addEventError$0());
         t1._sendData$1(new L.RenderContextEvent());
-      }, "call$1", "get$_onContextLost", 2, 0, 6],
+      }, "call$1", "get$_onContextLost", 2, 0, 11],
       _onContextRestored$1: [function(contextEvent) {
         var t1;
         this._contextValid = true;
@@ -12961,7 +13054,7 @@
         if (!t1.get$_mayAddEvent())
           H.throwExpression(t1._addEventError$0());
         t1._sendData$1(new L.RenderContextEvent());
-      }, "call$1", "get$_onContextRestored", 2, 0, 6]
+      }, "call$1", "get$_onContextRestored", 2, 0, 11]
     },
     RenderFilter: {
       "^": "Object;"
@@ -12979,7 +13072,7 @@
       }
     },
     _globalFrameRequest_closure: {
-      "^": "Closure:23;",
+      "^": "Closure:35;",
       call$1: function(frameTime) {
         var currentFrameTime, t1, deltaTime, t2, _i;
         if (typeof frameTime !== "number")
@@ -15088,12 +15181,9 @@
         }
       }, "call$1", "get$_onMouseDown", 2, 0, 28],
       TextField$2: function(text, textFormat) {
-        var t1;
-        this._text = text;
-        this._caretIndex = text.length;
-        t1 = this._refreshPending |= 3;
+        this.set$text(0, text);
         this._defaultTextFormat = new Y.TextFormat(textFormat.font, textFormat.size, textFormat.color, textFormat.strokeWidth, textFormat.strokeColor, textFormat.fillGradient, textFormat.weight, false, false, false, textFormat.align, textFormat.verticalAlign, textFormat.topMargin, textFormat.bottomMargin, textFormat.leftMargin, textFormat.rightMargin, textFormat.indent, textFormat.leading);
-        this._refreshPending = t1 | 3;
+        this._refreshPending |= 3;
         this.on$1(0, "keyDown").listen$1(this.get$_onKeyDown());
         this.on$1(0, "textInput").listen$1(this.get$_onTextInput());
         this.on$1(0, "mouseDown").listen$1(this.get$_onMouseDown());
@@ -15155,7 +15245,11 @@
             case 0:
               // Function start
               t1 = document;
-              $.stage = A.Stage$(t1.querySelector("#stage"), 18, new A.StageOptions(C.RenderEngine_0, C.InputEventMode_0, C.StageRenderMode_0, C.StageScaleMode_3, C.StageAlign_4, 4294967295, false, false, 5, true, true, false, false), 32);
+              t2 = t1.querySelector("#stage");
+              t3 = new A.StageOptions(C.RenderEngine_0, C.InputEventMode_0, C.StageRenderMode_0, C.StageScaleMode_3, C.StageAlign_4, 4294967295, false, false, 5, true, true, false, false);
+              t3.backgroundColor = 4291611852;
+              t3.antialias = true;
+              $.stage = A.Stage$(t2, 18, t3, 32);
               t2 = [P.num];
               t3 = new K.Juggler(null, null, 0, new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t2));
               t4 = new K._AnimatableLink(null, null);
@@ -15179,19 +15273,32 @@
             case 2:
               // returning from await.
               $.random = C.C__JSRandom;
-              t2 = new N.Game(null);
+              t2 = new N.Game(null, null);
               t2.setLevel$1(N.BaseLevel$());
+              t2.upPressed = false;
               $.stage.on$1(0, "enterFrame").listen$1(t2.get$enterFrame());
-              W._EventStreamSubscription$(t1, "keydown", t2.get$keyDown(), false, W.KeyboardEvent);
+              t3 = W.KeyboardEvent;
+              W._EventStreamSubscription$(t1, "keydown", t2.get$keyDown(), false, t3);
+              W._EventStreamSubscription$(t1, "keyup", t2.get$keyUp(), false, t3);
               $.game = t2;
               // implicit return
               return P._asyncReturn(null, $async$completer);
           }
       });
       return P._asyncStart($async$main, $async$completer);
-    }, "call$0", "main__main$closure", 0, 0, 22],
+    }, "call$0", "main__main$closure", 0, 0, 23],
     BaseLevel: {
-      "^": "Level;blockString,blocks,respawnBlocks,player,scrollX,sprite",
+      "^": "Level;blockString,blocks,respawnBlocks,player,scrollX,countdownText,countdownTime,sprite",
+      resetCountdown$0: function() {
+        this.countdownText.set$x(0, this.player.x + 0.5);
+        this.countdownText.set$y(0, this.player.y - 5);
+        this.countdownText.set$pivotX(5);
+        this.countdownText.set$pivotY(2);
+        var t1 = this.countdownText;
+        t1._width = 10;
+        t1._refreshPending |= 3;
+        this.countdownTime = 3;
+      },
       leftPressed$0: function() {
       },
       upPressed$0: function() {
@@ -15220,7 +15327,10 @@
             if (t7 < 0)
               return H.ioore(t5, t7);
             lastX = t5[t7].x;
-            t7 = lastX < 32 - this.scrollX;
+            t7 = this.scrollX;
+            if (typeof t7 !== "number")
+              return H.iae(t7);
+            t7 = lastX < 32 - t7;
             t5 = t7;
           } else
             t5 = true;
@@ -15260,7 +15370,7 @@
                 t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
                 t8._graphics = t7;
               }
-              command = new U.GraphicsCommandFillColor(4278190080, null);
+              command = new U.GraphicsCommandFillColor(4281545523, null);
               command._drawing$_graphics = t7;
               t7._originalCommands.push(command);
               C.JSArray_methods.set$length(t7._compiledCommands, 0);
@@ -15340,7 +15450,7 @@
                 t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
                 t8._graphics = t7;
               }
-              command = new U.GraphicsCommandFillColor(4278190080, null);
+              command = new U.GraphicsCommandFillColor(4284900966, null);
               command._drawing$_graphics = t7;
               t7._originalCommands.push(command);
               C.JSArray_methods.set$length(t7._compiledCommands, 0);
@@ -15358,7 +15468,7 @@
                 t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
                 t8._graphics = t7;
               }
-              command = new U.GraphicsCommandFillColor(4278190080, null);
+              command = new U.GraphicsCommandFillColor(4281545523, null);
               command._drawing$_graphics = t7;
               t7._originalCommands.push(command);
               C.JSArray_methods.set$length(t7._compiledCommands, 0);
@@ -15439,7 +15549,7 @@
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
                   t8._graphics = t7;
                 }
-                command = new U.GraphicsCommandFillColor(4278190080, null);
+                command = new U.GraphicsCommandFillColor(4284900966, null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
@@ -15484,147 +15594,161 @@
         var t1, t2, t3, removedBlock;
         while (true) {
           t1 = this.blocks;
-          t2 = t1.length;
-          if (t2 > 0) {
-            t3 = this.respawnBlocks;
-            t3 = t3.length > 1 && t3[1].x - 5 < -this.scrollX - 1;
+          if (t1.length > 0) {
+            t2 = this.respawnBlocks;
+            if (t2.length > 1) {
+              t2 = t2[1].x;
+              t3 = this.scrollX;
+              if (typeof t3 !== "number")
+                return t3.$negate();
+              t3 = t2 - 5 < -t3 - 1;
+              t2 = t3;
+            } else
+              t2 = false;
           } else
-            t3 = false;
-          if (!t3)
+            t2 = false;
+          if (!t2)
             break;
           removedBlock = C.JSArray_methods.removeAt$1(t1, 0);
           this.sprite.removeChild$1(removedBlock.sprite);
           if (removedBlock.respawn === true)
             C.JSArray_methods.remove$1(this.respawnBlocks, removedBlock);
         }
-        P.print(t2);
       },
       update$1: function(_, time) {
         var t1, t2, t3, collidingBlock, alive, t4, t5, t6;
-        t1 = this.player;
-        t2 = this.blocks;
-        t3 = t1.velocityY;
-        if (typeof t3 !== "number")
-          return t3.$add();
-        t3 += 150 * time;
-        t1.velocityY = t3;
-        t1.y = t1.y + t3 * time;
-        collidingBlock = t1.getCollidingBlock$1(t2);
-        if (collidingBlock != null) {
-          t1.velocityY = 0;
-          t3 = collidingBlock.height;
-          if (typeof t3 !== "number")
-            return H.iae(t3);
-          t1.y = 18 - t3 - 1;
-          t1.onGround = true;
-          alive = !collidingBlock.spikes || false;
+        t1 = this.countdownTime;
+        if (typeof t1 !== "number")
+          return t1.$gt();
+        if (t1 > 0) {
+          t1 -= time;
+          this.countdownTime = t1;
+          this.countdownText.set$text(0, C.JSInt_methods.toString$0(C.JSNumber_methods.ceil$0(t1)));
         } else {
-          t1.onGround = false;
-          alive = true;
-        }
-        t3 = t1.x;
-        t4 = t1.velocityX;
-        if (typeof t4 !== "number")
-          return t4.$mul();
-        t1.x = t3 + t4 * time;
-        if (t1.getCollidingBlock$1(t2) != null)
-          alive = false;
-        t1.updateSprite$0();
-        t1 = -this.player.x + 5;
-        this.scrollX = t1;
-        this.sprite.set$x(0, t1);
-        this.addBlocks$1(true);
-        this.removeOffscreenBlocks$0();
-        if (!alive) {
           t1 = this.player;
-          t2 = this.respawnBlocks;
-          if (0 >= t2.length)
-            return H.ioore(t2, 0);
-          t2 = t2[0];
-          t3 = t2.x;
-          t2 = t2.height;
-          if (typeof t2 !== "number")
-            return H.iae(t2);
-          t1.resetPhysics$2(t3, 18 - t2 - 1);
-          t2 = $.game;
-          t3 = new N.MiniLevel(null, "    #####\r\n    #Po #\r\n    #o oG\r\n    #   #\r\n    #####\r\n    ", null, null, this, null);
-          t1 = [A.DisplayObject];
-          t4 = H.setRuntimeTypeInfo([], t1);
-          t5 = $.DisplayObject__nextID;
-          $.DisplayObject__nextID = t5 + 1;
-          t6 = [A.BitmapFilter];
-          t5 = new A.Sprite(null, null, null, t4, true, true, false, true, "auto", true, 0, t5, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-          t3.sprite = t5;
-          t1 = H.setRuntimeTypeInfo([], t1);
-          t4 = $.DisplayObject__nextID;
-          $.DisplayObject__nextID = t4 + 1;
-          t6 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-          t3.blockSprite = t6;
-          t5.addChild$1(t6);
-          t3.reset$0(0);
-          t6 = t3.sprite;
-          t5 = Y.TextField$("press [R] to restart", new Y.TextFormat("Comfortaa", 1, 4278190080, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
-          t5.set$x(0, 0);
-          t5.set$y(0, 16);
-          t5._width = 32;
-          t5._refreshPending |= 3;
-          t6.addChild$1(t5);
-          t2.setLevel$1(t3);
+          t2 = this.blocks;
+          t3 = t1.velocityY;
+          if (typeof t3 !== "number")
+            return t3.$add();
+          t3 += 150 * time;
+          t1.velocityY = t3;
+          t1.y = t1.y + t3 * time;
+          collidingBlock = t1.getCollidingBlock$1(t2);
+          if (collidingBlock != null) {
+            t1.velocityY = 0;
+            t3 = collidingBlock.height;
+            if (typeof t3 !== "number")
+              return H.iae(t3);
+            t1.y = 18 - t3 - 1;
+            t1.onGround = true;
+            alive = !collidingBlock.spikes || false;
+            if ($.game.upPressed === true)
+              t1.velocityY = -30;
+          } else {
+            t1.onGround = false;
+            alive = true;
+          }
+          t3 = t1.x;
+          t4 = t1.velocityX;
+          if (typeof t4 !== "number")
+            return t4.$mul();
+          t1.x = t3 + t4 * time;
+          if (t1.getCollidingBlock$1(t2) != null)
+            alive = false;
+          t1.updateSprite$0();
+          this.updateSprite$0();
+          this.addBlocks$1(true);
+          this.removeOffscreenBlocks$0();
+          if (!alive) {
+            t1 = this.player;
+            t2 = this.respawnBlocks;
+            if (0 >= t2.length)
+              return H.ioore(t2, 0);
+            t2 = t2[0];
+            t3 = t2.x;
+            t2 = t2.height;
+            if (typeof t2 !== "number")
+              return H.iae(t2);
+            t1.resetPhysics$2(t3, 18 - t2 - 1);
+            t2 = $.game;
+            t3 = new N.MiniLevel(null, "    #####\r\n    #Po #\r\n    #o oG\r\n    #   #\r\n    #####\r\n    ", null, null, this, null);
+            t1 = [A.DisplayObject];
+            t4 = H.setRuntimeTypeInfo([], t1);
+            t5 = $.DisplayObject__nextID;
+            $.DisplayObject__nextID = t5 + 1;
+            t6 = [A.BitmapFilter];
+            t5 = new A.Sprite(null, null, null, t4, true, true, false, true, "auto", true, 0, t5, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+            t3.sprite = t5;
+            t1 = H.setRuntimeTypeInfo([], t1);
+            t4 = $.DisplayObject__nextID;
+            $.DisplayObject__nextID = t4 + 1;
+            t6 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+            t3.blockSprite = t6;
+            t5.addChild$1(t6);
+            t3.reset$0(0);
+            t6 = t3.sprite;
+            t5 = Y.TextField$("press [R] to restart", new Y.TextFormat("Comfortaa", 1, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+            t5.set$x(0, 0);
+            t5.set$y(0, 16);
+            t5._width = 32;
+            t5._refreshPending |= 3;
+            t6.addChild$1(t5);
+            t3.transitionFromBaseLevel$1(1);
+            t2.setLevel$1(t3);
+          }
         }
       },
+      updateSprite$0: function() {
+        var t1 = -this.player.x + 5;
+        this.scrollX = t1;
+        this.sprite.set$x(0, t1);
+      },
       BaseLevel$0: function() {
-        var t1, t2, t3, t4, t5, t6, command;
+        var t1, t2, t3, t4, command;
         t1 = [A.DisplayObject];
         t2 = H.setRuntimeTypeInfo([], t1);
         t3 = $.DisplayObject__nextID;
         $.DisplayObject__nextID = t3 + 1;
         t4 = [A.BitmapFilter];
         this.sprite = new A.Sprite(null, null, null, t2, true, true, false, true, "auto", true, 0, t3, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-        this.blockString = "33333333333333r333333333333333444444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
+        this.blockString = "333333r3333333333333333333333344r4444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
         t3 = [N.BaseLevelBlock];
         this.blocks = H.setRuntimeTypeInfo([], t3);
         this.respawnBlocks = H.setRuntimeTypeInfo([], t3);
-        this.scrollX = 0;
-        this.addBlocks$1(false);
-        t3 = this.respawnBlocks;
-        if (0 >= t3.length)
-          return H.ioore(t3, 0);
-        t3 = t3[0];
-        t2 = t3.x;
-        t3 = t3.height;
-        if (typeof t3 !== "number")
-          return H.iae(t3);
-        t3 = 18 - t3 - 1;
-        t5 = new N.BaseLevelPlayer(null, t2, t3, null, null, null);
+        t3 = new N.BaseLevelPlayer(null, 6, 14, null, null, null);
         t1 = H.setRuntimeTypeInfo([], t1);
-        t6 = $.DisplayObject__nextID;
-        $.DisplayObject__nextID = t6 + 1;
-        t4 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t6, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-        t5.sprite = t4;
-        t6 = t4.get$graphics();
-        t6.toString;
+        t2 = $.DisplayObject__nextID;
+        $.DisplayObject__nextID = t2 + 1;
+        t4 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+        t3.sprite = t4;
+        t2 = t4.get$graphics();
+        t2.toString;
         command = U.GraphicsCommandRect$(0, 0, 1, 1);
-        command._setGraphics$1(t6);
-        t6._originalCommands.push(command);
-        C.JSArray_methods.set$length(t6._compiledCommands, 0);
-        t6._bounds = null;
-        t4.get$graphics().fillColor$1(4294901760);
-        t5.resetPhysics$2(t2, t3);
-        t5.updateSprite$0();
-        this.player = t5;
-        this.sprite.addChild$1(t5.sprite);
-        this.sprite.set$x(0, this.scrollX);
+        command._setGraphics$1(t2);
+        t2._originalCommands.push(command);
+        C.JSArray_methods.set$length(t2._compiledCommands, 0);
+        t2._bounds = null;
+        t4.get$graphics().fillColor$1(4281959622);
+        t3.resetPhysics$2(6, 14);
+        t3.updateSprite$0();
+        this.player = t3;
+        this.sprite.addChild$1(t3.sprite);
+        this.updateSprite$0();
+        this.addBlocks$1(false);
+        this.countdownText = Y.TextField$("", new Y.TextFormat("Comfortaa", 4, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+        this.resetCountdown$0();
+        this.sprite.addChild$1(this.countdownText);
       },
       static: {
         BaseLevel$: function() {
-          var t1 = new N.BaseLevel(null, null, null, null, null, null);
+          var t1 = new N.BaseLevel(null, null, null, null, null, null, null, null);
           t1.BaseLevel$0();
           return t1;
         }
       }
     },
     BaseLevelPlayer: {
-      "^": "Object;sprite,x>,y>,velocityX,velocityY,onGround",
+      "^": "Object;sprite<,x>,y>,velocityX,velocityY,onGround",
       resetPhysics$2: function(x, y) {
         this.x = x;
         this.y = y;
@@ -15666,14 +15790,12 @@
       }
     },
     BaseLevelBlock: {
-      "^": "Object;x>,height>,spikes,respawn,sprite"
+      "^": "Object;x>,height>,spikes,respawn,sprite<"
     },
     Game: {
-      "^": "Object;currentLevel",
+      "^": "Object;currentLevel,upPressed",
       setLevel$1: function(level) {
-        var t1 = this.currentLevel;
-        if (t1 != null)
-          $.stage.removeChild$1(t1.sprite);
+        $.stage.removeChildren$0();
         this.currentLevel = level;
         $.stage.addChild$1(level.sprite);
       },
@@ -15686,6 +15808,7 @@
             this.currentLevel.leftPressed$0();
             break;
           case 38:
+            this.upPressed = true;
             this.currentLevel.upPressed$0();
             break;
           case 39:
@@ -15698,13 +15821,258 @@
             this.currentLevel.rPressed$0();
             break;
         }
-      }, "call$1", "get$keyDown", 2, 0, 11]
+      }, "call$1", "get$keyDown", 2, 0, 5],
+      keyUp$1: [function($event) {
+        switch (J.get$keyCode$x($event)) {
+          case 38:
+            this.upPressed = false;
+            break;
+        }
+      }, "call$1", "get$keyUp", 2, 0, 5]
     },
     Level: {
-      "^": "Object;"
+      "^": "Object;sprite<"
     },
     MiniLevel: {
       "^": "Level;blockSprite,blockString,player,blocks,baseLevel,sprite",
+      transitionFromBaseLevel$1: function(duration) {
+        var t1, restoreBaseLevelSprite, t2, t3, t4, _i, block, t5, origX, origY, t6, t7, t8, tweenProperty, playerX, playerY;
+        t1 = this.baseLevel;
+        this.sprite.addChild$1(t1.sprite);
+        restoreBaseLevelSprite = new N.MiniLevel_transitionFromBaseLevel_restoreBaseLevelSprite(this);
+        for (t2 = t1.blocks, t3 = t2.length, t4 = [K.TweenProperty], _i = 0; _i < t2.length; t2.length === t3 || (0, H.throwConcurrentModificationError)(t2), ++_i) {
+          block = t2[_i];
+          t5 = block.sprite;
+          origX = t5._x;
+          origY = t5._y;
+          t6 = $.stage.juggler;
+          t7 = new K.Tween(t5, K.animation_Transition_easeOutQuadratic$closure(), H.setRuntimeTypeInfo([], t4), null, null, null, 0, 0, 0, false, false);
+          if (!J.getInterceptor(t5).$isTweenObject)
+            H.throwExpression(P.ArgumentError$("tweenObject"));
+          t7._totalTime = Math.max(0.0001, duration);
+          t5 = t7.get$animate(t7);
+          t8 = t5._tween;
+          tweenProperty = new K.TweenProperty(t5, 0, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._deltaValue = $.random.nextInt$1(32) - 16;
+          t5 = t7.get$animate(t7);
+          t8 = t5._tween;
+          tweenProperty = new K.TweenProperty(t5, 1, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._deltaValue = ($.random.nextInt$1(2) * 2 - 1) * 18;
+          t5 = t7.get$animate(t7);
+          t8 = t5._tween;
+          tweenProperty = new K.TweenProperty(t5, 8, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._deltaValue = $.random.nextDouble$0() * 2 * 3.141592653589793;
+          t5 = t7.get$animate(t7);
+          t8 = t5._tween;
+          tweenProperty = new K.TweenProperty(t5, 9, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._targetValue = 0;
+          t5 = 0.3 + $.random.nextDouble$0() * 0.1;
+          if (!t7._started) {
+            t7._currentTime = t7._currentTime + t7._delay - t5;
+            t7._delay = t5;
+          }
+          t7._onComplete = new N.MiniLevel_transitionFromBaseLevel_closure(restoreBaseLevelSprite, block, origX, origY);
+          t6.add$1(0, t7);
+        }
+        t2 = this.player.sprite;
+        playerX = t2._x;
+        playerY = t2._y;
+        t2.set$x(0, t1.player.sprite._x + t1.sprite._x - this.blockSprite._x);
+        this.player.sprite.set$y(0, t1.player.sprite._y - this.blockSprite._y);
+        this.player.sprite.set$pivotX(0);
+        this.player.sprite.set$pivotY(0);
+        t2 = $.stage.juggler;
+        t3 = K.Tween$(this.player.sprite, duration, K.animation_Transition_easeInOutQuadratic$closure());
+        t5 = t3.get$animate(t3);
+        t5._tween._createTweenProperty$2(t5, 0)._targetValue = playerX;
+        t5 = t3.get$animate(t3);
+        t5._tween._createTweenProperty$2(t5, 1)._targetValue = playerY;
+        t5 = t3.get$animate(t3);
+        t5._tween._createTweenProperty$2(t5, 2)._targetValue = 0.5;
+        t5 = t3.get$animate(t3);
+        t5._tween._createTweenProperty$2(t5, 3)._targetValue = 0.5;
+        t3.set$delay(0, 0.4);
+        t2.add$1(0, t3);
+        t1.player.sprite._visible = false;
+        for (t1 = this.blocks, t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, H.throwConcurrentModificationError)(t1), ++_i)
+          for (t3 = C.JSArray_methods.get$iterator(t1[_i]); t3.moveNext$0();) {
+            block = t3.get$current();
+            if (block != null && !(block instanceof N.MiniLevelPlayer)) {
+              origX = block.get$sprite()._x;
+              origY = block.get$sprite()._y;
+              t5 = block.get$sprite();
+              t5._x = ($.random.nextInt$1(2) * 2 - 1) * 32;
+              t5._transformationMatrixRefresh = true;
+              t5 = block.get$sprite();
+              t5._y = $.random.nextInt$1(18) - 9;
+              t5._transformationMatrixRefresh = true;
+              t5 = block.get$sprite();
+              t5._rotation = $.random.nextDouble$0() * 2 * 3.141592653589793;
+              t5._transformationMatrixRefresh = true;
+              block.get$sprite().set$alpha(0, 0);
+              t5 = $.stage.juggler;
+              t6 = block.get$sprite();
+              t7 = new K.Tween(t6, K.animation_Transition_easeOutQuadratic$closure(), H.setRuntimeTypeInfo([], t4), null, null, null, 0, 0, 0, false, false);
+              if (!J.getInterceptor(t6).$isTweenObject)
+                H.throwExpression(P.ArgumentError$("tweenObject"));
+              t7._totalTime = Math.max(0.0001, duration);
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 0, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = origX;
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 1, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = origY;
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 8, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = 0;
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 9, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = 1;
+              t6 = 0.6 + $.random.nextDouble$0() * 0.2;
+              if (!t7._started) {
+                t7._currentTime = t7._currentTime + t7._delay - t6;
+                t7._delay = t6;
+              }
+              t5.add$1(0, t7);
+            }
+          }
+      },
+      transitionToBaseLevel$1: function(duration) {
+        var t1, t2, t3, t4, _i, block, t5, origX, origY, t6, t7, t8, tweenProperty;
+        t1 = this.baseLevel;
+        t1.player.updateSprite$0();
+        t1.updateSprite$0();
+        t1.sprite._visible = true;
+        t1.countdownText._visible = false;
+        for (t2 = t1.blocks, t3 = t2.length, t4 = [K.TweenProperty], _i = 0; _i < t2.length; t2.length === t3 || (0, H.throwConcurrentModificationError)(t2), ++_i) {
+          block = t2[_i];
+          t5 = block.sprite;
+          origX = t5._x;
+          origY = t5._y;
+          t5._x = $.random.nextInt$1(32) - 16;
+          t5._transformationMatrixRefresh = true;
+          t5 = block.sprite;
+          t5._y = ($.random.nextInt$1(2) * 2 - 1) * 18;
+          t5._transformationMatrixRefresh = true;
+          t5 = block.sprite;
+          t5._rotation = $.random.nextDouble$0() * 2 * 3.141592653589793;
+          t5._transformationMatrixRefresh = true;
+          block.sprite.set$alpha(0, 0);
+          t5 = $.stage.juggler;
+          t6 = block.sprite;
+          t7 = new K.Tween(t6, K.animation_Transition_easeOutQuadratic$closure(), H.setRuntimeTypeInfo([], t4), null, null, null, 0, 0, 0, false, false);
+          if (!J.getInterceptor(t6).$isTweenObject)
+            H.throwExpression(P.ArgumentError$("tweenObject"));
+          t7._totalTime = Math.max(0.0001, duration);
+          t6 = t7.get$animate(t7);
+          t8 = t6._tween;
+          tweenProperty = new K.TweenProperty(t6, 0, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._targetValue = origX;
+          t6 = t7.get$animate(t7);
+          t8 = t6._tween;
+          tweenProperty = new K.TweenProperty(t6, 1, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._targetValue = origY;
+          t6 = t7.get$animate(t7);
+          t8 = t6._tween;
+          tweenProperty = new K.TweenProperty(t6, 8, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._targetValue = 0;
+          t6 = t7.get$animate(t7);
+          t8 = t6._tween;
+          tweenProperty = new K.TweenProperty(t6, 9, 0 / 0, 0 / 0, 0 / 0);
+          if (!t8._started)
+            t8._tweenPropertyList.push(tweenProperty);
+          tweenProperty._targetValue = 1;
+          t6 = 0.6 + $.random.nextDouble$0() * 0.2;
+          if (!t7._started) {
+            t7._currentTime = t7._currentTime + t7._delay - t6;
+            t7._delay = t6;
+          }
+          t5.add$1(0, t7);
+        }
+        t2 = $.stage.juggler;
+        t3 = K.Tween$(this.player.sprite, duration, K.animation_Transition_easeInOutQuadratic$closure());
+        t5 = t3.get$animate(t3);
+        t5._tween._createTweenProperty$2(t5, 0)._targetValue = t1.player.sprite._x + t1.sprite._x - this.blockSprite._x;
+        t5 = t3.get$animate(t3);
+        t5._tween._createTweenProperty$2(t5, 1)._targetValue = t1.player.sprite._y - this.blockSprite._y;
+        t1 = t3.get$animate(t3);
+        t1._tween._createTweenProperty$2(t1, 2)._targetValue = 0;
+        t1 = t3.get$animate(t3);
+        t1._tween._createTweenProperty$2(t1, 3)._targetValue = 0;
+        t3.set$delay(0, 0.4);
+        t3._onComplete = new N.MiniLevel_transitionToBaseLevel_closure(this);
+        t2.add$1(0, t3);
+        for (t1 = this.blocks, t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, H.throwConcurrentModificationError)(t1), ++_i)
+          for (t3 = C.JSArray_methods.get$iterator(t1[_i]); t3.moveNext$0();) {
+            block = t3.get$current();
+            t5 = J.getInterceptor(block);
+            H.printString("" + !!t5.$isMiniLevelGoal);
+            if (block != null && !t5.$isMiniLevelPlayer) {
+              t5 = $.stage.juggler;
+              t6 = block.get$sprite();
+              t7 = new K.Tween(t6, K.animation_Transition_easeOutQuadratic$closure(), H.setRuntimeTypeInfo([], t4), null, null, null, 0, 0, 0, false, false);
+              if (!J.getInterceptor(t6).$isTweenObject)
+                H.throwExpression(P.ArgumentError$("tweenObject"));
+              t7._totalTime = Math.max(0.0001, duration);
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 0, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = ($.random.nextInt$1(2) * 2 - 1) * 32;
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 1, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = $.random.nextInt$1(18) - 9;
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 8, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = $.random.nextDouble$0() * 2 * 3.141592653589793;
+              t6 = t7.get$animate(t7);
+              t8 = t6._tween;
+              tweenProperty = new K.TweenProperty(t6, 9, 0 / 0, 0 / 0, 0 / 0);
+              if (!t8._started)
+                t8._tweenPropertyList.push(tweenProperty);
+              tweenProperty._targetValue = 1;
+              t6 = 0.3 + $.random.nextDouble$0() * 0.1;
+              if (!t7._started) {
+                t7._currentTime = t7._currentTime + t7._delay - t6;
+                t7._delay = t6;
+              }
+              t5.add$1(0, t7);
+            }
+          }
+      },
       reset$0: function(_) {
         var lines, t1, t2, i, chars, j, t3, block, t4, command;
         this.blockSprite.removeChildren$0();
@@ -15753,11 +16121,16 @@
                   t3._graphics = t4;
                   t3 = t4;
                 }
-                command = new U.GraphicsCommandFillColor(4294901760, null);
+                command = new U.GraphicsCommandFillColor(4281959622, null);
                 command._drawing$_graphics = t3;
                 t3._originalCommands.push(command);
                 C.JSArray_methods.set$length(t3._compiledCommands, 0);
                 t3._bounds = null;
+                t3 = block.sprite;
+                t3._pivotX = 0.5;
+                t3._transformationMatrixRefresh = true;
+                t3._pivotY = 0.5;
+                $.stage.juggler.add$1(0, block.createPulsationTween$0());
                 block.won = false;
                 this.player = block;
                 break;
@@ -15773,7 +16146,7 @@
                   t3._graphics = t4;
                   t3 = t4;
                 }
-                command = new U.GraphicsCommandRect(0, 0, 1, C.JSInt_methods.toDouble$0(1), null);
+                command = new U.GraphicsCommandCircle(0.5, 0.5, 0.5, false, null);
                 command._drawing$_graphics = t3;
                 t3._originalCommands.push(command);
                 C.JSArray_methods.set$length(t3._compiledCommands, 0);
@@ -15787,7 +16160,7 @@
                   t3._graphics = t4;
                   t3 = t4;
                 }
-                command = new U.GraphicsCommandFillColor(4294902015, null);
+                command = new U.GraphicsCommandFillColor(4293243700, null);
                 command._drawing$_graphics = t3;
                 t3._originalCommands.push(command);
                 C.JSArray_methods.set$length(t3._compiledCommands, 0);
@@ -15813,22 +16186,22 @@
       leftPressed$0: function() {
         this.player.move$3(-1, 0, this.blocks);
         if (this.player.won === true)
-          $.game.setLevel$1(this.baseLevel);
+          this.transitionToBaseLevel$1(1);
       },
       upPressed$0: function() {
         this.player.move$3(0, -1, this.blocks);
         if (this.player.won === true)
-          $.game.setLevel$1(this.baseLevel);
+          this.transitionToBaseLevel$1(1);
       },
       rightPressed$0: function() {
         this.player.move$3(1, 0, this.blocks);
         if (this.player.won === true)
-          $.game.setLevel$1(this.baseLevel);
+          this.transitionToBaseLevel$1(1);
       },
       downPressed$0: function() {
         this.player.move$3(0, 1, this.blocks);
         if (this.player.won === true)
-          $.game.setLevel$1(this.baseLevel);
+          this.transitionToBaseLevel$1(1);
       },
       rPressed$0: function() {
         this.reset$0(0);
@@ -15836,8 +16209,34 @@
       update$1: function(_, time) {
       }
     },
+    MiniLevel_transitionFromBaseLevel_restoreBaseLevelSprite: {
+      "^": "Closure:30;$this",
+      call$3: function(sprite, x, y) {
+        sprite.set$x(0, x);
+        sprite.set$y(0, y);
+        sprite.set$rotation(0);
+        sprite.set$alpha(0, 1);
+        this.$this.baseLevel.sprite._visible = false;
+      }
+    },
+    MiniLevel_transitionFromBaseLevel_closure: {
+      "^": "Closure:0;restoreBaseLevelSprite,block,origX,origY",
+      call$0: function() {
+        return this.restoreBaseLevelSprite.call$3(this.block.get$sprite(), this.origX, this.origY);
+      }
+    },
+    MiniLevel_transitionToBaseLevel_closure: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        var t1 = this.$this.baseLevel;
+        t1.player.sprite._visible = true;
+        t1.countdownText._visible = true;
+        t1.resetCountdown$0();
+        $.game.setLevel$1(t1);
+      }
+    },
     MiniLevelBlock: {
-      "^": "Object;sprite,x>,y>,movable",
+      "^": "Object;sprite<,x>,y>,movable",
       move$3: function(dx, dy, blocks) {
         var t1, t2, adjacientBlock, t3, t4;
         if (this.movable === true) {
@@ -15908,9 +16307,9 @@
           t1._bounds = null;
           t1 = this.sprite;
           if (this.movable === true)
-            t1.get$graphics().fillColor$1(4278255360);
+            t1.get$graphics().fillColor$1(4288568832);
           else
-            t1.get$graphics().fillColor$1(4278190335);
+            t1.get$graphics().fillColor$1(4281545523);
         }
         this.updateSprite$1(false);
       },
@@ -15923,12 +16322,59 @@
       }
     },
     MiniLevelPlayer: {
-      "^": "MiniLevelBlock;won,sprite,x,y,movable"
+      "^": "MiniLevelBlock;won,sprite,x,y,movable",
+      updateSprite$1: function(animate) {
+        var t1, t2, t3;
+        t1 = this.sprite;
+        if (animate) {
+          t2 = $.stage.juggler;
+          t1 = K.Tween$(t1, 0.1, K.animation_Transition_easeOutCubic$closure());
+          t3 = t1.get$animate(t1);
+          t3._tween._createTweenProperty$2(t3, 0)._targetValue = this.x + 0.5;
+          t3 = t1.get$animate(t1);
+          t3._tween._createTweenProperty$2(t3, 1)._targetValue = this.y + 0.5;
+          t2.add$1(0, t1);
+        } else {
+          t1.set$x(0, this.x + 0.5);
+          this.sprite.set$y(0, this.y + 0.5);
+        }
+      },
+      createPulsationTween$0: function() {
+        var t1, t2;
+        t1 = K.Tween$(this.sprite, 0.5, K.animation_Transition_easeInOutQuadratic$closure());
+        t2 = t1.get$animate(t1);
+        t2._tween._createTweenProperty$2(t2, 4)._targetValue = 0.8;
+        t2 = t1.get$animate(t1);
+        t2._tween._createTweenProperty$2(t2, 5)._targetValue = 0.8;
+        t1._onComplete = new N.MiniLevelPlayer_createPulsationTween_closure(this);
+        return t1;
+      }
+    },
+    MiniLevelPlayer_createPulsationTween_closure: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        var t1, t2, t3, t4;
+        t1 = $.stage.juggler;
+        t2 = this.$this;
+        t3 = K.Tween$(t2.sprite, 0.5, K.animation_Transition_easeInOutQuadratic$closure());
+        t4 = t3.get$animate(t3);
+        t4._tween._createTweenProperty$2(t4, 4)._targetValue = 1;
+        t4 = t3.get$animate(t3);
+        t4._tween._createTweenProperty$2(t4, 5)._targetValue = 1;
+        t3._onComplete = new N.MiniLevelPlayer_createPulsationTween__closure(t2);
+        return t1.add$1(0, t3);
+      }
+    },
+    MiniLevelPlayer_createPulsationTween__closure: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        return $.stage.juggler.add$1(0, this.$this.createPulsationTween$0());
+      }
     },
     MiniLevelGoal: {
       "^": "MiniLevelBlock;sprite,x,y,movable",
       move$3: function(dx, dy, blocks) {
-        var t1, t2;
+        var t1, t2, t3;
         t1 = this.x - dx;
         if (t1 < 0 || t1 >= blocks.length)
           return H.ioore(blocks, t1);
@@ -15939,9 +16385,23 @@
         t2 = t1[t2];
         if (t2 instanceof N.MiniLevelPlayer) {
           t2.won = true;
+          t1 = $.stage.juggler;
+          t2 = K.Tween$(this.sprite, 0.3, K.animation_Transition_easeOutQuadratic$closure());
+          t3 = t2.get$animate(t2);
+          t3._tween._createTweenProperty$2(t3, 1)._deltaValue = 2;
+          t3 = t2.get$animate(t2);
+          t3._tween._createTweenProperty$2(t3, 9)._targetValue = 0;
+          t2._onComplete = new N.MiniLevelGoal_move_closure(this);
+          t1.add$1(0, t2);
           return true;
         }
         return false;
+      }
+    },
+    MiniLevelGoal_move_closure: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        return this.$this.sprite.removeFromParent$0();
       }
     }
   }, 1]];
@@ -16430,7 +16890,7 @@
   Isolate = Isolate.$finishIsolateConstructor(Isolate);
   $ = new Isolate();
   init.metadata = [null, 0];
-  init.types = [{func: 1}, {func: 1, v: true}, {func: 1, args: [,]}, {func: 1, args: [,,]}, {func: 1, v: true, args: [{func: 1, v: true}]}, {func: 1, ret: P.num, args: [P.num]}, {func: 1, v: true, args: [P.ContextEvent]}, {func: 1, args: [, P.StackTrace]}, {func: 1, v: true, opt: [,]}, {func: 1, v: true, args: [P.Object], opt: [P.StackTrace]}, {func: 1, ret: P.String, args: [P.int]}, {func: 1, v: true, args: [W.KeyboardEvent]}, {func: 1, v: true, args: [W.Event0]}, {func: 1, v: true, args: [, P.StackTrace]}, {func: 1, ret: W.Node}, {func: 1, args: [P.String,,]}, {func: 1, args: [P.num, P.num]}, {func: 1, v: true, args: [W.MouseEvent]}, {func: 1, v: true, args: [W.WheelEvent]}, {func: 1, v: true, args: [W.TouchEvent]}, {func: 1, args: [P.int,,]}, {func: 1, v: true, args: [A.BitmapData]}, {func: 1, ret: [P.Future, P.Null]}, {func: 1, args: [P.num]}, {func: 1, v: true, args: [P.num]}, {func: 1, args: [,], opt: [,]}, {func: 1, v: true, args: [R.KeyboardEvent0]}, {func: 1, v: true, args: [R.TextEvent0]}, {func: 1, v: true, args: [R.MouseEvent0]}, {func: 1, v: true, args: [R.EnterFrameEvent]}, {func: 1, ret: P.num}, {func: 1, args: [, P.String]}, {func: 1, ret: P.String, args: [W.EventTarget]}, {func: 1, args: [P.String]}, {func: 1, args: [{func: 1, v: true}]}];
+  init.types = [{func: 1}, {func: 1, v: true}, {func: 1, args: [,]}, {func: 1, ret: P.num, args: [P.num]}, {func: 1, args: [,,]}, {func: 1, v: true, args: [W.KeyboardEvent]}, {func: 1, v: true, args: [{func: 1, v: true}]}, {func: 1, args: [, P.StackTrace]}, {func: 1, v: true, opt: [,]}, {func: 1, v: true, args: [P.Object], opt: [P.StackTrace]}, {func: 1, ret: P.String, args: [P.int]}, {func: 1, v: true, args: [P.ContextEvent]}, {func: 1, v: true, args: [W.Event0]}, {func: 1, args: [,], opt: [,]}, {func: 1, ret: W.Node}, {func: 1, args: [P.String,,]}, {func: 1, args: [P.num, P.num]}, {func: 1, v: true, args: [W.MouseEvent]}, {func: 1, v: true, args: [W.WheelEvent]}, {func: 1, v: true, args: [W.TouchEvent]}, {func: 1, args: [{func: 1, v: true}]}, {func: 1, v: true, args: [A.BitmapData]}, {func: 1, args: [, P.String]}, {func: 1, ret: [P.Future, P.Null]}, {func: 1, v: true, args: [P.num]}, {func: 1, args: [P.int,,]}, {func: 1, v: true, args: [R.KeyboardEvent0]}, {func: 1, v: true, args: [R.TextEvent0]}, {func: 1, v: true, args: [R.MouseEvent0]}, {func: 1, v: true, args: [R.EnterFrameEvent]}, {func: 1, v: true, args: [A.Sprite, P.num, P.num]}, {func: 1, ret: P.num}, {func: 1, v: true, args: [, P.StackTrace]}, {func: 1, ret: P.String, args: [W.EventTarget]}, {func: 1, args: [P.String]}, {func: 1, args: [P.num]}];
   function convertToFastObject(properties) {
     function MyClass() {
     }

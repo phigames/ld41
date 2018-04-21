@@ -6,26 +6,26 @@ class Game {
   static const int WIDTH = 32, HEIGHT = 18;
 
   Level currentLevel;
+  bool upPressed;
 
   Game() {
     setLevel(new BaseLevel());
-    //currentLevel = new MiniLevel(MiniLevel.LEVEL_1);
-    //stage.addChild(currentLevel.sprite);
-
+    upPressed = false;
     stage.onEnterFrame.listen(enterFrame);
     html.document.onKeyDown.listen(keyDown);
+    html.document.onKeyUp.listen(keyUp);
   }
 
   void setLevel(Level level) {
-    if (currentLevel != null) {
-      stage.removeChild(currentLevel.sprite);
-    }
+    stage.removeChildren();
     currentLevel = level;
     stage.addChild(level.sprite);
   }
 
   void enterFrame(EnterFrameEvent event) {
-    currentLevel.update(event.passedTime);
+    //if (event.passedTime < 0.1) { // skip lagging frames
+      currentLevel.update(event.passedTime);
+    //}
   }
 
   void keyDown(html.KeyboardEvent event) {
@@ -34,6 +34,7 @@ class Game {
         currentLevel.leftPressed();
         break;
       case html.KeyCode.UP:
+        upPressed = true;
         currentLevel.upPressed();
         break;
       case html.KeyCode.RIGHT:
@@ -44,6 +45,14 @@ class Game {
         break;
       case html.KeyCode.R:
         currentLevel.rPressed();
+        break;
+    }
+  }
+
+  void keyUp(html.KeyboardEvent event) {
+    switch (event.keyCode) {
+      case html.KeyCode.UP:
+        upPressed = false;
         break;
     }
   }

@@ -21,8 +21,9 @@ Future<Null> main() async {
     html.querySelector('#stage'),
     width: Game.WIDTH, height: Game.HEIGHT,
     options: new StageOptions()
-      ..backgroundColor = Color.White
-      ..renderEngine = RenderEngine.WebGL);
+      ..backgroundColor = 0xFFCCCCCC
+      ..renderEngine = RenderEngine.WebGL
+      ..antialias = true);
 
   renderLoop = new RenderLoop();
   renderLoop.addStage(stage);
