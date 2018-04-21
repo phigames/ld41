@@ -30,7 +30,7 @@ class MiniLevel extends Level {
     sprite.addChild(blockSprite);
     reset();
     sprite.addChild(
-      new TextField("press [R] to restart", new TextFormat("Roboto", 1, 0xFF000000, align: "center"))
+      new TextField("press [R] to restart", new TextFormat("Comfortaa", 1, 0xFF000000, align: "center"))
         ..x = 0
         ..y = Game.HEIGHT - 2
         ..width = Game.WIDTH

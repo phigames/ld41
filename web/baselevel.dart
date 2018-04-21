@@ -9,7 +9,7 @@ class BaseLevel extends Level {
    * s = spikes
    * r = respawn
    */
-  static final RegExp BLOCK_REGEXP = new RegExp(r"(\d)([rs]*)");
+  static final RegExp BLOCK_REGEXP = new RegExp(r"(\d)([rs]?)");
 
   String blockString;
   List<BaseLevelBlock> blocks;
@@ -19,12 +19,12 @@ class BaseLevel extends Level {
 
   BaseLevel() {
     sprite = new Sprite();
-    blockString = "333333r333333333r33333344444r44444444r33333331234";
+    blockString = "333333r333333333333333444s4444444444s33333331234";
     blocks = new List<BaseLevelBlock>();
     respawnBlocks = new List<BaseLevelBlock>();
     scrollX = 0;
     addBlocks(false);
-    player = new BaseLevelPlayer(5, 5);
+    player = new BaseLevelPlayer(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
     sprite.addChild(player.sprite);
     updateSprite();
   }
@@ -47,8 +47,8 @@ class BaseLevel extends Level {
       Match match = BLOCK_REGEXP.matchAsPrefix(blockString);
       if (match != null) {
         int blockHeight = int.parse(match.group(1));
-        bool spikes = match.group(2).contains("s");
-        bool respawn = match.group(2).contains("r");
+        bool spikes = match.group(2) == "s";
+        bool respawn = match.group(2) == "r";
         BaseLevelBlock block = new BaseLevelBlock(lastX + 1, blockHeight, spikes, respawn, animate);
         blocks.add(block);
         sprite.addChild(block.sprite);
@@ -78,14 +78,13 @@ class BaseLevel extends Level {
   }
 
   void update(num time) {
-    bool alive = player.updateMovement(time, blocks);
+    bool alive = player.updatePhysics(time, blocks);
     scrollX = (-player.x + LEFT_MARGIN);
     updateSprite();
     addBlocks(true);
     removeOffscreenBlocks();
     if (!alive) {
-      player.x = respawnBlocks[0].x;
-      player.y = Game.HEIGHT - respawnBlocks[0].height - 1;
+      player.resetPhysics(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
       game.setLevel(new MiniLevel(MiniLevel.LEVEL_1, this));
     }
   }
@@ -111,10 +110,16 @@ class BaseLevelPlayer {
     sprite = new Sprite();
     sprite.graphics.rect(0, 0, 1, 1);
     sprite.graphics.fillColor(0xFFFF0000);
+    resetPhysics(x, y);
+    updateSprite();
+  }
+
+  void resetPhysics(num x, num y) {
+    this.x = x;
+    this.y = y;
     velocityX = SPEED;
     velocityY = 0;
     onGround = false;
-    updateSprite();
   }
 
   void jump() {
@@ -123,7 +128,7 @@ class BaseLevelPlayer {
     }
   }
 
-  bool updateMovement(num time, List<BaseLevelBlock> blocks) {
+  bool updatePhysics(num time, List<BaseLevelBlock> blocks) {
     bool alive = true;
     // move y
     velocityY += GRAVITY * time;
@@ -134,6 +139,9 @@ class BaseLevelPlayer {
       velocityY = 0;
       y = Game.HEIGHT - collidingBlock.height - 1;
       onGround = true;
+      if (collidingBlock.spikes) {
+        alive = false;
+      }
     } else {
       onGround = false;
     }
@@ -149,10 +157,19 @@ class BaseLevelPlayer {
   }
 
   BaseLevelBlock getCollidingBlock(List<BaseLevelBlock> blocks) {
+    BaseLevelBlock spikesBlock = null;
     for (BaseLevelBlock block in blocks) {
       if (x > block.x - 1 && x < block.x + 1 && y + 1 > Game.HEIGHT - block.height) {
-        return block;
+        if (block.spikes) {
+          spikesBlock = block;
+        } else {
+          return block;
+        }
       }
+    }
+    // be nice to the player: only collide with spikes when there is no other collision
+    if (spikesBlock != null) {
+      return spikesBlock;
     }
     return null;
   }
@@ -172,11 +189,30 @@ class BaseLevelBlock {
 
   BaseLevelBlock(this.x, this.height, this.spikes, this.respawn, bool animate) {
     sprite = new Sprite();
-    sprite.graphics.rect(0, 0, 1, -height);
-    if (respawn) {
-      sprite.graphics.fillColor(0xFF0000FF);
-    } else {
+    if (spikes) {
+      sprite.graphics.rect(0, 0, 1, -height + 1);
       sprite.graphics.fillColor(0xFF000000);
+      sprite.graphics.beginPath();
+      sprite.graphics.moveTo(0, -height + 1);
+      sprite.graphics.lineTo(0.25, -height);
+      sprite.graphics.lineTo(0.5, -height + 1);
+      sprite.graphics.lineTo(0.75, -height);
+      sprite.graphics.lineTo(1, -height + 1);
+      sprite.graphics.closePath();
+      sprite.graphics.fillColor(0xFF000000);
+    } else {
+      sprite.graphics.rect(0, 0, 1, -height);
+      sprite.graphics.fillColor(0xFF000000);
+      if (respawn) {
+        sprite.graphics.beginPath();
+        sprite.graphics.moveTo(0.4, -height);
+        sprite.graphics.lineTo(0.4, -height - 1);
+        sprite.graphics.lineTo(1, -height - 0.7);
+        sprite.graphics.lineTo(0.6, -height - 0.7);
+        sprite.graphics.lineTo(0.6, -height);
+        sprite.graphics.closePath();
+        sprite.graphics.fillColor(0xFF000000);
+      }
     }
     sprite.x = x;
     sprite.y = Game.HEIGHT;
