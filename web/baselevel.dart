@@ -1,29 +1,34 @@
 part of ld41;
 
-class BaseLevel {
+class BaseLevel extends Level {
 
   static final RegExp blockRegex = new RegExp(r"\d");
 
-  Sprite sprite;
+  BaseLevelPlayer player;
   String blockString;
   List<BaseLevelBlock> blocks;
-  BaseLevelPlayer player;
   num scrollX;
 
   BaseLevel() {
     sprite = new Sprite();
+    player = new BaseLevelPlayer();
     blockString = "333333333333333333333444444444444433333331234";
     blocks = new List<BaseLevelBlock>();
-    player = new BaseLevelPlayer();
     sprite.addChild(player.sprite);
     scrollX = 0;
     addBlocks();
     updateSprite();
   }
 
+  void leftPressed() { }
+
   void upPressed() {
     player.jump();
   }
+
+  void rightPressed() { }
+
+  void downPressed() { }
 
   void addBlocks() {
     int lastX = 0;
@@ -93,6 +98,7 @@ class BaseLevelPlayer {
   }
 
   bool updateMovement(List<BaseLevelBlock> blocks) {
+    bool alive = true;
     // move y
     velocityY += GRAVITY;
     pos += new Vector(0, velocityY);
@@ -110,10 +116,10 @@ class BaseLevelPlayer {
     collidingBlock = getCollidingBlock(blocks);
     // hit a block from the side?
     if (collidingBlock != null) {
-      return false;
+      alive = false;
     }
     updateSprite();
-    return true;
+    return alive;
   }
 
   BaseLevelBlock getCollidingBlock(List<BaseLevelBlock> blocks) {

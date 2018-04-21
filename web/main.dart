@@ -7,6 +7,7 @@ import 'dart:math';
 
 part 'game.dart';
 part 'baselevel.dart';
+part 'minilevel.dart';
 
 Stage stage;
 RenderLoop renderLoop;
