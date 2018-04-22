@@ -17,12 +17,58 @@ class MiniLevel extends Level {
     #   #
     #####
     """;
+  static const String LEVEL_2 =
+    """
+    ######
+    # o  #
+    #o o G
+    #Poo #
+    ######
+    """;
+  static const String LEVEL_3 =
+    """
+    #######
+    ## Po #
+    # oo ##
+    ## ooG
+    ##  o #
+    ## ####
+    #######
+    """;
+  static const String LEVEL_4 =
+    """
+    ######
+    ## o #
+    # oo #
+    # # ##
+    #  oG
+    ## o##
+    ## oP#
+    ## o #
+    ######
+    """;
+  /* static const String LEVEL_5 =
+    """
+    #### ##
+    #  # ##
+    #   o G
+    #  #o##
+    #   o #
+    #ooPo #
+    # #o  #
+    #  #  #
+    #     #
+    #######
+    """; */
+
+  static final List<String> LEVELS = [ LEVEL_1, LEVEL_2, LEVEL_3, LEVEL_4 ];
 
   Sprite blockSprite;
   String blockString;
   MiniLevelPlayer player;
   List<List<MiniLevelBlock>> blocks;
   BaseLevel baseLevel;
+  bool won;
 
   MiniLevel(this.blockString, this.baseLevel) {
     sprite = new Sprite();
@@ -64,14 +110,10 @@ class MiniLevel extends Level {
     num playerY = player.sprite.y;
     player.sprite.x = baseLevel.player.sprite.x + baseLevel.sprite.x - blockSprite.x;
     player.sprite.y = baseLevel.player.sprite.y - blockSprite.y;
-    player.sprite.pivotX = 0;
-    player.sprite.pivotY = 0;
     stage.juggler.add(
       new Tween(player.sprite, duration, Transition.easeInOutQuadratic)
         ..animate.x.to(playerX)
         ..animate.y.to(playerY)
-        ..animate.pivotX.to(0.5)
-        ..animate.pivotY.to(0.5)
         ..delay = 0.4
     );
     baseLevel.player.sprite.visible = false;
@@ -123,8 +165,6 @@ class MiniLevel extends Level {
       new Tween(player.sprite, duration, Transition.easeInOutQuadratic)
         ..animate.x.to(baseLevel.player.sprite.x + baseLevel.sprite.x - blockSprite.x)
         ..animate.y.to(baseLevel.player.sprite.y - blockSprite.y)
-        ..animate.pivotX.to(0)
-        ..animate.pivotY.to(0)
         ..delay = 0.4
         ..onComplete = () {
           baseLevel.player.sprite.visible = true;
@@ -136,7 +176,6 @@ class MiniLevel extends Level {
     
     for (List<MiniLevelBlock> row in blocks) {
       for (MiniLevelBlock block in row) {
-        print(block is MiniLevelGoal);
         if (block != null && !(block is MiniLevelPlayer)) {
           stage.juggler.add(
             new Tween(block.sprite, duration, Transition.easeOutQuadratic)
@@ -190,33 +229,44 @@ class MiniLevel extends Level {
   }
 
   void leftPressed() {
-    player.move(-1, 0, blocks);
-    checkWon();
+    if (!won) {
+      player.move(-1, 0, blocks);
+      checkWon();
+    }
   }
 
   void upPressed() {
-    player.move(0, -1, blocks);
-    checkWon();
+    if (!won) {
+      player.move(0, -1, blocks);
+      checkWon();
+    }
   }
 
   void rightPressed() {
-    player.move(1, 0, blocks);
-    checkWon();
+    if (!won) {
+      player.move(1, 0, blocks);
+      checkWon();
+    }
   }
 
   void downPressed() {
-    player.move(0, 1, blocks);
-    checkWon();
+    if (!won) {
+      player.move(0, 1, blocks);
+      checkWon();
+    }
   }
 
   void rPressed() {
-    reset();
+    if (!won) {
+      reset();
+    }
   }
 
   void update(num time) { }
 
   void checkWon() {
     if (player.won) {
+      won = true;
       transitionToBaseLevel(1);
     } 
   }
@@ -305,12 +355,12 @@ class MiniLevelPlayer extends MiniLevelBlock {
 
   Tween createPulsationTween() {
     return new Tween(sprite, 0.5, Transition.easeInOutQuadratic)
-      ..animate.scaleX.to(0.8)
-      ..animate.scaleY.to(0.8)
+      ..animate.scaleX.to(0.6)
+      ..animate.scaleY.to(0.6)
       ..onComplete = () =>
         stage.juggler.add(new Tween(sprite, 0.5, Transition.easeInOutQuadratic)
-          ..animate.scaleX.to(1)
-          ..animate.scaleY.to(1)
+          ..animate.scaleX.to(0.8)
+          ..animate.scaleY.to(0.8)
           ..onComplete = () => stage.juggler.add(createPulsationTween())
         );
   }
@@ -319,10 +369,10 @@ class MiniLevelPlayer extends MiniLevelBlock {
 
 class MiniLevelGoal extends MiniLevelBlock {
 
-  static const int COLOR = 0xFFE5B334;
+  static const int COLOR = 0xFFEFB834;
 
   MiniLevelGoal(int x, int y) : super(x, y, false, false) {
-    sprite.graphics.circle(0.5, 0.5, 0.5);
+    sprite.graphics.circle(0.5, 0.5, 0.4);
     sprite.graphics.fillColor(COLOR);
   }
 

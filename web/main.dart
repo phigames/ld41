@@ -29,8 +29,7 @@ Future<Null> main() async {
   renderLoop.addStage(stage);
   
   resources = new ResourceManager();
-  //resources.addBitmapData('name', 'images/name.png');
-  //resources.addSound('name', 'sounds/name.png');
+  resources.addSound('song', 'sounds/song.ogg');
 
   await resources.load();
 

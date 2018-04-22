@@ -10,6 +10,12 @@ class BaseLevel extends Level {
    * r = respawn
    */
   static final RegExp BLOCK_REGEXP = new RegExp(r"(\d)([rs]?)");
+  
+  static const String LEVEL = 
+    "333333r333333333333333333333333333333333334444444455555555533s3s33333333333334s33333333333332s2s33r333333" +
+    "4444444455555555666666667s7s666666661s1s666666667s7s666666661s1s66666666";
+
+  static const String STAIRS = "111111r11111122223333444455556666777788889999";
 
   String blockString;
   List<BaseLevelBlock> blocks;
@@ -18,10 +24,11 @@ class BaseLevel extends Level {
   num scrollX;
   TextField countdownText;
   num countdownTime;
+  int miniLevelIndex;
 
   BaseLevel() {
     sprite = new Sprite();
-    blockString = "333333r3333333333333333333333344r4444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
+    blockString = LEVEL;
     blocks = new List<BaseLevelBlock>();
     respawnBlocks = new List<BaseLevelBlock>();
     //player = new BaseLevelPlayer(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
@@ -30,17 +37,18 @@ class BaseLevel extends Level {
     updateSprite();
     addBlocks(false);
     countdownText = new TextField("", new TextFormat("Comfortaa", 4, BaseLevelBlock.COLOR_BLOCK, align: "center"));
+    countdownText.pivotX = 5;
+    countdownText.pivotY = 2;
+    countdownText.width = 10;
     resetCountdown();
     sprite.addChild(countdownText);
+    miniLevelIndex = 0;
   }
 
   void resetCountdown() {
     countdownText.x = player.x + 0.5;
     countdownText.y = player.y - 5;
-    countdownText.pivotX = 5;
-    countdownText.pivotY = 2;
-    countdownText.width = 10;
-    countdownTime = 3;
+    countdownTime = 3.1;
   }
 
   void leftPressed() { }
@@ -92,8 +100,24 @@ class BaseLevel extends Level {
 
   void update(num time) {
     if (countdownTime > 0) {
-      countdownTime -= time;
-      countdownText.text = countdownTime.ceil().toString();
+      int before = countdownTime.ceil();
+      countdownTime -= time * 13 / 8; // ?
+      int after = countdownTime.ceil();
+      if (after != before) {
+        if (after > 0) {
+          countdownText.text = after.toString();
+        } else {
+          countdownText.text = "GO";
+        }
+        /* countdownText.scaleX = countdownText.scaleY = 1;
+        countdownText.alpha = 1;
+        stage.juggler.add(
+          new Tween(countdownText, 0.8, Transition.easeOutQuadratic)
+            ..animate.scaleX.to(0.7)
+            ..animate.scaleY.to(0.7)
+            ..animate.alpha.to(0)
+        ); */
+      }
     } else {
       bool alive = player.updatePhysics(time, blocks);
       updateSprite();
@@ -101,7 +125,11 @@ class BaseLevel extends Level {
       removeOffscreenBlocks();
       if (!alive) {
         player.resetPhysics(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
-        game.setLevel(new MiniLevel(MiniLevel.LEVEL_1, this));
+        game.setLevel(new MiniLevel(MiniLevel.LEVELS[miniLevelIndex], this));
+        miniLevelIndex++;
+        if (miniLevelIndex >= MiniLevel.LEVELS.length) {
+          miniLevelIndex = 0;
+        }
       }
     }
   }
@@ -116,7 +144,7 @@ class BaseLevel extends Level {
 class BaseLevelPlayer {
 
   static const int COLOR = 0xFF3984C6;
-  static const num GRAVITY = 150;
+  static const num GRAVITY = 170;//150;
   static const num JUMP = -30;
   static const num SPEED = 13; // 780 blocks/min -> ♩ = 195?
 
@@ -129,6 +157,8 @@ class BaseLevelPlayer {
     sprite = new Sprite();
     sprite.graphics.rect(0, 0, 1, 1);
     sprite.graphics.fillColor(COLOR);
+    sprite.pivotX = 0.5;
+    sprite.pivotY = 0.5;
     resetPhysics(x, y);
     updateSprite();
   }
@@ -182,10 +212,14 @@ class BaseLevelPlayer {
   BaseLevelBlock getCollidingBlock(List<BaseLevelBlock> blocks) {
     BaseLevelBlock spikesBlock = null;
     for (BaseLevelBlock block in blocks) {
-      if (x > block.x - 1 && x < block.x + 1 && y + 1 > Game.HEIGHT - block.height) {
-        if (block.spikes) {
+      if (block.spikes) {
+        // higher tolerance for spikes
+        num tolerance = 0.2;
+        if (x + 1 > block.x + tolerance && x < block.x + 1 - tolerance && y + 1 > Game.HEIGHT - block.height + tolerance) {
           spikesBlock = block;
-        } else {
+        }
+      } else {
+        if (x + 1 > block.x && x < block.x + 1 && y + 1 > Game.HEIGHT - block.height) {
           return block;
         }
       }
@@ -198,8 +232,8 @@ class BaseLevelPlayer {
   }
 
   void updateSprite() {
-    sprite.x = x;
-    sprite.y = y;
+    sprite.x = x + 0.5;
+    sprite.y = y + 0.5;
   }
 
 }
