@@ -111,7 +111,7 @@ class MiniLevel extends Level {
     player.sprite.x = baseLevel.player.sprite.x + baseLevel.sprite.x - blockSprite.x;
     player.sprite.y = baseLevel.player.sprite.y - blockSprite.y;
     stage.juggler.add(
-      new Tween(player.sprite, duration, Transition.easeInOutQuadratic)
+      new Tween(player.sprite, duration + 0.2, Transition.easeInOutQuadratic)
         ..animate.x.to(playerX)
         ..animate.y.to(playerY)
         ..delay = 0.4
@@ -133,7 +133,7 @@ class MiniLevel extends Level {
               ..animate.y.to(origY)
               ..animate.rotation.to(0)
               ..animate.alpha.to(1)
-              ..delay = 0.6 + random.nextDouble() * 0.2
+              ..delay = 0.4 + random.nextDouble() * 0.2
           );
         }
       }

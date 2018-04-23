@@ -29,7 +29,7 @@ Future<Null> main() async {
   renderLoop.addStage(stage);
   
   resources = new ResourceManager();
-  resources.addSound('song', 'sounds/song.ogg');
+  resources.addSound('song', 'music/song.ogg');
 
   await resources.load();
 
