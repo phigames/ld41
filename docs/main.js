@@ -10885,6 +10885,9 @@
         else
           receiver.noteOn(when, grainOffset);
       },
+      start$2: function($receiver, when, grainOffset) {
+        return this.start$3($receiver, when, grainOffset, null);
+      },
       stop$1: function(receiver, when) {
         if (!!receiver.stop)
           receiver.stop(when);
@@ -11461,7 +11464,8 @@
         return this._y;
       },
       set$y: function(_, value) {
-        this._y = value;
+        if (typeof value === "number")
+          this._y = value;
         this._transformationMatrixRefresh = true;
       },
       set$pivotX: function(value) {
@@ -15337,11 +15341,15 @@
         t1._soundTransform = new E.SoundTransform(1, 0);
         t1._audioElementSound = this;
         t1._media$_duration = duration;
+        t1._loop = loop;
         this._requestAudioElement$1(t1).then$1(t1.get$_onAudioElement());
         return t1;
       },
       play$0: function($receiver) {
         return this.play$2($receiver, false, null);
+      },
+      play$1: function($receiver, loop) {
+        return this.play$2($receiver, loop, null);
       },
       _requestAudioElement$1: function(soundChannel) {
         var $async$goto = 0, $async$completer = P.Completer_Completer$sync(), $async$returnValue, $async$self = this, t1, t2, audioElement, t3, audioCanPlay;
@@ -15501,8 +15509,10 @@
         }
       },
       set$position: function(_, value) {
-        var position, t1;
-        position = C.JSNumber_methods.clamp$2(value, 0, this._media$_duration);
+        var t1, t2, position;
+        t1 = this._loop;
+        t2 = this._media$_duration;
+        position = t1 ? C.JSNumber_methods.$mod(value, t2) : C.JSNumber_methods.clamp$2(value, 0, t2);
         if (!this._stopped)
           if (this._paused || this._audioElement == null)
             this._media$_position = position;
@@ -15603,7 +15613,12 @@
       },
       _onCompleteTimer$0: [function() {
         if (!this._paused)
-          this.stop$0(0);
+          if (this._loop) {
+            J.set$currentTime$x(this._audioElement, this._startTime);
+            J.play$0$x(this._audioElement);
+            this._startCompleteTimer$1(this._media$_duration);
+          } else
+            this.stop$0(0);
       }, "call$0", "get$_onCompleteTimer", 0, 0, 2],
       _onVolumeChanged$1: [function(volume) {
         var t1, t2;
@@ -15616,7 +15631,8 @@
         J.set$volume$x(t1, t2 * volume);
       }, "call$1", "get$_onVolumeChanged", 2, 0, 13],
       _onAudioEnded$0: function() {
-        this.stop$0(0);
+        if (!this._loop)
+          this.stop$0(0);
       }
     },
     MockSound: {
@@ -15628,10 +15644,14 @@
         var t1 = new E.MockSoundChannel(null, false, false, false, 0, 0, 0, null, null);
         t1._mockSound = this;
         t1._soundTransform = new E.SoundTransform(1, 0);
+        t1._loop = loop;
         return t1;
       },
       play$0: function($receiver) {
         return this.play$2($receiver, false, null);
+      },
+      play$1: function($receiver, loop) {
+        return this.play$2($receiver, loop, null);
       }
     },
     MockSoundChannel: {
@@ -15690,6 +15710,7 @@
         t2._soundTransform = t3;
         t2._webAudioApiSound = this;
         t2._media$_duration = J.toDouble$0$n(t1);
+        t2._loop = loop;
         t1 = E.WebAudioApiMixer$($.SoundMixer__webAudioApiMixer._volumeNode);
         t2._mixer = t1;
         t1.applySoundTransform$1(t3);
@@ -15698,6 +15719,9 @@
       },
       play$0: function($receiver) {
         return this.play$2($receiver, false, null);
+      },
+      play$1: function($receiver, loop) {
+        return this.play$2($receiver, loop, null);
       },
       static: {
         WebAudioApiSound_load: function(url, soundLoadOptions) {
@@ -15792,7 +15816,7 @@
     WebAudioApiSoundChannel: {
       "^": "SoundChannel;_webAudioApiSound,_soundTransform,_mixer,_sourceNode,_sourceNodeEndedSubscription,_stopped,_paused,_loop,_startTime,_media$_duration,_media$_position,_timeOffset,_eventStreams",
       get$position: function(_) {
-        var currentTime, t1;
+        var currentTime, t1, position, t2;
         if (this._paused || this._stopped)
           return this._media$_position;
         else {
@@ -15800,12 +15824,17 @@
           t1 = this._timeOffset;
           if (typeof currentTime !== "number")
             return currentTime.$sub();
-          t1 = C.JSDouble_methods.clamp$2(currentTime - t1, 0, this._media$_duration);
-          return t1;
+          position = currentTime - t1;
+          t1 = this._loop;
+          t2 = this._media$_duration;
+          return t1 ? C.JSDouble_methods.$mod(position, t2) : C.JSDouble_methods.clamp$2(position, 0, t2);
         }
       },
       set$position: function(_, value) {
-        var position = C.JSNumber_methods.clamp$2(value, 0, this._media$_duration);
+        var t1, t2, position;
+        t1 = this._loop;
+        t2 = this._media$_duration;
+        position = t1 ? C.JSNumber_methods.$mod(value, t2) : C.JSNumber_methods.clamp$2(value, 0, t2);
         if (!this._stopped)
           if (this._paused)
             this._media$_position = position;
@@ -15831,6 +15860,24 @@
               t1.cancel$0(0);
             t1 = this._sourceNode;
             (t1 && C.AudioBufferSourceNode_methods).stop$1(t1, 0);
+          } else if (this._loop) {
+            this._paused = false;
+            t1 = $.$get$WebAudioApiMixer_audioContext();
+            t2 = t1.createBufferSource();
+            this._sourceNode = t2;
+            t2.buffer = this._webAudioApiSound._audioBuffer;
+            t2.loop = true;
+            t3 = this._startTime;
+            t2.loopStart = t3;
+            t2.loopEnd = t3 + this._media$_duration;
+            t2.connect(this._mixer._volumeNode, 0, 0);
+            t2 = this._sourceNode;
+            (t2 && C.AudioBufferSourceNode_methods).start$2(t2, 0, this._startTime + this._media$_position);
+            t1 = t1.currentTime;
+            t2 = this._media$_position;
+            if (typeof t1 !== "number")
+              return t1.$sub();
+            this._timeOffset = t1 - t2;
           } else {
             this._paused = false;
             t1 = $.$get$WebAudioApiMixer_audioContext();
@@ -15858,7 +15905,7 @@
         this._mixer.applySoundTransform$1(value);
       },
       _onEnded$1: [function(e) {
-        if (!this._paused && !this._stopped && true) {
+        if (!this._paused && !this._stopped && !this._loop) {
           this._media$_position = this.get$position(this);
           this._stopped = true;
           this._paused = true;
@@ -15965,6 +16012,9 @@
         t1 = t1.get$values(t1);
         t2 = H.getRuntimeTypeArgument(t1, "Iterable", 0);
         return P.List_List$from(new H.WhereIterable(t1, new O.ResourceManager_failedResources_closure(), [t2]), true, t2);
+      },
+      getSound$1: function($name) {
+        return H.interceptedTypeCast(this._getResourceValue$2("Sound", $name), "$isSound");
       },
       _addResource$4: function(kind, $name, url, loader) {
         var key, resource, t1;
@@ -16656,6 +16706,12 @@
               t2 = new O.ResourceManager(new H.JsLinkedHashMap(0, null, null, null, null, null, 0, [P.String, O.ResourceManagerResource]), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t2));
               $.resources = t2;
               t2._addResource$4("Sound", "song", "music/song.ogg", E.Sound_load("music/song.ogg", null));
+              t2 = $.resources;
+              t2.toString;
+              t2._addResource$4("Sound", "ticktack", "music/ticktack.ogg", E.Sound_load("music/ticktack.ogg", null));
+              t2 = $.resources;
+              t2.toString;
+              t2._addResource$4("Sound", "checkpoint", "music/checkpoint.ogg", E.Sound_load("music/checkpoint.ogg", null));
               $async$goto = 2;
               return P._asyncAwait($.resources.load$0(0), $async$main);
             case 2:
@@ -16681,7 +16737,7 @@
       return P._asyncStart($async$main, $async$completer);
     }, "call$0", "main__main$closure", 0, 0, 24],
     BaseLevel: {
-      "^": "Level;blockString,winningX,blocks,respawnBlocks,player,scrollX,countdownText,countdownTime,miniLevelIndex,deathCount,wonText,music,musicChannel,playerMusicOffset,sprite",
+      "^": "Level;blockString,winningX,blocks,respawnBlocks,player,scrollX,countdownText,countdownTime,miniLevelIndex,deathCount,wonText,music,ticktack,musicChannel,ticktackChannel,playerMusicOffset,sprite",
       resetCountdown$0: function() {
         this.countdownText.set$x(0, this.player.x + 0.5);
         this.countdownText.set$y(0, this.player.y - 5);
@@ -16739,7 +16795,7 @@
               return H.ioore(t5, 2);
             respawn = J.$eq$(t5[2], "r");
             t6 = lastX + 1;
-            block = new N.BaseLevelBlock(t6, blockHeight, spikes, respawn, null);
+            block = new N.BaseLevelBlock(t6, blockHeight, spikes, respawn, null, null);
             t7 = H.setRuntimeTypeInfo([], t2);
             t8 = $.DisplayObject__nextID;
             $.DisplayObject__nextID = t8 + 1;
@@ -16862,86 +16918,96 @@
               C.JSArray_methods.set$length(t7._compiledCommands, 0);
               t7._bounds = null;
               if (respawn) {
-                t7 = t8._graphics;
+                t7 = H.setRuntimeTypeInfo([], t2);
+                t9 = $.DisplayObject__nextID;
+                $.DisplayObject__nextID = t9 + 1;
+                t9 = new A.Sprite(null, null, null, t7, true, true, false, true, "auto", true, 0, t9, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t3), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+                block.checkpointSprite = t9;
+                t7 = J.$negate$n(blockHeight);
+                if (typeof t7 === "number")
+                  t9._y = t7;
+                t9._transformationMatrixRefresh = true;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
                 command = new U.GraphicsCommandBeginPath(null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
-                t7 = t8._graphics;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
-                command = new U.GraphicsCommandMoveTo(0.4, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
+                command = new U.GraphicsCommandMoveTo(0.4, C.JSInt_methods.toDouble$0(0), null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
-                t7 = t8._graphics;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
-                command = new U.GraphicsCommandLineTo(0.4, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 1)), null);
+                command = new U.GraphicsCommandLineTo(0.4, C.JSInt_methods.toDouble$0(-1), null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
-                t7 = t8._graphics;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
-                command = new U.GraphicsCommandLineTo(1, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.5)), null);
+                command = new U.GraphicsCommandLineTo(1, C.JSDouble_methods.toDouble$0(-0.5), null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
-                t7 = t8._graphics;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
-                command = new U.GraphicsCommandLineTo(0.6, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.5)), null);
+                command = new U.GraphicsCommandLineTo(0.6, C.JSDouble_methods.toDouble$0(-0.5), null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
-                t7 = t8._graphics;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
-                command = new U.GraphicsCommandLineTo(0.6, J.toDouble$0$n(J.$negate$n(blockHeight)), null);
+                command = new U.GraphicsCommandLineTo(0.6, C.JSInt_methods.toDouble$0(0), null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
-                t7 = t8._graphics;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
                 command = new U.GraphicsCommandClosePath(null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
-                t7 = t8._graphics;
+                t7 = t9._graphics;
                 if (!(t7 != null)) {
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
-                  t8._graphics = t7;
+                  t9._graphics = t7;
                 }
                 command = new U.GraphicsCommandFillColor(4284900966, null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
                 t7._bounds = null;
+                t8.addChild$1(t9);
               }
             }
             t8._x = t6;
@@ -16999,8 +17065,13 @@
             break;
           removedBlock = C.JSArray_methods.removeAt$1(t1, 0);
           this.sprite.removeChild$1(removedBlock.sprite);
-          if (removedBlock.respawn === true)
+          if (removedBlock.respawn === true) {
             C.JSArray_methods.remove$1(this.respawnBlocks, removedBlock);
+            t1 = this.respawnBlocks;
+            if (0 >= t1.length)
+              return H.ioore(t1, 0);
+            t1[0].animate$0(0);
+          }
         }
       },
       update$1: function(_, time) {
@@ -17008,7 +17079,7 @@
         t1 = this.musicChannel;
         if (t1.get$paused(t1)) {
           this.musicChannel.set$soundTransform(new E.SoundTransform(1, 0));
-          $.game.fadeSound$2(null, this.musicChannel);
+          $.game.fadeSound$2(this.ticktackChannel, this.musicChannel);
         }
         t1 = this.countdownTime;
         if (typeof t1 !== "number")
@@ -17084,7 +17155,7 @@
               t5.addChild$1(t6);
               t1.reset$0(0);
               t6 = t1.sprite;
-              t5 = Y.TextField$("press [R] to restart", new Y.TextFormat("Comfortaa", 1, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+              t5 = Y.TextField$("solve the puzzle. [R] to reset", new Y.TextFormat("Comfortaa", 1, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
               t5.set$x(0, 0);
               t5.set$y(0, 16);
               t5._width = 32;
@@ -17106,7 +17177,7 @@
               ++t1;
               this.deathCount = t1;
               this.wonText.set$text(0, "YOU DID IT!\nyou died " + t1 + " times\nthank you for playing <3");
-              $.game.fadeSound$3$onComplete(this.musicChannel, null, new N.BaseLevel_update_closure(this));
+              $.game.fadeSound$3$onComplete(this.musicChannel, this.ticktackChannel, new N.BaseLevel_update_closure(this));
             }
           } else {
             t2 = t1.velocityX;
@@ -17270,7 +17341,30 @@
       }
     },
     BaseLevelBlock: {
-      "^": "Object;x>,height>,spikes,respawn,sprite<"
+      "^": "Object;x>,height>,spikes,respawn,sprite<,checkpointSprite",
+      animate$0: function(_) {
+        var t1, t2, t3;
+        if (this.respawn === true) {
+          t1 = $.stage.juggler;
+          t2 = K.Tween$(this.checkpointSprite, 0.2, K.animation_Transition_easeOutQuadratic$closure());
+          t3 = t2.get$animate(t2);
+          t3._tween._createTweenProperty$2(t3, 1)._deltaValue = -3;
+          t2._onComplete = new N.BaseLevelBlock_animate_closure(this);
+          t1.add$1(0, t2);
+          $.$get$BaseLevelBlock_checkpointSound().play$0(0);
+        }
+      }
+    },
+    BaseLevelBlock_animate_closure: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        var t1, t2, t3;
+        t1 = $.stage.juggler;
+        t2 = K.Tween$(this.$this.checkpointSprite, 0.2, K.animation_Transition_easeOutQuadratic$closure());
+        t3 = t2.get$animate(t2);
+        t3._tween._createTweenProperty$2(t3, 1)._deltaValue = 3;
+        return t1.add$1(0, t2);
+      }
     },
     Game: {
       "^": "Object;startMenu,currentLevel,upPressed,fadingOutSoundChannel,fadingInSoundChannel,fadingProgress,onFadeComplete",
@@ -17443,7 +17537,7 @@
         var t1, t2, t3, t4;
         t1 = this.$this;
         $.stage.removeChild$1(t1.startMenu);
-        t2 = new N.BaseLevel(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+        t2 = new N.BaseLevel(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
         t3 = H.setRuntimeTypeInfo([], [A.DisplayObject]);
         t4 = $.DisplayObject__nextID;
         $.DisplayObject__nextID = t4 + 1;
@@ -17480,6 +17574,11 @@
         t3 = H.interceptedTypeCast($.resources._getResourceValue$2("Sound", "song"), "$isSound");
         t2.music = t3;
         t2.musicChannel = t3.play$0(0);
+        t3 = H.interceptedTypeCast($.resources._getResourceValue$2("Sound", "ticktack"), "$isSound");
+        t2.ticktack = t3;
+        t3 = t3.play$1(0, true);
+        t3.set$paused(0, true);
+        t2.ticktackChannel = t3;
         t1.setLevel$1(t2);
       }
     },
@@ -18624,7 +18723,9 @@
     return t1.get$stream(t1);
   }, "Mouse_onCursorChanged", "BaseLevel_BLOCK_REGEXP", "$get$BaseLevel_BLOCK_REGEXP", function() {
     return P.RegExp_RegExp("(\\d)([rs]?)", true, false);
-  }, "BaseLevel_BLOCK_REGEXP", "MiniLevel_LEVELS", "$get$MiniLevel_LEVELS", function() {
+  }, "BaseLevel_BLOCK_REGEXP", "BaseLevelBlock_checkpointSound", "$get$BaseLevelBlock_checkpointSound", function() {
+    return $.resources.getSound$1("checkpoint");
+  }, "BaseLevelBlock_checkpointSound", "MiniLevel_LEVELS", "$get$MiniLevel_LEVELS", function() {
     return ["    #####\r\n    #Po #\r\n    #o oG\r\n    #   #\r\n    #####\r\n    ", "    ######\r\n    # o  #\r\n    #o o G\r\n    #Poo #\r\n    ######\r\n    ", "    #######\r\n    ## Po #\r\n    # oo ##\r\n    ## ooG\r\n    ##  o #\r\n    ## ####\r\n    #######\r\n    ", "    ######\r\n    ## o #\r\n    # oo #\r\n    # # ##\r\n    #  oG\r\n    ## o##\r\n    ## oP#\r\n    ## o #\r\n    ######\r\n    "];
   }, "MiniLevel_LEVELS"]);
   Isolate = Isolate.$finishIsolateConstructor(Isolate);
