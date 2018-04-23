@@ -586,7 +586,7 @@
       toString$0: ["super$Interceptor$toString", function(receiver) {
         return H.Primitives_objectToHumanReadableString(receiver);
       }],
-      "%": "ANGLEInstancedArrays|ANGLE_instanced_arrays|AnimationEffectReadOnly|AnimationEffectTiming|AnimationTimeline|AppBannerPromptResult|AudioListener|BarProp|Bluetooth|BluetoothAdvertisingData|BluetoothCharacteristicProperties|BluetoothRemoteGATTServer|BluetoothRemoteGATTService|BluetoothUUID|CHROMIUMSubscribeUniform|CHROMIUMValuebuffer|CSS|Cache|CacheStorage|CanvasGradient|CanvasPattern|CanvasRenderingContext2D|CircularGeofencingRegion|Clients|CompositorProxy|ConsoleBase|Coordinates|Credential|CredentialsContainer|Crypto|CryptoKey|DOMError|DOMFileSystem|DOMFileSystemSync|DOMImplementation|DOMMatrix|DOMMatrixReadOnly|DOMParser|DOMStringMap|DataTransfer|DataTransferItem|Database|DeprecatedStorageInfo|DeprecatedStorageQuota|DeviceRotationRate|DirectoryEntry|DirectoryEntrySync|DirectoryReader|DirectoryReaderSync|EXTBlendMinMax|EXTColorBufferFloat|EXTDisjointTimerQuery|EXTFragDepth|EXTShaderTextureLOD|EXTTextureFilterAnisotropic|EXT_blend_minmax|EXT_frag_depth|EXT_sRGB|EXT_shader_texture_lod|EXT_texture_filter_anisotropic|EXTsRGB|EffectModel|Entry|EntrySync|FederatedCredential|FileEntry|FileEntrySync|FileError|FileReaderSync|FileWriterSync|FormData|Geofencing|GeofencingRegion|Geolocation|Geoposition|HMDVRDevice|HTMLAllCollection|Headers|IDBFactory|IDBIndex|IDBKeyRange|IDBObjectStore|IdleDeadline|ImageBitmapRenderingContext|InjectedScriptHost|InputDeviceCapabilities|IntersectionObserver|IntersectionObserverEntry|Iterator|KeyframeEffect|MIDIInputMap|MIDIOutputMap|MediaDeviceInfo|MediaDevices|MediaError|MediaKeyStatusMap|MediaKeySystemAccess|MediaKeys|MediaMetadata|MediaSession|MemoryInfo|MessageChannel|Metadata|MutationObserver|MutationRecord|NFC|NavigatorStorageUtils|NavigatorUserMediaError|NodeFilter|NodeIterator|NonDocumentTypeChildNode|NonElementParentNode|OESElementIndexUint|OESStandardDerivatives|OESTextureFloat|OESTextureFloatLinear|OESTextureHalfFloat|OESTextureHalfFloatLinear|OESVertexArrayObject|OES_element_index_uint|OES_standard_derivatives|OES_texture_float|OES_texture_float_linear|OES_texture_half_float|OES_texture_half_float_linear|OES_vertex_array_object|PagePopupController|PasswordCredential|PerformanceCompositeTiming|PerformanceEntry|PerformanceMark|PerformanceMeasure|PerformanceNavigation|PerformanceObserver|PerformanceObserverEntryList|PerformanceRenderTiming|PerformanceResourceTiming|PerformanceTiming|PeriodicWave|Permissions|PositionError|PositionSensorVRDevice|Presentation|PushManager|PushMessageData|PushSubscription|RTCCertificate|RTCIceCandidate|RTCSessionDescription|RTCStatsReport|RTCStatsResponse|Range|ReadableByteStream|ReadableByteStreamReader|ReadableStreamReader|SQLError|SQLResultSet|SQLTransaction|SVGAnimatedAngle|SVGAnimatedBoolean|SVGAnimatedEnumeration|SVGAnimatedInteger|SVGAnimatedLength|SVGAnimatedLengthList|SVGAnimatedNumber|SVGAnimatedNumberList|SVGAnimatedPreserveAspectRatio|SVGAnimatedRect|SVGAnimatedString|SVGAnimatedTransformList|SVGMatrix|SVGPreserveAspectRatio|SVGUnitTypes|ScrollState|Selection|ServicePort|SharedArrayBuffer|SourceInfo|SpeechRecognitionAlternative|SpeechSynthesisVoice|StorageInfo|StorageManager|StorageQuota|Stream|StyleMedia|StylePropertyMap|SubtleCrypto|SyncManager|TrackDefault|URLSearchParams|USBAlternateInterface|USBConfiguration|USBDevice|USBEndpoint|USBInTransferResult|USBInterface|USBIsochronousInTransferPacket|USBIsochronousInTransferResult|USBIsochronousOutTransferPacket|USBIsochronousOutTransferResult|USBOutTransferResult|UnderlyingSourceBase|VRDevice|VREyeParameters|VRFieldOfView|VRPositionState|ValidityState|VideoPlaybackQuality|VideoTrack|WEBGL_compressed_texture_atc|WEBGL_compressed_texture_etc1|WEBGL_compressed_texture_pvrtc|WEBGL_compressed_texture_s3tc|WEBGL_debug_renderer_info|WEBGL_debug_shaders|WEBGL_depth_texture|WEBGL_draw_buffers|WEBGL_lose_context|WebGLActiveInfo|WebGLBuffer|WebGLCompressedTextureASTC|WebGLCompressedTextureATC|WebGLCompressedTextureETC1|WebGLCompressedTexturePVRTC|WebGLCompressedTextureS3TC|WebGLDebugRendererInfo|WebGLDebugShaders|WebGLDepthTexture|WebGLDrawBuffers|WebGLExtensionLoseContext|WebGLFramebuffer|WebGLLoseContext|WebGLProgram|WebGLQuery|WebGLRenderbuffer|WebGLSampler|WebGLShader|WebGLShaderPrecisionFormat|WebGLSync|WebGLTexture|WebGLTimerQueryEXT|WebGLTransformFeedback|WebGLVertexArrayObject|WebGLVertexArrayObjectOES|WebKitCSSMatrix|WebKitMutationObserver|WorkerConsole|Worklet|WorkletGlobalScope|XMLSerializer|XPathEvaluator|XPathExpression|XPathNSResolver|XPathResult|XSLTProcessor|mozRTCIceCandidate|mozRTCSessionDescription"
+      "%": "ANGLEInstancedArrays|ANGLE_instanced_arrays|AnimationEffectReadOnly|AppBannerPromptResult|AudioListener|BarProp|Bluetooth|BluetoothAdvertisingData|BluetoothCharacteristicProperties|BluetoothRemoteGATTServer|BluetoothRemoteGATTService|BluetoothUUID|CHROMIUMSubscribeUniform|CHROMIUMValuebuffer|CSS|Cache|CacheStorage|CanvasGradient|CanvasPattern|CanvasRenderingContext2D|CircularGeofencingRegion|Clients|CompositorProxy|ConsoleBase|Coordinates|Credential|CredentialsContainer|Crypto|CryptoKey|DOMError|DOMFileSystem|DOMFileSystemSync|DOMImplementation|DOMMatrix|DOMMatrixReadOnly|DOMParser|DOMStringMap|DataTransfer|DataTransferItem|Database|DeprecatedStorageInfo|DeprecatedStorageQuota|DeviceRotationRate|DirectoryEntrySync|DirectoryReader|DirectoryReaderSync|EXTBlendMinMax|EXTColorBufferFloat|EXTDisjointTimerQuery|EXTFragDepth|EXTShaderTextureLOD|EXTTextureFilterAnisotropic|EXT_blend_minmax|EXT_frag_depth|EXT_sRGB|EXT_shader_texture_lod|EXT_texture_filter_anisotropic|EXTsRGB|EffectModel|EntrySync|FederatedCredential|FileEntrySync|FileError|FileReaderSync|FileWriterSync|FormData|Geofencing|GeofencingRegion|Geolocation|Geoposition|HMDVRDevice|HTMLAllCollection|Headers|IDBFactory|IDBIndex|IDBKeyRange|IDBObjectStore|IdleDeadline|ImageBitmapRenderingContext|InjectedScriptHost|InputDeviceCapabilities|IntersectionObserver|Iterator|KeyframeEffect|MIDIInputMap|MIDIOutputMap|MediaDeviceInfo|MediaDevices|MediaError|MediaKeyStatusMap|MediaKeySystemAccess|MediaKeys|MediaMetadata|MediaSession|MemoryInfo|MessageChannel|Metadata|MutationObserver|NFC|NavigatorStorageUtils|NavigatorUserMediaError|NodeFilter|NodeIterator|NonDocumentTypeChildNode|NonElementParentNode|OESElementIndexUint|OESStandardDerivatives|OESTextureFloat|OESTextureFloatLinear|OESTextureHalfFloat|OESTextureHalfFloatLinear|OESVertexArrayObject|OES_element_index_uint|OES_standard_derivatives|OES_texture_float|OES_texture_float_linear|OES_texture_half_float|OES_texture_half_float_linear|OES_vertex_array_object|PagePopupController|PasswordCredential|PerformanceNavigation|PerformanceObserver|PerformanceObserverEntryList|PerformanceTiming|PeriodicWave|Permissions|PositionError|PositionSensorVRDevice|Presentation|PushManager|PushMessageData|PushSubscription|RTCCertificate|RTCIceCandidate|RTCSessionDescription|RTCStatsReport|RTCStatsResponse|Range|ReadableByteStream|ReadableByteStreamReader|ReadableStreamReader|SQLError|SQLResultSet|SQLTransaction|SVGAnimatedAngle|SVGAnimatedBoolean|SVGAnimatedEnumeration|SVGAnimatedInteger|SVGAnimatedLength|SVGAnimatedLengthList|SVGAnimatedNumber|SVGAnimatedNumberList|SVGAnimatedPreserveAspectRatio|SVGAnimatedRect|SVGAnimatedString|SVGAnimatedTransformList|SVGMatrix|SVGPreserveAspectRatio|SVGUnitTypes|ScrollState|Selection|ServicePort|SharedArrayBuffer|SourceInfo|SpeechRecognitionAlternative|SpeechSynthesisVoice|StorageInfo|StorageManager|StorageQuota|Stream|StyleMedia|StylePropertyMap|SubtleCrypto|SyncManager|TrackDefault|TreeWalker|URLSearchParams|USBAlternateInterface|USBConfiguration|USBDevice|USBEndpoint|USBInTransferResult|USBInterface|USBIsochronousInTransferPacket|USBIsochronousInTransferResult|USBIsochronousOutTransferPacket|USBIsochronousOutTransferResult|USBOutTransferResult|UnderlyingSourceBase|VRDevice|VREyeParameters|VRFieldOfView|VRPositionState|ValidityState|VideoPlaybackQuality|VideoTrack|WEBGL_compressed_texture_atc|WEBGL_compressed_texture_etc1|WEBGL_compressed_texture_pvrtc|WEBGL_compressed_texture_s3tc|WEBGL_debug_renderer_info|WEBGL_debug_shaders|WEBGL_depth_texture|WEBGL_draw_buffers|WEBGL_lose_context|WebGLActiveInfo|WebGLBuffer|WebGLCompressedTextureASTC|WebGLCompressedTextureATC|WebGLCompressedTextureETC1|WebGLCompressedTexturePVRTC|WebGLCompressedTextureS3TC|WebGLDebugRendererInfo|WebGLDebugShaders|WebGLDepthTexture|WebGLDrawBuffers|WebGLExtensionLoseContext|WebGLFramebuffer|WebGLLoseContext|WebGLProgram|WebGLQuery|WebGLRenderbuffer|WebGLSampler|WebGLShader|WebGLShaderPrecisionFormat|WebGLSync|WebGLTexture|WebGLTimerQueryEXT|WebGLTransformFeedback|WebGLVertexArrayObject|WebGLVertexArrayObjectOES|WebKitCSSMatrix|WebKitMutationObserver|WorkerConsole|Worklet|WorkletGlobalScope|XMLSerializer|XPathEvaluator|XPathExpression|XPathNSResolver|XPathResult|XSLTProcessor|mozRTCIceCandidate|mozRTCSessionDescription"
     },
     JSBool: {
       "^": "Interceptor;",
@@ -663,6 +663,12 @@
           }
         return false;
       },
+      addAll$1: function(receiver, collection) {
+        var t1, _i;
+        this.checkGrowable$1(receiver, "addAll");
+        for (t1 = collection.length, _i = 0; _i < collection.length; collection.length === t1 || (0, H.throwConcurrentModificationError)(collection), ++_i)
+          receiver.push(collection[_i]);
+      },
       forEach$1: function(receiver, f) {
         var end, i;
         end = receiver.length;
@@ -686,7 +692,7 @@
         return value;
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -742,6 +748,17 @@
       },
       toString$0: function(receiver) {
         return P.IterableBase_iterableToFullString(receiver, "[", "]");
+      },
+      toList$1$growable: function(receiver, growable) {
+        var t1 = [H.getTypeArgumentByIndex(receiver, 0)];
+        if (growable)
+          t1 = H.setRuntimeTypeInfo(receiver.slice(0), t1);
+        else {
+          t1 = H.setRuntimeTypeInfo(receiver.slice(0), t1);
+          t1.fixed$length = Array;
+          t1 = t1;
+        }
+        return t1;
       },
       get$iterator: function(receiver) {
         return new J.ArrayIterator(receiver, receiver.length, 0, null);
@@ -807,8 +824,47 @@
     },
     JSNumber: {
       "^": "Interceptor;",
+      compareTo$1: function(receiver, b) {
+        var bIsNegative;
+        if (receiver < b)
+          return -1;
+        else if (receiver > b)
+          return 1;
+        else if (receiver === b) {
+          if (receiver === 0) {
+            bIsNegative = this.get$isNegative(b);
+            if (this.get$isNegative(receiver) === bIsNegative)
+              return 0;
+            if (this.get$isNegative(receiver))
+              return -1;
+            return 1;
+          }
+          return 0;
+        } else if (isNaN(receiver)) {
+          if (isNaN(b))
+            return 0;
+          return 1;
+        } else
+          return -1;
+      },
+      get$isNegative: function(receiver) {
+        return receiver === 0 ? 1 / receiver < 0 : receiver < 0;
+      },
+      get$isInfinite: function(receiver) {
+        return receiver == 1 / 0 || receiver == -1 / 0;
+      },
       abs$0: function(receiver) {
         return Math.abs(receiver);
+      },
+      toInt$0: function(receiver) {
+        var t1;
+        if (receiver >= -2147483648 && receiver <= 2147483647)
+          return receiver | 0;
+        if (isFinite(receiver)) {
+          t1 = receiver < 0 ? Math.ceil(receiver) : Math.floor(receiver);
+          return t1 + 0;
+        }
+        throw H.wrapException(new P.UnsupportedError("" + receiver + ".toInt()"));
       },
       ceil$0: function(receiver) {
         var truncated, d;
@@ -846,20 +902,25 @@
           return 0 - Math.round(0 - receiver);
         throw H.wrapException(new P.UnsupportedError("" + receiver + ".round()"));
       },
+      clamp$2: function(receiver, lowerLimit, upperLimit) {
+        if (C.JSInt_methods.compareTo$1(lowerLimit, upperLimit) > 0)
+          throw H.wrapException(H.argumentErrorValue(lowerLimit));
+        if (this.compareTo$1(receiver, lowerLimit) < 0)
+          return lowerLimit;
+        if (this.compareTo$1(receiver, upperLimit) > 0)
+          return upperLimit;
+        return receiver;
+      },
       toDouble$0: function(receiver) {
         return receiver;
       },
       toStringAsFixed$1: function(receiver, fractionDigits) {
-        var result, t1;
+        var result;
         H.checkInt(fractionDigits);
         if (fractionDigits < 0 || fractionDigits > 20)
           throw H.wrapException(P.RangeError$range(fractionDigits, 0, 20, "fractionDigits", null));
         result = receiver.toFixed(fractionDigits);
-        if (receiver === 0)
-          t1 = 1 / receiver < 0;
-        else
-          t1 = false;
-        if (t1)
+        if (receiver === 0 && this.get$isNegative(receiver))
           return "-" + result;
         return result;
       },
@@ -1085,6 +1146,9 @@
           throw H.wrapException(P.RangeError$range(startIndex, 0, receiver.length, null, null));
         return H.stringContainsUnchecked(receiver, other, startIndex);
       },
+      contains$1: function($receiver, other) {
+        return this.contains$2($receiver, other, 0);
+      },
       toString$0: function(receiver) {
         return receiver;
       },
@@ -1242,9 +1306,12 @@
         return $length - t1;
       },
       elementAt$1: function(_, index) {
-        var realIndex, t1;
-        realIndex = this.get$_startIndex() + index;
-        if (index >= 0) {
+        var t1, realIndex;
+        t1 = this.get$_startIndex();
+        if (typeof index !== "number")
+          return H.iae(index);
+        realIndex = t1 + index;
+        if (!(index < 0)) {
           t1 = this.get$_endIndex();
           if (typeof t1 !== "number")
             return H.iae(t1);
@@ -1797,10 +1864,10 @@
           }
           this.doneHandlers = null;
         }
-      }, "call$0", "get$kill", 0, 0, 1]
+      }, "call$0", "get$kill", 0, 0, 2]
     },
     _IsolateContext_handlePing_respond: {
-      "^": "Closure:1;responsePort,response",
+      "^": "Closure:2;responsePort,response",
       call$0: function() {
         J.send$1$x(this.responsePort, this.response);
       }
@@ -1874,7 +1941,7 @@
       }
     },
     _EventLoop__runHelper_next: {
-      "^": "Closure:1;$this",
+      "^": "Closure:2;$this",
       call$0: function() {
         if (!this.$this.runIteration$0())
           return;
@@ -1902,7 +1969,7 @@
       }
     },
     IsolateNatives__startIsolate_runStartFunction: {
-      "^": "Closure:1;topLevel,args,message,isSpawnUri,context",
+      "^": "Closure:2;topLevel,args,message,isSpawnUri,context",
       call$0: function() {
         var t1, t2;
         t1 = this.context;
@@ -2038,6 +2105,20 @@
     },
     TimerImpl: {
       "^": "Object;_once,_inEventLoop,_handle",
+      cancel$0: function(_) {
+        var t1;
+        if (self.setTimeout != null) {
+          if (this._inEventLoop)
+            throw H.wrapException(new P.UnsupportedError("Timer in event loop cannot be canceled."));
+          t1 = this._handle;
+          if (t1 == null)
+            return;
+          --init.globalState.topEventLoop._activeJsAsyncCount;
+          self.clearTimeout(t1);
+          this._handle = null;
+        } else
+          throw H.wrapException(new P.UnsupportedError("Canceling a timer."));
+      },
       TimerImpl$2: function(milliseconds, callback) {
         var t1, t2;
         if (milliseconds === 0)
@@ -2065,14 +2146,14 @@
       }
     },
     TimerImpl_internalCallback: {
-      "^": "Closure:1;$this,callback",
+      "^": "Closure:2;$this,callback",
       call$0: function() {
         this.$this._handle = null;
         this.callback.call$0();
       }
     },
     TimerImpl_internalCallback0: {
-      "^": "Closure:1;$this,callback",
+      "^": "Closure:2;$this,callback",
       call$0: function() {
         this.$this._handle = null;
         --init.globalState.topEventLoop._activeJsAsyncCount;
@@ -2153,7 +2234,7 @@
         if (!(x instanceof P.Object))
           this.unsupported$1(x);
         return ["dart", init.classIdExtractor(x), this.serializeArrayInPlace$1(init.classFieldsExtractor(x))];
-      }, "call$1", "get$serialize", 2, 0, 2],
+      }, "call$1", "get$serialize", 2, 0, 1],
       unsupported$2: function(x, message) {
         throw H.wrapException(new P.UnsupportedError((message == null ? "Can't transmit:" : message) + " " + H.S(x)));
       },
@@ -2310,7 +2391,7 @@
           default:
             throw H.wrapException("couldn't deserialize: " + H.S(x));
         }
-      }, "call$1", "get$deserialize", 2, 0, 2],
+      }, "call$1", "get$deserialize", 2, 0, 1],
       deserializeArrayInPlace$1: function(x) {
         var t1, i, t2;
         t1 = J.getInterceptor$asx(x);
@@ -2590,6 +2671,11 @@
     },
     argumentErrorValue: function(object) {
       return new P.ArgumentError(true, object, null, null);
+    },
+    checkNum: function(value) {
+      if (typeof value !== "number")
+        throw H.wrapException(H.argumentErrorValue(value));
+      return value;
     },
     checkInt: function(value) {
       if (typeof value !== "number" || Math.floor(value) !== value)
@@ -3477,6 +3563,14 @@
       var t1 = receiver.indexOf(other, startIndex);
       return t1 >= 0;
     },
+    stringReplaceAllUnchecked: function(receiver, pattern, replacement) {
+      var nativeRegexp, t1;
+      H.checkString(replacement);
+      nativeRegexp = pattern.get$_nativeGlobalVersion();
+      nativeRegexp.lastIndex = 0;
+      t1 = receiver.replace(nativeRegexp, replacement.replace(/\$/g, "$$$$"));
+      return t1;
+    },
     ReflectionInfo: {
       "^": "Object;jsFunction,data,isAccessor,requiredParameterCount,optionalParameterCount,areOptionalParametersNamed,functionType,cachedSortedIndices",
       static: {
@@ -3600,7 +3694,7 @@
       "^": "Object;dartException,stackTrace<"
     },
     unwrapException_saveStackTrace: {
-      "^": "Closure:2;ex",
+      "^": "Closure:1;ex",
       call$1: function(error) {
         if (!!J.getInterceptor(error).$isError)
           if (error.$thrownJsError == null)
@@ -4018,7 +4112,7 @@
       }
     },
     JsLinkedHashMap_values_closure: {
-      "^": "Closure:2;$this",
+      "^": "Closure:1;$this",
       call$1: function(each) {
         return this.$this.$index(0, each);
       }
@@ -4074,19 +4168,19 @@
       }
     },
     initHooks_closure: {
-      "^": "Closure:2;getTag",
+      "^": "Closure:1;getTag",
       call$1: function(o) {
         return this.getTag(o);
       }
     },
     initHooks_closure0: {
-      "^": "Closure:22;getUnknownTag",
+      "^": "Closure:15;getUnknownTag",
       call$2: function(o, tag) {
         return this.getUnknownTag(o, tag);
       }
     },
     initHooks_closure1: {
-      "^": "Closure:34;prototypeForTag",
+      "^": "Closure:32;prototypeForTag",
       call$1: function(tag) {
         return this.prototypeForTag(tag);
       }
@@ -4322,6 +4416,7 @@
     NativeByteBuffer: {
       "^": "Interceptor;",
       $isNativeByteBuffer: 1,
+      $isByteBuffer: 1,
       "%": "ArrayBuffer"
     },
     NativeTypedData: {
@@ -4628,14 +4723,14 @@
     _AsyncRun__scheduleImmediateJsOverride: [function(callback) {
       ++init.globalState.topEventLoop._activeJsAsyncCount;
       self.scheduleImmediate(H.convertDartClosureToJS(new P._AsyncRun__scheduleImmediateJsOverride_internalCallback(callback), 0));
-    }, "call$1", "async__AsyncRun__scheduleImmediateJsOverride$closure", 2, 0, 6],
+    }, "call$1", "async__AsyncRun__scheduleImmediateJsOverride$closure", 2, 0, 8],
     _AsyncRun__scheduleImmediateWithSetImmediate: [function(callback) {
       ++init.globalState.topEventLoop._activeJsAsyncCount;
       self.setImmediate(H.convertDartClosureToJS(new P._AsyncRun__scheduleImmediateWithSetImmediate_internalCallback(callback), 0));
-    }, "call$1", "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", 2, 0, 6],
+    }, "call$1", "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", 2, 0, 8],
     _AsyncRun__scheduleImmediateWithTimer: [function(callback) {
       P.Timer__createTimer(C.Duration_0, callback);
-    }, "call$1", "async__AsyncRun__scheduleImmediateWithTimer$closure", 2, 0, 6],
+    }, "call$1", "async__AsyncRun__scheduleImmediateWithTimer$closure", 2, 0, 8],
     _asyncStart: function(bodyFunction, completer) {
       P._awaitOnObject(null, bodyFunction);
       return completer.get$future();
@@ -4741,6 +4836,10 @@
     Completer_Completer$sync: function($T) {
       return new P._SyncCompleter(new P._Future(0, $.Zone__current, null, [$T]), [$T]);
     },
+    _completeWithErrorCallback: function(result, error, stackTrace) {
+      $.Zone__current.toString;
+      result._completeError$2(error, stackTrace);
+    },
     _microtaskLoop: function() {
       var t1, t2;
       for (; t1 = $._nextCallback, t1 != null;) {
@@ -4762,7 +4861,7 @@
         if ($._nextCallback != null)
           $.$get$_AsyncRun__scheduleImmediateClosure().call$1(P.async___startMicrotaskLoop$closure());
       }
-    }, "call$0", "async___startMicrotaskLoop$closure", 0, 0, 1],
+    }, "call$0", "async___startMicrotaskLoop$closure", 0, 0, 2],
     _scheduleAsyncCallback: function(callback) {
       var newEntry = new P._AsyncCallbackEntry(callback, null);
       if ($._nextCallback == null) {
@@ -4815,15 +4914,17 @@
     _runGuarded: function(notificationHandler) {
       return;
     },
+    _nullDataHandler: [function(value) {
+    }, "call$1", "async___nullDataHandler$closure", 2, 0, 33],
     _nullErrorHandler: [function(error, stackTrace) {
       var t1 = $.Zone__current;
       t1.toString;
       P._rootHandleUncaughtError(null, null, t1, error, stackTrace);
     }, function(error) {
       return P._nullErrorHandler(error, null);
-    }, "call$2", "call$1", "async___nullErrorHandler$closure", 2, 2, 9, 0],
+    }, "call$2", "call$1", "async___nullErrorHandler$closure", 2, 2, 6, 0],
     _nullDoneHandler: [function() {
-    }, "call$0", "async___nullDoneHandler$closure", 0, 0, 1],
+    }, "call$0", "async___nullDoneHandler$closure", 0, 0, 2],
     _runUserCode: function(userCode, onSuccess, onError) {
       var e, s, replacement, error, stackTrace, exception, error0;
       try {
@@ -4852,6 +4953,13 @@
     },
     _cancelAndErrorClosure: function(subscription, future) {
       return new P._cancelAndErrorClosure_closure(subscription, future);
+    },
+    _cancelAndValue: function(subscription, future, value) {
+      var cancelFuture = subscription.cancel$0(0);
+      if (!!J.getInterceptor(cancelFuture).$isFuture && cancelFuture !== $.$get$Future__nullFuture())
+        cancelFuture.whenComplete$1(new P._cancelAndValue_closure(future, value));
+      else
+        future._complete$1(value);
     },
     _addErrorWithReplacement: function(sink, error, stackTrace) {
       $.Zone__current.toString;
@@ -4923,7 +5031,7 @@
       P._scheduleAsyncCallback(f);
     },
     _AsyncRun__initializeScheduleImmediate_internalCallback: {
-      "^": "Closure:2;_box_0",
+      "^": "Closure:1;_box_0",
       call$1: function(_) {
         var t1, f;
         --init.globalState.topEventLoop._activeJsAsyncCount;
@@ -4934,7 +5042,7 @@
       }
     },
     _AsyncRun__initializeScheduleImmediate_closure: {
-      "^": "Closure:20;_box_0,div,span",
+      "^": "Closure:35;_box_0,div,span",
       call$1: function(callback) {
         var t1, t2;
         ++init.globalState.topEventLoop._activeJsAsyncCount;
@@ -4959,19 +5067,19 @@
       }
     },
     _awaitOnObject_closure: {
-      "^": "Closure:2;bodyFunction",
+      "^": "Closure:1;bodyFunction",
       call$1: function(result) {
         return this.bodyFunction.call$2(0, result);
       }
     },
     _awaitOnObject_closure0: {
-      "^": "Closure:7;bodyFunction",
+      "^": "Closure:9;bodyFunction",
       call$2: function(error, stackTrace) {
         this.bodyFunction.call$2(1, new H.ExceptionAndStackTrace(error, stackTrace));
       }
     },
     _wrapJsFunctionForAsync_closure: {
-      "^": "Closure:25;$protected",
+      "^": "Closure:21;$protected",
       call$2: function(errorCode, result) {
         this.$protected(errorCode, result);
       }
@@ -4982,12 +5090,15 @@
     _BroadcastSubscription: {
       "^": "_ControllerSubscription;_eventState,_async$_next<,_async$_previous,_controller,_async$_onData,_onError,_onDone,_zone,_state,_cancelFuture,_pending,$ti",
       _onPause$0: [function() {
-      }, "call$0", "get$_onPause", 0, 0, 1],
+      }, "call$0", "get$_onPause", 0, 0, 2],
       _onResume$0: [function() {
-      }, "call$0", "get$_onResume", 0, 0, 1]
+      }, "call$0", "get$_onResume", 0, 0, 2]
     },
     _BroadcastStreamController: {
       "^": "Object;_state<,$ti",
+      get$stream: function(_) {
+        return new P._BroadcastStream(this, this.$ti);
+      },
       get$_mayAddEvent: function() {
         return this._state < 4;
       },
@@ -5075,7 +5186,7 @@
       "^": "Object;$ti"
     },
     Future_wait_handleError: {
-      "^": "Closure:4;_box_0,eagerError,cleanUp,result",
+      "^": "Closure:5;_box_0,eagerError,cleanUp,result",
       call$2: function(theError, theStackTrace) {
         var t1, t2;
         t1 = this._box_0;
@@ -5115,17 +5226,16 @@
     },
     _Completer: {
       "^": "Object;future<,$ti",
-      completeError$2: function(error, stackTrace) {
+      completeError$2: [function(error, stackTrace) {
         if (error == null)
           error = new P.NullThrownError();
         if (this.future._state !== 0)
           throw H.wrapException(new P.StateError("Future already completed"));
         $.Zone__current.toString;
         this._completeError$2(error, stackTrace);
-      },
-      completeError$1: function(error) {
+      }, function(error) {
         return this.completeError$2(error, null);
-      }
+      }, "completeError$1", "call$2", "call$1", "get$completeError", 2, 2, 6, 0]
     },
     _AsyncCompleter: {
       "^": "_Completer;future,$ti",
@@ -5136,7 +5246,7 @@
         t1._asyncComplete$1(value);
       }, function($receiver) {
         return this.complete$1($receiver, null);
-      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 8, 0],
+      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 10, 0],
       _completeError$2: function(error, stackTrace) {
         this.future._asyncCompleteError$2(error, stackTrace);
       }
@@ -5150,7 +5260,7 @@
         t1._complete$1(value);
       }, function($receiver) {
         return this.complete$1($receiver, null);
-      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 8, 0],
+      }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 10, 0],
       _completeError$2: function(error, stackTrace) {
         this.future._completeError$2(error, stackTrace);
       }
@@ -5215,6 +5325,18 @@
         var result = new P._Future(0, $.Zone__current, null, [null]);
         this._addListener$1(new P._FutureListener(null, result, onError == null ? 1 : 3, f, onError));
         return result;
+      },
+      catchError$2$test: function(onError, test) {
+        var t1, result;
+        t1 = $.Zone__current;
+        result = new P._Future(0, t1, null, this.$ti);
+        if (t1 !== C.C__RootZone)
+          onError = P._registerErrorHandler(onError, t1);
+        this._addListener$1(new P._FutureListener(null, result, 2, test, onError));
+        return result;
+      },
+      catchError$1: function(onError) {
+        return this.catchError$2$test(onError, null);
       },
       whenComplete$1: function(action) {
         var t1, result;
@@ -5318,7 +5440,7 @@
         P._Future__propagateToListeners(this, listeners);
       }, function(error) {
         return this._completeError$2(error, null);
-      }, "_completeError$1", "call$2", "call$1", "get$_completeError", 2, 2, 9, 0],
+      }, "_completeError$1", "call$2", "call$1", "get$_completeError", 2, 2, 6, 0],
       _asyncComplete$1: function(value) {
         var t1;
         if (H.checkSubtype(value, "$isFuture", this.$ti, "$asFuture")) {
@@ -5498,7 +5620,7 @@
       }
     },
     _Future__chainForeignFuture_closure: {
-      "^": "Closure:2;target",
+      "^": "Closure:1;target",
       call$1: function(value) {
         var t1 = this.target;
         t1._state = 0;
@@ -5506,7 +5628,7 @@
       }
     },
     _Future__chainForeignFuture_closure0: {
-      "^": "Closure:13;target",
+      "^": "Closure:14;target",
       call$2: function(error, stackTrace) {
         this.target._completeError$2(error, stackTrace);
       },
@@ -5539,7 +5661,7 @@
       }
     },
     _Future__propagateToListeners_handleWhenCompleteCallback: {
-      "^": "Closure:1;_box_1,_box_0,hasError,listener",
+      "^": "Closure:2;_box_1,_box_0,hasError,listener",
       call$0: function() {
         var completeResult, e, s, exception, t1, t2, originalSource;
         completeResult = null;
@@ -5580,13 +5702,13 @@
       }
     },
     _Future__propagateToListeners_handleWhenCompleteCallback_closure: {
-      "^": "Closure:2;originalSource",
+      "^": "Closure:1;originalSource",
       call$1: function(_) {
         return this.originalSource;
       }
     },
     _Future__propagateToListeners_handleValueCallback: {
-      "^": "Closure:1;_box_0,listener,sourceResult",
+      "^": "Closure:2;_box_0,listener,sourceResult",
       call$0: function() {
         var e, s, exception, t1;
         try {
@@ -5601,7 +5723,7 @@
       }
     },
     _Future__propagateToListeners_handleError: {
-      "^": "Closure:1;_box_1,_box_0,listener",
+      "^": "Closure:2;_box_1,_box_0,listener",
       call$0: function() {
         var asyncError, e, s, t1, t2, exception, t3, t4;
         try {
@@ -5658,6 +5780,14 @@
         future = new P._Future(0, $.Zone__current, null, [[P.List, t1]]);
         this.listen$4$cancelOnError$onDone$onError(new P.Stream_toList_closure(this, result), true, new P.Stream_toList_closure0(result, future), future.get$_completeError());
         return future;
+      },
+      get$first: function(_) {
+        var t1, future;
+        t1 = {};
+        future = new P._Future(0, $.Zone__current, null, [H.getRuntimeTypeArgument(this, "Stream", 0)]);
+        t1.subscription = null;
+        t1.subscription = this.listen$4$cancelOnError$onDone$onError(new P.Stream_first_closure(t1, this, future), true, new P.Stream_first_closure0(future), future.get$_completeError());
+        return future;
       }
     },
     Stream_forEach_closure: {
@@ -5678,7 +5808,7 @@
       }
     },
     Stream_forEach__closure0: {
-      "^": "Closure:2;",
+      "^": "Closure:1;",
       call$1: function(_) {
       }
     },
@@ -5689,7 +5819,7 @@
       }
     },
     Stream_length_closure: {
-      "^": "Closure:2;_box_0",
+      "^": "Closure:1;_box_0",
       call$1: function(_) {
         ++this._box_0.count;
       }
@@ -5717,6 +5847,31 @@
         this.future._complete$1(this.result);
       }
     },
+    Stream_first_closure: {
+      "^": "Closure;_box_0,$this,future",
+      call$1: function(value) {
+        P._cancelAndValue(this._box_0.subscription, this.future, value);
+      },
+      $signature: function() {
+        return H.computeSignature(function(T) {
+          return {func: 1, args: [T]};
+        }, this.$this, "Stream");
+      }
+    },
+    Stream_first_closure0: {
+      "^": "Closure:0;future",
+      call$0: function() {
+        var e, s, t1, exception;
+        try {
+          t1 = H.IterableElementError_noElement();
+          throw H.wrapException(t1);
+        } catch (exception) {
+          e = H.unwrapException(exception);
+          s = H.getTraceFromException(exception);
+          P._completeWithErrorCallback(this.future, e, s);
+        }
+      }
+    },
     StreamSubscription: {
       "^": "Object;"
     },
@@ -5742,10 +5897,10 @@
       },
       _onPause$0: [function() {
         this._controller._recordPause$1(this);
-      }, "call$0", "get$_onPause", 0, 0, 1],
+      }, "call$0", "get$_onPause", 0, 0, 2],
       _onResume$0: [function() {
         this._controller._recordResume$1(this);
-      }, "call$0", "get$_onResume", 0, 0, 1]
+      }, "call$0", "get$_onResume", 0, 0, 2]
     },
     _BufferingStreamSubscription: {
       "^": "Object;_state<,$ti",
@@ -5833,9 +5988,9 @@
           this._addPending$1(C.C__DelayedDone);
       },
       _onPause$0: [function() {
-      }, "call$0", "get$_onPause", 0, 0, 1],
+      }, "call$0", "get$_onPause", 0, 0, 2],
       _onResume$0: [function() {
-      }, "call$0", "get$_onResume", 0, 0, 1],
+      }, "call$0", "get$_onResume", 0, 0, 2],
       _onCancel$0: function() {
         return;
       },
@@ -5939,15 +6094,17 @@
           this._pending.schedule$1(this);
       },
       _BufferingStreamSubscription$4: function(onData, onError, onDone, cancelOnError, $T) {
-        var t1 = this._zone;
+        var handleData, t1;
+        handleData = onData == null ? P.async___nullDataHandler$closure() : onData;
+        t1 = this._zone;
         t1.toString;
-        this._async$_onData = onData;
+        this._async$_onData = handleData;
         this._onError = P._registerErrorHandler(onError == null ? P.async___nullErrorHandler$closure() : onError, t1);
         this._onDone = onDone == null ? P.async___nullDoneHandler$closure() : onDone;
       }
     },
     _BufferingStreamSubscription__sendError_sendError: {
-      "^": "Closure:1;$this,error,stackTrace",
+      "^": "Closure:2;$this,error,stackTrace",
       call$0: function() {
         var t1, t2, t3, t4, t5, t6;
         t1 = this.$this;
@@ -5968,7 +6125,7 @@
       }
     },
     _BufferingStreamSubscription__sendDone_sendDone: {
-      "^": "Closure:1;$this",
+      "^": "Closure:2;$this",
       call$0: function() {
         var t1, t2;
         t1 = this.$this;
@@ -6104,8 +6261,10 @@
         if (t1 >= 4)
           return;
         this._state = (t1 | 1) >>> 0;
-        this._zone.runGuarded$1(this._onDone);
-      }, "call$0", "get$_sendDone", 0, 0, 1]
+        t1 = this._onDone;
+        if (t1 != null)
+          this._zone.runGuarded$1(t1);
+      }, "call$0", "get$_sendDone", 0, 0, 2]
     },
     _StreamIterator: {
       "^": "Object;_subscription,_stateData,_isPaused,$ti"
@@ -6117,9 +6276,15 @@
       }
     },
     _cancelAndErrorClosure_closure: {
-      "^": "Closure:7;subscription,future",
+      "^": "Closure:9;subscription,future",
       call$2: function(error, stackTrace) {
         P._cancelAndError(this.subscription, this.future, error, stackTrace);
+      }
+    },
+    _cancelAndValue_closure: {
+      "^": "Closure:0;future,value",
+      call$0: function() {
+        return this.future._complete$1(this.value);
       }
     },
     _ForwardingStream: {
@@ -6163,13 +6328,13 @@
         if (t1 == null)
           return;
         t1.pause$0(0);
-      }, "call$0", "get$_onPause", 0, 0, 1],
+      }, "call$0", "get$_onPause", 0, 0, 2],
       _onResume$0: [function() {
         var t1 = this._subscription;
         if (t1 == null)
           return;
         t1.resume$0(0);
-      }, "call$0", "get$_onResume", 0, 0, 1],
+      }, "call$0", "get$_onResume", 0, 0, 2],
       _onCancel$0: function() {
         var t1 = this._subscription;
         if (t1 != null) {
@@ -6187,10 +6352,10 @@
       }],
       _handleError$2: [function(error, stackTrace) {
         this._stream._handleError$3(error, stackTrace, this);
-      }, "call$2", "get$_handleError", 4, 0, 32],
+      }, "call$2", "get$_handleError", 4, 0, 20],
       _handleDone$0: [function() {
         this._async$_close$0();
-      }, "call$0", "get$_handleDone", 0, 0, 1],
+      }, "call$0", "get$_handleDone", 0, 0, 2],
       _ForwardingStreamSubscription$5: function(_stream, onData, onError, onDone, cancelOnError, $S, $T) {
         this._subscription = this._stream._async$_source.listen$3$onDone$onError(this.get$_handleData(), this.get$_handleDone(), this.get$_handleError());
       },
@@ -6346,7 +6511,7 @@
       }
     },
     _RootZone_bindUnaryCallback_closure: {
-      "^": "Closure:2;$this,f",
+      "^": "Closure:1;$this,f",
       call$1: function(arg) {
         return this.$this.runUnaryGuarded$2(this.f, arg);
       }
@@ -6835,7 +7000,7 @@
       $asEfficientLengthIterable: null
     },
     Maps_mapToString_closure: {
-      "^": "Closure:4;_box_0,result",
+      "^": "Closure:5;_box_0,result",
       call$2: function(k, v) {
         var t1, t2;
         t1 = this._box_0;
@@ -6874,6 +7039,8 @@
       elementAt$1: function(_, index) {
         var $length, t1, t2, t3;
         $length = (this._tail - this._head & this._table.length - 1) >>> 0;
+        if (typeof index !== "number")
+          return H.iae(index);
         if (0 > index || index >= $length)
           H.throwExpression(P.IndexError$(index, this, "index", null, $length));
         t1 = this._table;
@@ -7011,6 +7178,9 @@
       list = H.setRuntimeTypeInfo([], [$E]);
       for (t1 = J.get$iterator$ax(elements); t1.moveNext$0();)
         list.push(t1.get$current());
+      if (growable)
+        return list;
+      list.fixed$length = Array;
       return list;
     },
     print: function(object) {
@@ -7152,10 +7322,15 @@
       },
       $negate: function(_) {
         return new P.Duration(0 - this._duration);
+      },
+      static: {
+        Duration$: function(days, hours, microseconds, milliseconds, minutes, seconds) {
+          return new P.Duration(864e8 * days + 3600000000 * hours + 60000000 * minutes + 1000000 * seconds + 1000 * milliseconds + microseconds);
+        }
       }
     },
     Duration_toString_sixDigits: {
-      "^": "Closure:10;",
+      "^": "Closure:11;",
       call$1: function(n) {
         if (n >= 100000)
           return "" + n;
@@ -7171,7 +7346,7 @@
       }
     },
     Duration_toString_twoDigits: {
-      "^": "Closure:10;",
+      "^": "Closure:11;",
       call$1: function(n) {
         if (n >= 10)
           return "" + n;
@@ -7232,6 +7407,9 @@
         },
         ArgumentError$value: function(value, $name, message) {
           return new P.ArgumentError(true, value, $name, message);
+        },
+        ArgumentError$notNull: function($name) {
+          return new P.ArgumentError(false, null, $name, "Must not be null");
         }
       }
     },
@@ -7443,6 +7621,8 @@
       },
       elementAt$1: function(_, index) {
         var t1, elementIndex, element;
+        if (typeof index !== "number" || Math.floor(index) !== index)
+          throw H.wrapException(P.ArgumentError$notNull("index"));
         if (index < 0)
           H.throwExpression(P.RangeError$range(index, 0, null, "index", null));
         for (t1 = this.get$iterator(this), elementIndex = 0; t1.moveNext$0();) {
@@ -7544,6 +7724,12 @@
     window: function() {
       return window;
     },
+    AudioElement_AudioElement$_: function(src) {
+      return new Audio();
+    },
+    AudioElement_AudioElement: function(src) {
+      return W.AudioElement_AudioElement$_(src);
+    },
     CanvasElement_CanvasElement: function(height, width) {
       var e = document.createElement("canvas");
       e.width = width;
@@ -7557,9 +7743,23 @@
     },
     Element__determineMouseWheelEventType: [function(e) {
       return "wheel";
-    }, "call$1", "html_Element__determineMouseWheelEventType$closure", 2, 0, 33],
+    }, "call$1", "html_Element__determineMouseWheelEventType$closure", 2, 0, 34],
     _ElementFactoryProvider_createElement_tag: function(tag, typeExtension) {
       return document.createElement(tag);
+    },
+    HttpRequest_request: function(url, method, mimeType, onProgress, requestHeaders, responseType, sendData, withCredentials) {
+      var t1, t2, completer, xhr;
+      t1 = W.HttpRequest;
+      t2 = new P._Future(0, $.Zone__current, null, [t1]);
+      completer = new P._AsyncCompleter(t2, [t1]);
+      xhr = new XMLHttpRequest();
+      C.HttpRequest_methods.open$3$async(xhr, "GET", url, true);
+      xhr.responseType = responseType;
+      t1 = W.ProgressEvent;
+      W._EventStreamSubscription$(xhr, "load", new W.HttpRequest_request_closure(completer, xhr), false, t1);
+      W._EventStreamSubscription$(xhr, "error", completer.get$completeError(), false, t1);
+      xhr.send();
+      return t2;
     },
     ImageElement_ImageElement: function(height, src, width) {
       var e = document.createElement("img");
@@ -7575,6 +7775,26 @@
       hash ^= hash >>> 11;
       return 536870911 & hash + ((16383 & hash) << 15);
     },
+    _convertNativeToDart_EventTarget: function(e) {
+      var $window;
+      if (e == null)
+        return;
+      if ("postMessage" in e) {
+        $window = W._DOMWindowCrossFrame__createSafe(e);
+        if (!!J.getInterceptor($window).$isEventTarget)
+          return $window;
+        return;
+      } else
+        return e;
+    },
+    _convertNativeToDart_XHR_Response: function(o) {
+      var t1;
+      if (!!J.getInterceptor(o).$isDocument)
+        return o;
+      t1 = new P._AcceptStructuredCloneDart2Js([], [], false);
+      t1.mustCopy = true;
+      return t1.walk$1(o);
+    },
     _wrapZone: function(callback) {
       var t1 = $.Zone__current;
       if (t1 === C.C__RootZone)
@@ -7583,27 +7803,56 @@
     },
     HtmlElement: {
       "^": "Element;",
-      "%": "HTMLBRElement|HTMLBaseElement|HTMLContentElement|HTMLDListElement|HTMLDataListElement|HTMLDetailsElement|HTMLDialogElement|HTMLDirectoryElement|HTMLDivElement|HTMLFieldSetElement|HTMLFontElement|HTMLFrameElement|HTMLHRElement|HTMLHeadElement|HTMLHeadingElement|HTMLHtmlElement|HTMLKeygenElement|HTMLLabelElement|HTMLLegendElement|HTMLLinkElement|HTMLMapElement|HTMLMarqueeElement|HTMLMenuElement|HTMLMenuItemElement|HTMLMetaElement|HTMLModElement|HTMLOListElement|HTMLOptGroupElement|HTMLParagraphElement|HTMLPictureElement|HTMLPreElement|HTMLQuoteElement|HTMLScriptElement|HTMLShadowElement|HTMLSlotElement|HTMLSourceElement|HTMLSpanElement|HTMLStyleElement|HTMLTableCaptionElement|HTMLTableCellElement|HTMLTableColElement|HTMLTableDataCellElement|HTMLTableElement|HTMLTableHeaderCellElement|HTMLTableRowElement|HTMLTableSectionElement|HTMLTemplateElement|HTMLTitleElement|HTMLTrackElement|HTMLUListElement|HTMLUnknownElement;HTMLElement"
+      "%": "HTMLBRElement|HTMLContentElement|HTMLDListElement|HTMLDataListElement|HTMLDetailsElement|HTMLDialogElement|HTMLDirectoryElement|HTMLDivElement|HTMLFieldSetElement|HTMLFontElement|HTMLFrameElement|HTMLHRElement|HTMLHeadElement|HTMLHeadingElement|HTMLHtmlElement|HTMLKeygenElement|HTMLLabelElement|HTMLLegendElement|HTMLLinkElement|HTMLMapElement|HTMLMarqueeElement|HTMLMenuElement|HTMLMenuItemElement|HTMLMetaElement|HTMLModElement|HTMLOListElement|HTMLOptGroupElement|HTMLParagraphElement|HTMLPictureElement|HTMLPreElement|HTMLQuoteElement|HTMLScriptElement|HTMLShadowElement|HTMLSlotElement|HTMLSourceElement|HTMLSpanElement|HTMLStyleElement|HTMLTableCaptionElement|HTMLTableCellElement|HTMLTableColElement|HTMLTableDataCellElement|HTMLTableElement|HTMLTableHeaderCellElement|HTMLTableRowElement|HTMLTableSectionElement|HTMLTemplateElement|HTMLTitleElement|HTMLTrackElement|HTMLUListElement|HTMLUnknownElement;HTMLElement"
     },
     AnchorElement: {
-      "^": "HtmlElement;",
+      "^": "HtmlElement;target=",
       toString$0: function(receiver) {
         return String(receiver);
       },
       $isInterceptor: 1,
       "%": "HTMLAnchorElement"
     },
+    Animation: {
+      "^": "EventTarget;currentTime%",
+      pause$0: function(receiver) {
+        return receiver.pause();
+      },
+      play$0: function(receiver) {
+        return receiver.play();
+      },
+      "%": "Animation"
+    },
+    AnimationEffectTiming: {
+      "^": "Interceptor;duration=",
+      "%": "AnimationEffectTiming"
+    },
+    AnimationPlayerEvent: {
+      "^": "Event0;currentTime=",
+      "%": "AnimationPlayerEvent"
+    },
+    AnimationTimeline: {
+      "^": "Interceptor;currentTime%",
+      "%": "AnimationTimeline"
+    },
     ApplicationCacheErrorEvent: {
       "^": "Event0;url=",
       "%": "ApplicationCacheErrorEvent"
     },
     AreaElement: {
-      "^": "HtmlElement;",
+      "^": "HtmlElement;target=",
       toString$0: function(receiver) {
         return String(receiver);
       },
       $isInterceptor: 1,
       "%": "HTMLAreaElement"
+    },
+    AudioElement: {
+      "^": "MediaElement;",
+      $isAudioElement: 1,
+      $isEventTarget: 1,
+      $isObject: 1,
+      "%": "HTMLAudioElement"
     },
     AudioTrack: {
       "^": "Interceptor;",
@@ -7624,7 +7873,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -7668,6 +7917,10 @@
       $isList: 1,
       $isEfficientLengthIterable: 1
     },
+    BaseElement: {
+      "^": "HtmlElement;target=",
+      "%": "HTMLBaseElement"
+    },
     Blob: {
       "^": "Interceptor;",
       "%": ";Blob"
@@ -7678,6 +7931,7 @@
     },
     BodyElement: {
       "^": "HtmlElement;",
+      $isEventTarget: 1,
       $isInterceptor: 1,
       "%": "HTMLBodyElement"
     },
@@ -7706,7 +7960,7 @@
     CharacterData: {
       "^": "Node;length=",
       $isInterceptor: 1,
-      "%": "CDATASection|CharacterData|Comment|ProcessingInstruction|Text"
+      "%": "CDATASection|Comment|Text;CharacterData"
     },
     Client: {
       "^": "Interceptor;url=",
@@ -7714,6 +7968,7 @@
     },
     CompositorWorker: {
       "^": "EventTarget;",
+      $isEventTarget: 1,
       $isInterceptor: 1,
       "%": "CompositorWorker"
     },
@@ -7813,10 +8068,18 @@
       "^": "Event0;value=",
       "%": "DeviceLightEvent"
     },
+    Document: {
+      "^": "Node;",
+      get$onEnded: function(receiver) {
+        return new W._EventStream(receiver, "ended", false, [W.Event0]);
+      },
+      $isDocument: 1,
+      "%": "Document|HTMLDocument|XMLDocument"
+    },
     DocumentFragment: {
       "^": "Node;",
       $isInterceptor: 1,
-      "%": "DocumentFragment|ShadowRoot"
+      "%": ";DocumentFragment"
     },
     DomException: {
       "^": "Interceptor;",
@@ -7909,7 +8172,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -7968,12 +8231,42 @@
       get$offsetTop: function(receiver) {
         return C.JSNumber_methods.round$0(receiver.offsetTop);
       },
+      get$onEnded: function(receiver) {
+        return new W._ElementEventStreamImpl(receiver, "ended", false, [W.Event0]);
+      },
       $isInterceptor: 1,
+      $isEventTarget: 1,
       "%": ";Element"
     },
     EmbedElement: {
       "^": "HtmlElement;height=,width=",
       "%": "HTMLEmbedElement"
+    },
+    Entry: {
+      "^": "Interceptor;",
+      _html$_remove$2: function(receiver, successCallback, errorCallback) {
+        return receiver.remove(H.convertDartClosureToJS(successCallback, 0), H.convertDartClosureToJS(errorCallback, 1));
+      },
+      remove$0: function(receiver) {
+        var t1, completer;
+        t1 = new P._Future(0, $.Zone__current, null, [null]);
+        completer = new P._AsyncCompleter(t1, [null]);
+        this._html$_remove$2(receiver, new W.Entry_remove_closure(completer), new W.Entry_remove_closure0(completer));
+        return t1;
+      },
+      "%": "DirectoryEntry|Entry|FileEntry"
+    },
+    Entry_remove_closure: {
+      "^": "Closure:0;completer",
+      call$0: function() {
+        this.completer.complete$0(0);
+      }
+    },
+    Entry_remove_closure0: {
+      "^": "Closure:1;completer",
+      call$1: function(error) {
+        this.completer.completeError$1(error);
+      }
     },
     ErrorEvent: {
       "^": "Event0;error=",
@@ -7981,12 +8274,15 @@
     },
     Event0: {
       "^": "Interceptor;type=",
+      get$target: function(receiver) {
+        return W._convertNativeToDart_EventTarget(receiver.target);
+      },
       preventDefault$0: function(receiver) {
         return receiver.preventDefault();
       },
       $isEvent0: 1,
       $isObject: 1,
-      "%": "AnimationEvent|AnimationPlayerEvent|AudioProcessingEvent|AutocompleteErrorEvent|BeforeInstallPromptEvent|BeforeUnloadEvent|BlobEvent|ClipboardEvent|CloseEvent|CustomEvent|DeviceMotionEvent|DeviceOrientationEvent|ExtendableEvent|ExtendableMessageEvent|FetchEvent|FontFaceSetLoadEvent|GamepadEvent|GeofencingEvent|HashChangeEvent|IDBVersionChangeEvent|InstallEvent|MIDIConnectionEvent|MIDIMessageEvent|MediaEncryptedEvent|MediaKeyMessageEvent|MediaQueryListEvent|MediaStreamEvent|MediaStreamTrackEvent|MessageEvent|NotificationEvent|OfflineAudioCompletionEvent|PageTransitionEvent|PopStateEvent|PresentationConnectionAvailableEvent|PresentationConnectionCloseEvent|ProgressEvent|PromiseRejectionEvent|PushEvent|RTCDTMFToneChangeEvent|RTCDataChannelEvent|RTCIceCandidateEvent|RTCPeerConnectionIceEvent|RelatedEvent|ResourceProgressEvent|SecurityPolicyViolationEvent|ServicePortConnectEvent|ServiceWorkerMessageEvent|SpeechRecognitionEvent|SpeechSynthesisEvent|SyncEvent|TrackEvent|TransitionEvent|USBConnectionEvent|WebKitTransitionEvent;Event|InputEvent"
+      "%": "AnimationEvent|AudioProcessingEvent|AutocompleteErrorEvent|BeforeInstallPromptEvent|BeforeUnloadEvent|BlobEvent|ClipboardEvent|CloseEvent|CustomEvent|DeviceMotionEvent|DeviceOrientationEvent|ExtendableEvent|ExtendableMessageEvent|FetchEvent|FontFaceSetLoadEvent|GamepadEvent|GeofencingEvent|HashChangeEvent|IDBVersionChangeEvent|InstallEvent|MIDIConnectionEvent|MIDIMessageEvent|MediaEncryptedEvent|MediaKeyMessageEvent|MediaQueryListEvent|MediaStreamEvent|MediaStreamTrackEvent|MessageEvent|NotificationEvent|OfflineAudioCompletionEvent|PageTransitionEvent|PopStateEvent|PresentationConnectionAvailableEvent|PresentationConnectionCloseEvent|ProgressEvent|PromiseRejectionEvent|PushEvent|RTCDTMFToneChangeEvent|RTCDataChannelEvent|RTCIceCandidateEvent|RTCPeerConnectionIceEvent|RelatedEvent|ResourceProgressEvent|SecurityPolicyViolationEvent|ServicePortConnectEvent|ServiceWorkerMessageEvent|SpeechRecognitionEvent|SpeechSynthesisEvent|SyncEvent|TrackEvent|TransitionEvent|USBConnectionEvent|WebKitTransitionEvent;Event|InputEvent"
     },
     EventSource: {
       "^": "EventTarget;url=",
@@ -8002,7 +8298,7 @@
       },
       $isEventTarget: 1,
       $isObject: 1,
-      "%": "AnalyserNode|Animation|ApplicationCache|AudioBufferSourceNode|AudioChannelMerger|AudioChannelSplitter|AudioContext|AudioDestinationNode|AudioGainNode|AudioNode|AudioPannerNode|AudioSourceNode|BatteryManager|BiquadFilterNode|BluetoothDevice|BluetoothRemoteGATTCharacteristic|CanvasCaptureMediaStreamTrack|ChannelMergerNode|ChannelSplitterNode|ConvolverNode|CrossOriginServiceWorkerClient|DOMApplicationCache|DelayNode|DynamicsCompressorNode|GainNode|IDBDatabase|IIRFilterNode|JavaScriptAudioNode|MIDIAccess|MediaElementAudioSourceNode|MediaKeySession|MediaQueryList|MediaRecorder|MediaSource|MediaStream|MediaStreamAudioDestinationNode|MediaStreamAudioSourceNode|MediaStreamTrack|MessagePort|NetworkInformation|Notification|OfflineAudioContext|OfflineResourceList|Oscillator|OscillatorNode|PannerNode|Performance|PermissionStatus|PresentationReceiver|PresentationRequest|RTCDTMFSender|RTCPeerConnection|RealtimeAnalyserNode|ScreenOrientation|ScriptProcessorNode|ServicePortCollection|ServiceWorkerContainer|ServiceWorkerRegistration|SpeechRecognition|SpeechSynthesis|StereoPannerNode|USB|WaveShaperNode|WorkerPerformance|mozRTCPeerConnection|webkitAudioContext|webkitAudioPannerNode|webkitRTCPeerConnection;EventTarget;EventTarget_ListMixin|EventTarget_ListMixin_ImmutableListMixin|EventTarget_ListMixin0|EventTarget_ListMixin_ImmutableListMixin0|EventTarget_ListMixin1|EventTarget_ListMixin_ImmutableListMixin1"
+      "%": "ApplicationCache|BatteryManager|BluetoothDevice|BluetoothRemoteGATTCharacteristic|CrossOriginServiceWorkerClient|DOMApplicationCache|IDBDatabase|MIDIAccess|MediaQueryList|MessagePort|NetworkInformation|Notification|OfflineResourceList|Performance|PermissionStatus|PresentationReceiver|PresentationRequest|RTCPeerConnection|ScreenOrientation|ServicePortCollection|ServiceWorkerContainer|ServiceWorkerRegistration|SpeechRecognition|USB|WorkerPerformance|mozRTCPeerConnection|webkitRTCPeerConnection;EventTarget;EventTarget_ListMixin|EventTarget_ListMixin_ImmutableListMixin|EventTarget_ListMixin0|EventTarget_ListMixin_ImmutableListMixin0|EventTarget_ListMixin1|EventTarget_ListMixin_ImmutableListMixin1"
     },
     File: {
       "^": "Blob;",
@@ -8023,7 +8319,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8091,7 +8387,7 @@
       "%": "FontFaceSet"
     },
     FormElement: {
-      "^": "HtmlElement;length=",
+      "^": "HtmlElement;length=,target=",
       "%": "HTMLFormElement"
     },
     Gamepad: {
@@ -8121,7 +8417,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8167,10 +8463,40 @@
     },
     HttpRequest: {
       "^": "HttpRequestEventTarget;",
+      open$5$async$password$user: function(receiver, method, url, async, password, user) {
+        return receiver.open(method, url, true, user, password);
+      },
+      open$3$async: function($receiver, method, url, async) {
+        return $receiver.open(method, url, async);
+      },
+      get$response: function(receiver) {
+        return W._convertNativeToDart_XHR_Response(receiver.response);
+      },
       send$1: function(receiver, body_OR_data) {
         return receiver.send(body_OR_data);
       },
+      $isHttpRequest: 1,
+      $isEventTarget: 1,
+      $isObject: 1,
       "%": "XMLHttpRequest"
+    },
+    HttpRequest_request_closure: {
+      "^": "Closure:1;completer,xhr",
+      call$1: function(e) {
+        var t1, t2, accepted, unknownRedirect, t3;
+        t1 = this.xhr;
+        t2 = t1.status;
+        if (typeof t2 !== "number")
+          return t2.$ge();
+        accepted = t2 >= 200 && t2 < 300;
+        unknownRedirect = t2 > 307 && t2 < 400;
+        t2 = accepted || t2 === 0 || t2 === 304 || unknownRedirect;
+        t3 = this.completer;
+        if (t2)
+          t3.complete$1(0, t1);
+        else
+          t3.completeError$1(e);
+      }
     },
     HttpRequestEventTarget: {
       "^": "EventTarget;",
@@ -8196,7 +8522,6 @@
         return $receiver.complete.call$1(arg0);
       },
       $isImageElement: 1,
-      $isNode: 1,
       $isEventTarget: 1,
       $isObject: 1,
       "%": "HTMLImageElement"
@@ -8204,7 +8529,12 @@
     InputElement: {
       "^": "HtmlElement;height=,value=,width=",
       $isInterceptor: 1,
+      $isEventTarget: 1,
       "%": "HTMLInputElement"
+    },
+    IntersectionObserverEntry: {
+      "^": "Interceptor;target=",
+      "%": "IntersectionObserverEntry"
     },
     KeyboardEvent: {
       "^": "UIEvent;keyCode=,altKey=,ctrlKey=,shiftKey=",
@@ -8229,12 +8559,50 @@
       "%": "Location"
     },
     MediaElement: {
-      "^": "HtmlElement;error=",
-      "%": "HTMLAudioElement;HTMLMediaElement"
+      "^": "HtmlElement;currentTime%,duration=,error=,volume}",
+      pause$0: function(receiver) {
+        return receiver.pause();
+      },
+      play$0: function(receiver) {
+        return receiver.play();
+      },
+      "%": ";HTMLMediaElement"
+    },
+    MediaKeySession: {
+      "^": "EventTarget;",
+      remove$0: function(receiver) {
+        return receiver.remove();
+      },
+      "%": "MediaKeySession"
     },
     MediaList: {
       "^": "Interceptor;length=",
       "%": "MediaList"
+    },
+    MediaRecorder: {
+      "^": "EventTarget;",
+      pause$0: function(receiver) {
+        return receiver.pause();
+      },
+      "%": "MediaRecorder"
+    },
+    MediaSource: {
+      "^": "EventTarget;duration=",
+      "%": "MediaSource"
+    },
+    MediaStream: {
+      "^": "EventTarget;",
+      get$onEnded: function(receiver) {
+        return new W._EventStream(receiver, "ended", false, [W.Event0]);
+      },
+      "%": "MediaStream"
+    },
+    MediaStreamTrack: {
+      "^": "EventTarget;",
+      get$onEnded: function(receiver) {
+        return new W._EventStream(receiver, "ended", false, [W.Event0]);
+      },
+      "%": "CanvasCaptureMediaStreamTrack|MediaStreamTrack"
     },
     MeterElement: {
       "^": "HtmlElement;value=",
@@ -8273,7 +8641,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8327,13 +8695,22 @@
       $isObject: 1,
       "%": ";DragEvent|MouseEvent"
     },
+    MutationRecord: {
+      "^": "Interceptor;target=",
+      "%": "MutationRecord"
+    },
     Navigator: {
       "^": "Interceptor;",
       $isInterceptor: 1,
       "%": "Navigator"
     },
     Node: {
-      "^": "EventTarget;parentNode=,text:textContent}",
+      "^": "EventTarget;text:textContent}",
+      remove$0: function(receiver) {
+        var t1 = receiver.parentNode;
+        if (t1 != null)
+          t1.removeChild(receiver);
+      },
       toString$0: function(receiver) {
         var value = receiver.nodeValue;
         return value == null ? this.super$Interceptor$toString(receiver) : value;
@@ -8341,10 +8718,12 @@
       append$1: function(receiver, node) {
         return receiver.appendChild(node);
       },
-      $isNode: 1,
+      clone$1: function(receiver, deep) {
+        return receiver.cloneNode(true);
+      },
       $isEventTarget: 1,
       $isObject: 1,
-      "%": "Document|HTMLDocument|XMLDocument;Node"
+      "%": ";Node"
     },
     NodeList: {
       "^": "Interceptor_ListMixin_ImmutableListMixin3;",
@@ -8360,7 +8739,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8433,6 +8812,10 @@
       $isInterceptor: 1,
       "%": "Path2D"
     },
+    PerformanceEntry: {
+      "^": "Interceptor;duration=",
+      "%": "PerformanceCompositeTiming|PerformanceEntry|PerformanceMark|PerformanceMeasure|PerformanceRenderTiming|PerformanceResourceTiming"
+    },
     Perspective: {
       "^": "TransformComponent;length=",
       "%": "Perspective"
@@ -8456,7 +8839,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8519,6 +8902,10 @@
       },
       "%": "PresentationConnection"
     },
+    ProcessingInstruction: {
+      "^": "CharacterData;target=",
+      "%": "ProcessingInstruction"
+    },
     ProgressElement: {
       "^": "HtmlElement;value=",
       "%": "HTMLProgressElement"
@@ -8534,6 +8921,10 @@
       },
       "%": "DataChannel|RTCDataChannel"
     },
+    RtcDtmfSender: {
+      "^": "EventTarget;duration=",
+      "%": "RTCDTMFSender"
+    },
     Screen: {
       "^": "Interceptor;height=,width=",
       "%": "Screen"
@@ -8542,8 +8933,16 @@
       "^": "HtmlElement;length=,value=",
       "%": "HTMLSelectElement"
     },
+    ShadowRoot: {
+      "^": "DocumentFragment;",
+      clone$1: function(receiver, deep) {
+        return receiver.cloneNode(true);
+      },
+      "%": "ShadowRoot"
+    },
     SharedWorker: {
       "^": "EventTarget;",
+      $isEventTarget: 1,
       $isInterceptor: 1,
       "%": "SharedWorker"
     },
@@ -8571,7 +8970,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8634,7 +9033,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8687,8 +9086,15 @@
       $isObject: 1,
       "%": "SpeechRecognitionResult"
     },
+    SpeechSynthesis: {
+      "^": "EventTarget;",
+      pause$0: function(receiver) {
+        return receiver.pause();
+      },
+      "%": "SpeechSynthesis"
+    },
     SpeechSynthesisUtterance: {
-      "^": "EventTarget;text}",
+      "^": "EventTarget;text},volume}",
       "%": "SpeechSynthesisUtterance"
     },
     Storage: {
@@ -8760,7 +9166,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8818,7 +9224,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8868,6 +9274,9 @@
     },
     Touch: {
       "^": "Interceptor;",
+      get$target: function(receiver) {
+        return W._convertNativeToDart_EventTarget(receiver.target);
+      },
       get$client: function(receiver) {
         return new P.Point0(C.JSNumber_methods.round$0(receiver.clientX), C.JSNumber_methods.round$0(receiver.clientY), [null]);
       },
@@ -8895,7 +9304,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -8950,13 +9359,6 @@
     Translation: {
       "^": "TransformComponent;x=,y=",
       "%": "Translation"
-    },
-    TreeWalker: {
-      "^": "Interceptor;",
-      parentNode$0: [function(receiver) {
-        return receiver.parentNode();
-      }, "call$0", "get$parentNode", 0, 0, 14],
-      "%": "TreeWalker"
     },
     UIEvent: {
       "^": "Event0;",
@@ -9042,11 +9444,16 @@
           };
         })(receiver);
       },
+      get$onEnded: function(receiver) {
+        return new W._EventStream(receiver, "ended", false, [W.Event0]);
+      },
       $isInterceptor: 1,
+      $isEventTarget: 1,
       "%": "DOMWindow|Window"
     },
     Worker: {
       "^": "EventTarget;",
+      $isEventTarget: 1,
       $isInterceptor: 1,
       "%": "Worker"
     },
@@ -9117,7 +9524,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -9175,7 +9582,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -9254,7 +9661,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -9300,6 +9707,7 @@
     },
     _HTMLFrameSetElement: {
       "^": "HtmlElement;",
+      $isEventTarget: 1,
       $isInterceptor: 1,
       "%": "HTMLFrameSetElement"
     },
@@ -9317,7 +9725,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -9367,6 +9775,7 @@
     },
     _ServiceWorker: {
       "^": "EventTarget;",
+      $isEventTarget: 1,
       $isInterceptor: 1,
       "%": "ServiceWorker"
     },
@@ -9384,7 +9793,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -9442,7 +9851,7 @@
         throw H.wrapException(new P.UnsupportedError("Cannot assign element of immutable List."));
       },
       elementAt$1: function(receiver, index) {
-        if (index < 0 || index >= receiver.length)
+        if (index >>> 0 !== index || index >= receiver.length)
           return H.ioore(receiver, index);
         return receiver[index];
       },
@@ -9563,7 +9972,7 @@
       },
       static: {
         _EventStreamSubscription$: function(_target, _eventType, onData, _useCapture, $T) {
-          var t1 = W._wrapZone(new W._EventStreamSubscription_closure(onData));
+          var t1 = onData == null ? null : W._wrapZone(new W._EventStreamSubscription_closure(onData));
           t1 = new W._EventStreamSubscription(0, _target, _eventType, t1, false, [$T]);
           t1._EventStreamSubscription$4(_target, _eventType, onData, false, $T);
           return t1;
@@ -9571,7 +9980,7 @@
       }
     },
     _EventStreamSubscription_closure: {
-      "^": "Closure:2;onData",
+      "^": "Closure:1;onData",
       call$1: function(e) {
         return this.onData.call$1(e);
       }
@@ -9609,6 +10018,19 @@
       },
       get$current: function() {
         return this._html$_current;
+      }
+    },
+    _DOMWindowCrossFrame: {
+      "^": "Object;_window",
+      $isEventTarget: 1,
+      $isInterceptor: 1,
+      static: {
+        _DOMWindowCrossFrame__createSafe: function(w) {
+          if (w === window)
+            return w;
+          else
+            return new W._DOMWindowCrossFrame(w);
+        }
       }
     }
   }], ["html_common", "dart:html_common",, P, {
@@ -9772,7 +10194,7 @@
       }
     },
     _AcceptStructuredClone_walk_closure: {
-      "^": "Closure:4;_box_0,$this",
+      "^": "Closure:5;_box_0,$this",
       call$2: function(key, value) {
         var t1, t2;
         t1 = this._box_0.copy;
@@ -9782,7 +10204,7 @@
       }
     },
     convertDartToNative_Dictionary_closure: {
-      "^": "Closure:15;object",
+      "^": "Closure:16;object",
       call$2: function(key, value) {
         this.object[key] = value;
       }
@@ -9798,13 +10220,13 @@
       }
     },
     convertNativePromiseToDartFuture_closure: {
-      "^": "Closure:2;completer",
+      "^": "Closure:1;completer",
       call$1: function(result) {
         return this.completer.complete$1(0, result);
       }
     },
     convertNativePromiseToDartFuture_closure0: {
-      "^": "Closure:2;completer",
+      "^": "Closure:1;completer",
       call$1: function(result) {
         return this.completer.completeError$1(result);
       }
@@ -10008,7 +10430,7 @@
   }], ["dart.dom.svg", "dart:svg",, P, {
     "^": "",
     AElement: {
-      "^": "GraphicsElement;",
+      "^": "GraphicsElement;target=",
       $isInterceptor: 1,
       "%": "SVGAElement"
     },
@@ -10324,6 +10746,10 @@
     },
     SvgElement: {
       "^": "Element;",
+      get$onEnded: function(receiver) {
+        return new W._ElementEventStreamImpl(receiver, "ended", false, [W.Event0]);
+      },
+      $isEventTarget: 1,
       $isInterceptor: 1,
       "%": "SVGComponentTransferFunctionElement|SVGDescElement|SVGDiscardElement|SVGFEDistantLightElement|SVGFEFuncAElement|SVGFEFuncBElement|SVGFEFuncGElement|SVGFEFuncRElement|SVGFEMergeNodeElement|SVGMetadataElement|SVGStopElement|SVGStyleElement|SVGTitleElement;SVGElement"
     },
@@ -10441,12 +10867,90 @@
   }], ["dart.dom.web_audio", "dart:web_audio",, P, {
     "^": "",
     AudioBuffer: {
-      "^": "Interceptor;length=",
+      "^": "Interceptor;duration=,length=",
+      $isAudioBuffer: 1,
+      $isObject: 1,
       "%": "AudioBuffer"
+    },
+    AudioBufferSourceNode: {
+      "^": "AudioSourceNode;",
+      start$3: function(receiver, when, grainOffset, grainDuration) {
+        if (!!receiver.start)
+          if (grainDuration != null)
+            receiver.start(when, grainOffset, grainDuration);
+          else
+            receiver.start(when, grainOffset);
+        else if (grainDuration != null)
+          receiver.noteOn(when, grainOffset, grainDuration);
+        else
+          receiver.noteOn(when, grainOffset);
+      },
+      stop$1: function(receiver, when) {
+        if (!!receiver.stop)
+          receiver.stop(when);
+        else
+          receiver.noteOff(when);
+      },
+      get$onEnded: function(receiver) {
+        return new W._EventStream(receiver, "ended", false, [W.Event0]);
+      },
+      "%": "AudioBufferSourceNode"
+    },
+    AudioContext: {
+      "^": "EventTarget;currentTime=",
+      createGain$0: function(receiver) {
+        if (receiver.createGain !== undefined)
+          return receiver.createGain();
+        else
+          return receiver.createGainNode();
+      },
+      _decodeAudioData$3: function(receiver, audioData, successCallback, errorCallback) {
+        return receiver.decodeAudioData(audioData, H.convertDartClosureToJS(successCallback, 1), H.convertDartClosureToJS(errorCallback, 1));
+      },
+      decodeAudioData$1: function(receiver, audioData) {
+        var t1, t2, completer;
+        t1 = P.AudioBuffer;
+        t2 = new P._Future(0, $.Zone__current, null, [t1]);
+        completer = new P._AsyncCompleter(t2, [t1]);
+        this._decodeAudioData$3(receiver, audioData, new P.AudioContext_decodeAudioData_closure(completer), new P.AudioContext_decodeAudioData_closure0(completer));
+        return t2;
+      },
+      "%": "AudioContext|OfflineAudioContext|webkitAudioContext"
+    },
+    AudioContext_decodeAudioData_closure: {
+      "^": "Closure:1;completer",
+      call$1: function(value) {
+        this.completer.complete$1(0, value);
+      }
+    },
+    AudioContext_decodeAudioData_closure0: {
+      "^": "Closure:1;completer",
+      call$1: function(error) {
+        var t1 = this.completer;
+        if (error == null)
+          t1.completeError$1("");
+        else
+          t1.completeError$1(error);
+      }
+    },
+    AudioNode: {
+      "^": "EventTarget;",
+      "%": "AnalyserNode|AudioChannelMerger|AudioChannelSplitter|AudioDestinationNode|AudioGainNode|AudioPannerNode|BiquadFilterNode|ChannelMergerNode|ChannelSplitterNode|ConvolverNode|DelayNode|DynamicsCompressorNode|GainNode|IIRFilterNode|JavaScriptAudioNode|MediaStreamAudioDestinationNode|PannerNode|RealtimeAnalyserNode|ScriptProcessorNode|StereoPannerNode|WaveShaperNode|webkitAudioPannerNode;AudioNode"
     },
     AudioParam: {
       "^": "Interceptor;value=",
       "%": "AudioParam"
+    },
+    AudioSourceNode: {
+      "^": "AudioNode;",
+      "%": "MediaElementAudioSourceNode|MediaStreamAudioSourceNode;AudioSourceNode"
+    },
+    OscillatorNode: {
+      "^": "AudioSourceNode;",
+      get$onEnded: function(receiver) {
+        return new W._EventStream(receiver, "ended", false, [W.Event0]);
+      },
+      "%": "Oscillator|OscillatorNode"
     }
   }], ["dart.dom.web_gl", "dart:web_gl",, P, {
     "^": "",
@@ -10565,21 +11069,21 @@
     "^": "",
     Transition_linear: [function(ratio) {
       return ratio;
-    }, "call$1", "animation_Transition_linear$closure", 2, 0, 3],
+    }, "call$1", "animation_Transition_linear$closure", 2, 0, 4],
     Transition_easeOutQuadratic: [function(ratio) {
       if (typeof ratio !== "number")
         return H.iae(ratio);
       ratio = 1 - ratio;
       return 1 - ratio * ratio;
-    }, "call$1", "animation_Transition_easeOutQuadratic$closure", 2, 0, 3],
+    }, "call$1", "animation_Transition_easeOutQuadratic$closure", 2, 0, 4],
     Transition_easeInOutQuadratic: [function(ratio) {
       ratio *= 2;
       return ratio < 1 ? 0.5 * (ratio * ratio) : 0.5 * K.Transition_easeOutQuadratic(ratio - 1) + 0.5;
-    }, "call$1", "animation_Transition_easeInOutQuadratic$closure", 2, 0, 3],
+    }, "call$1", "animation_Transition_easeInOutQuadratic$closure", 2, 0, 4],
     Transition_easeOutCubic: [function(ratio) {
       ratio = 1 - ratio;
       return 1 - ratio * ratio * ratio;
-    }, "call$1", "animation_Transition_easeOutCubic$closure", 2, 0, 3],
+    }, "call$1", "animation_Transition_easeOutCubic$closure", 2, 0, 4],
     _AnimatableLink: {
       "^": "Object;animatable,nextAnimatableLink"
     },
@@ -10742,7 +11246,10 @@
         t2 = this._currentTime;
         if (t1 >= t2)
           this.advanceTime$1(t1 - t2);
-      }, "call$0", "get$complete", 0, 0, 1],
+      }, "call$0", "get$complete", 0, 0, 2],
+      get$currentTime: function(_) {
+        return this._currentTime;
+      },
       set$delay: function(_, value) {
         if (!this._started) {
           this._currentTime = this._currentTime + this._delay - value;
@@ -10774,9 +11281,11 @@
         return this._tween._createTweenProperty$2(this, 1);
       },
       _getValue$1: function(propertyID) {
+        var t1;
         switch (propertyID) {
           case 0:
-            return this._tweenObject._x;
+            t1 = this._tweenObject;
+            return t1.get$x(t1);
           case 1:
             return this._tweenObject._y;
           case 2:
@@ -10804,15 +11313,36 @@
     "^": "",
     BitmapData: {
       "^": "Object;width>,height>,renderTextureQuad<",
+      clone$1: function(_, pixelRatio) {
+        var t1, t2, t3, bitmapData, updateBatch, sourceQuad, renderState;
+        t1 = this.width;
+        t2 = this.height;
+        if (typeof true !== "number")
+          return H.iae(true);
+        t3 = L.RenderTexture$(C.JSNumber_methods.round$0(t1 * true), C.JSNumber_methods.round$0(t2 * true), 16777215).get$quad();
+        bitmapData = A.BitmapData$fromRenderTextureQuad(L.RenderTextureQuad$(t3.renderTexture, t3.sourceRectangle, t3.offsetRectangle, t3.rotation, true));
+        updateBatch = A.BitmapDataUpdateBatch$(bitmapData);
+        sourceQuad = this.renderTextureQuad.cut$1(new U.Rectangle0(0, 0, t1, t2, [P.num]));
+        renderState = L.RenderState$(updateBatch._renderContext, updateBatch._drawMatrix, 1, null);
+        t2 = renderState._currentContextState.matrix._data;
+        t2[4] = 0 * t2[0] + 0 * t2[2] + t2[4];
+        t2[5] = 0 * t2[1] + 0 * t2[3] + t2[5];
+        renderState._engine$_renderContext.renderTextureQuad$2(renderState, sourceQuad);
+        updateBatch.bitmapData.renderTextureQuad.renderTexture.update$0(0);
+        return bitmapData;
+      },
       get$renderTexture: function() {
         return this.renderTextureQuad.renderTexture;
       },
       static: {
         BitmapData$fromRenderTextureQuad: function(renderTextureQuad) {
-          var t1, t2;
+          var t1, t2, t3;
           t1 = renderTextureQuad.offsetRectangle;
-          t2 = renderTextureQuad.pixelRatio;
-          return new A.BitmapData(t1.width / t2, t1.height / t2, renderTextureQuad);
+          t2 = t1.width;
+          t3 = renderTextureQuad.pixelRatio;
+          if (typeof t3 !== "number")
+            return H.iae(t3);
+          return new A.BitmapData(t2 / t3, t1.height / t3, renderTextureQuad);
         },
         BitmapData_load: function(url, options) {
           var bitmapDataFileInfo, targetUrl, pixelRatio, t1, t2, t3, loader;
@@ -10826,14 +11356,14 @@
           loader = new N.ImageLoader(t1, new P._AsyncCompleter(t3, [t2]), targetUrl, null, null);
           t2 = W.Event0;
           loader._onLoadSubscription = W._EventStreamSubscription$(t1, "load", loader.get$_onImageLoad(), false, t2);
-          loader._onErrorSubscription = W._EventStreamSubscription$(t1, "error", loader.get$_onImageError(), false, t2);
+          loader._image_loader$_onErrorSubscription = W._EventStreamSubscription$(t1, "error", loader.get$_onImageError(), false, t2);
           t1.src = targetUrl;
           return t3.then$1(new A.BitmapData_load_closure(pixelRatio));
         }
       }
     },
     BitmapData_load_closure: {
-      "^": "Closure:2;pixelRatio",
+      "^": "Closure:1;pixelRatio",
       call$1: function(i) {
         var renderTexture, t1;
         renderTexture = new L.RenderTexture(0, 0, null, null, C.RenderTextureFiltering_9729, C.RenderTextureWrapping_33071, C.RenderTextureWrapping_33071, null, -1, false, null, null, -1);
@@ -10886,7 +11416,7 @@
       }
     },
     BitmapDataLoadInfo_closure: {
-      "^": "Closure:16;devicePixelRatio",
+      "^": "Closure:17;devicePixelRatio",
       call$2: function(a, b) {
         var t1, t2;
         t1 = this.devicePixelRatio;
@@ -10895,7 +11425,24 @@
       }
     },
     BitmapDataLoadOptions: {
-      "^": "Object;png,jpg,webp,pixelRatios,corsEnabled"
+      "^": "Object;png,jpg,webp,pixelRatios,corsEnabled<"
+    },
+    BitmapDataUpdateBatch: {
+      "^": "Object;bitmapData,_renderContext,_drawMatrix",
+      static: {
+        BitmapDataUpdateBatch$: function(bitmapData) {
+          var t1, t2, t3, t4, t5;
+          t1 = bitmapData.renderTextureQuad;
+          t2 = t1.renderTexture;
+          t2 = t2.get$canvas(t2);
+          t3 = T.Matrix$fromIdentity();
+          t4 = J.get$context2D$x(t2);
+          t5 = [L.RenderContextEvent];
+          t2 = new L.RenderContextCanvas(t2, t4, t3, C.BlendMode_bZz, 1, new L.RenderStatistics(0, 0, 0), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t5), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t5));
+          t2.reset$0(0);
+          return new A.BitmapDataUpdateBatch(bitmapData, t2, t1.get$drawMatrix());
+        }
+      }
     },
     BitmapFilter: {
       "^": "RenderFilter;"
@@ -10925,14 +11472,28 @@
         this._pivotY = value;
         this._transformationMatrixRefresh = true;
       },
+      set$scaleX: function(value) {
+        this._scaleX = value;
+        this._transformationMatrixRefresh = true;
+      },
+      set$scaleY: function(value) {
+        this._scaleY = value;
+        this._transformationMatrixRefresh = true;
+      },
       set$rotation: function(value) {
         this._rotation = value;
         this._transformationMatrixRefresh = true;
+      },
+      get$visible: function(_) {
+        return this._visible;
       },
       set$alpha: function(_, value) {
         if (value <= 0)
           value = 0;
         this._alpha = value >= 1 ? 1 : value;
+      },
+      get$mask: function(_) {
+        return this._mask;
       },
       get$root: function(_) {
         var obj, obj0;
@@ -11003,6 +11564,9 @@
         var rectangle = this.get$bounds();
         return this.get$transformationMatrix().transformRectangle$2(rectangle, rectangle);
       },
+      hitTestInput$2: function(localX, localY) {
+        return this.get$bounds().contains$2(0, localX, localY) ? this : null;
+      },
       globalToLocal$2: function(globalPoint, returnPoint) {
         returnPoint.x = globalPoint.x;
         returnPoint.y = globalPoint.y;
@@ -11060,6 +11624,8 @@
           ++i;
         }
       },
+      render$1: function(renderState) {
+      },
       $isTweenObject2D: 1,
       $isTweenObject: 1
     },
@@ -11074,10 +11640,7 @@
           child.removeFromParent$0();
           this._throwIfAncestors$1(child);
           this._children.push(child);
-          child._parent = this;
-          child.dispatchEvent$1(0, new R.Event("added", true, C.EventPhase_1, null, null, false, false));
-          if (this.get$stage() != null)
-            this._dispatchStageEvents$2(child, "addedToStage");
+          this._setChildParent$1(child);
         }
       },
       removeChild$1: function(child) {
@@ -11091,8 +11654,25 @@
           C.JSArray_methods.removeAt$1(t1, index);
         }
       },
+      removeChildAt$1: function(index) {
+        var t1, child, root;
+        if (index < 0 || index >= this._children.length)
+          throw H.wrapException(P.ArgumentError$("The supplied index is out of bounds."));
+        else {
+          t1 = this._children;
+          if (index < 0 || index >= t1.length)
+            return H.ioore(t1, index);
+          child = t1[index];
+          child.dispatchEvent$1(0, new R.Event("removed", true, C.EventPhase_1, null, null, false, false));
+          root = this.get$root(this);
+          if ((root instanceof A.Stage ? root : null) != null)
+            this._dispatchStageEvents$2(child, "removedFromStage");
+          child._parent = null;
+          C.JSArray_methods.removeAt$1(t1, index);
+        }
+      },
       removeChildren$2: function(beginIndex, endIndex) {
-        var t1, $length, i2, t2, i, child, root;
+        var t1, $length, i2, t2, i;
         t1 = this._children;
         $length = t1.length;
         i2 = $length - 1;
@@ -11108,20 +11688,7 @@
             while (true) {
               if (!(i <= i2 && 0 < t1.length))
                 break;
-              t2 = t1.length;
-              if (0 >= t2)
-                H.throwExpression(P.ArgumentError$("The supplied index is out of bounds."));
-              else {
-                if (0 >= t1.length)
-                  return H.ioore(t1, 0);
-                child = t1[0];
-                child.dispatchEvent$1(0, new R.Event("removed", true, C.EventPhase_1, null, null, false, false));
-                root = this.get$root(this);
-                if ((root instanceof A.Stage ? root : null) != null)
-                  this._dispatchStageEvents$2(child, "removedFromStage");
-                child._parent = null;
-                C.JSArray_methods.removeAt$1(t1, 0);
-              }
+              this.removeChildAt$1(0);
               ++i;
             }
           }
@@ -11131,14 +11698,12 @@
         return this.removeChildren$2(null, null);
       },
       get$bounds: function() {
-        var t1, left, $top, right, bottom, i, t2, rectangle, left0, top0, right0, bottom0;
+        var t1, left, $top, right, bottom, i, rectangle, left0, top0, right0, bottom0;
         t1 = this._children;
         if (t1.length === 0)
           return A.DisplayObject.prototype.get$bounds.call(this);
         for (left = 1 / 0, $top = 1 / 0, right = -1 / 0, bottom = -1 / 0, i = 0; i < t1.length; ++i) {
-          t2 = t1[i];
-          rectangle = t2.get$bounds();
-          rectangle = t2.get$transformationMatrix().transformRectangle$2(rectangle, rectangle);
+          rectangle = t1[i].get$boundsTransformed();
           left0 = rectangle.left;
           if (left0 < left)
             left = left0;
@@ -11160,6 +11725,7 @@
           if (i >= t1.length)
             return H.ioore(t1, i);
           child = t1[i];
+          child.get$mask(child);
           matrix = child.get$transformationMatrix();
           if (child._visible && true) {
             t2 = matrix._data;
@@ -11173,7 +11739,9 @@
             displayObject = child.hitTestInput$2((t3 * deltaX - t4 * deltaY) / t6, (t5 * deltaY - t2 * deltaX) / t6);
             if (displayObject == null)
               continue;
-            return displayObject;
+            if (!!displayObject.$isInteractiveObject && true)
+              return displayObject;
+            hit = this;
           }
         }
         return hit;
@@ -11182,7 +11750,7 @@
         var t1, i, child;
         for (t1 = this._children, i = 0; i < t1.length; ++i) {
           child = t1[i];
-          if (child._visible && true)
+          if (child.get$visible(child) && true)
             renderState.renderObject$1(child);
         }
       }],
@@ -11201,6 +11769,12 @@
           if (child === oldChild)
             break;
         }
+      },
+      _setChildParent$1: function(child) {
+        child._parent = this;
+        child.dispatchEvent$1(0, new R.Event("added", true, C.EventPhase_1, null, null, false, false));
+        if (this.get$stage() != null)
+          this._dispatchStageEvents$2(child, "addedToStage");
       },
       _clearChildParent$1: function(child) {
         child.dispatchEvent$1(0, new R.Event("removed", true, C.EventPhase_1, null, null, false, false));
@@ -11224,10 +11798,10 @@
       _dispatchStageEventsRecursion$3: function(displayObject, $event, captured) {
         var t1, children, i;
         t1 = !captured;
-        if (!t1 || displayObject.hasEventListener$1($event._events$_type))
+        if (!t1 || displayObject.hasEventListener$1($event._type))
           displayObject.dispatchEvent$1(0, $event);
         if (!!displayObject.$isDisplayObjectContainer) {
-          captured = !t1 || displayObject.hasEventListener$2$useCapture($event._events$_type, true);
+          captured = !t1 || displayObject.hasEventListener$2$useCapture($event._type, true);
           children = displayObject._children;
           for (i = 0; i < children.length; ++i)
             this._dispatchStageEventsRecursion$3(children[i], $event, captured);
@@ -11258,14 +11832,14 @@
       }
     },
     RenderLoop_advanceTime_closure: {
-      "^": "Closure:2;deltaTime",
+      "^": "Closure:1;deltaTime",
       call$1: function(s) {
         s.get$juggler().advanceTime$1(this.deltaTime);
         return true;
       }
     },
     RenderLoop_advanceTime_closure0: {
-      "^": "Closure:2;$this,deltaTime",
+      "^": "Closure:1;$this,deltaTime",
       call$1: function(s) {
         return s.materialize$2(this.$this._display$_currentTime, this.deltaTime);
       }
@@ -11641,7 +12215,7 @@
         this._mousePosition = stagePoint;
         C.JSArray_methods.forEach$1(this._drags, new A.Stage__onMouseEvent_closure(stagePoint));
         if ($event.type !== "mouseout")
-          target = this.hitTestInput$2(stagePoint.x, stagePoint.y);
+          target = H.interceptedTypeCast(this.hitTestInput$2(stagePoint.x, stagePoint.y), "$isInteractiveObject");
         else {
           this.dispatchEvent$1(0, new R.Event("mouseLeave", false, C.EventPhase_1, null, null, false, false));
           target = null;
@@ -11767,13 +12341,13 @@
             target.dispatchEvent$1(0, new R.MouseEvent0(0, 0, mouseButton.buttonDown, 0, t1, t2, t3, t4, t5, t6, t7, false, mouseButton.mouseClickEventType, true, C.EventPhase_1, null, null, false, false));
           }
         }
-      }, "call$1", "get$_onMouseEvent", 2, 0, 17],
+      }, "call$1", "get$_onMouseEvent", 2, 0, 18],
       _onMouseWheelEvent$1: [function($event) {
         var t1, stagePoint, localPoint, target, t2, t3, t4, t5, t6, t7, t8, mouseEvent;
         t1 = J.getInterceptor$x($event);
         stagePoint = this._clientTransformation.transformPoint$1(t1.get$client($event));
         localPoint = new U.Point(0, 0, [P.num]);
-        target = this.hitTestInput$2(stagePoint.x, stagePoint.y);
+        target = H.interceptedTypeCast(this.hitTestInput$2(stagePoint.x, stagePoint.y), "$isInteractiveObject");
         target.globalToLocal$2(stagePoint, localPoint);
         t2 = localPoint.x;
         t3 = localPoint.y;
@@ -11790,7 +12364,7 @@
           $event.stopPropagation();
         if (mouseEvent._isDefaultPrevented)
           $event.preventDefault();
-      }, "call$1", "get$_onMouseWheelEvent", 2, 0, 18],
+      }, "call$1", "get$_onMouseWheelEvent", 2, 0, 19],
       _onTouchEvent$1: [function($event) {
         var t1, eventType, altKey, ctrlKey, shiftKey, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, _i, changedTouch, identifier, stagePoint, localPoint, target, touchPoint, touchPointID, primaryTouchPoint, p, oldTargetList, newTargetList, p0, t13, t14, commonCount, t15, ot, i, target0, touchEventType, isTap;
         t1 = J.getInterceptor$x($event);
@@ -11805,7 +12379,7 @@
           stagePoint = t10.transformPoint$1(new P.Point0(C.JSNumber_methods.round$0(changedTouch.clientX), C.JSNumber_methods.round$0(changedTouch.clientY), t9));
           localPoint = new U.Point(0, 0, t11);
           target = this.super$DisplayObjectContainer$hitTestInput(stagePoint.x, stagePoint.y);
-          target = target != null ? target : this;
+          target = H.interceptedTypeCast(target != null ? target : this, "$isInteractiveObject");
           touchPoint = t7.putIfAbsent$2(0, identifier, new A.Stage__onTouchEvent_closure(this, target));
           touchPointID = touchPoint.get$touchPointID();
           primaryTouchPoint = touchPoint.get$primaryTouchPoint();
@@ -11878,10 +12452,10 @@
               target.dispatchEvent$1(0, new R.TouchEvent0(touchPointID, primaryTouchPoint, localPoint.x, localPoint.y, stagePoint.x, stagePoint.y, altKey, ctrlKey, shiftKey, false, "touchTap", true, C.EventPhase_1, null, null, false, false));
           }
         }
-      }, "call$1", "get$_onTouchEvent", 2, 0, 19],
+      }, "call$1", "get$_onTouchEvent", 2, 0, 36],
       _onKeyEvent$1: [function($event) {
         return;
-      }, "call$1", "get$_onKeyEvent", 2, 0, 5],
+      }, "call$1", "get$_onKeyEvent", 2, 0, 7],
       Stage$4$height$options$width: function(canvas, height, options, width) {
         var t1, t2, t3, t4;
         if (!J.getInterceptor(canvas).$isCanvasElement)
@@ -11974,13 +12548,13 @@
       }
     },
     Stage_closure: {
-      "^": "Closure:2;$this",
+      "^": "Closure:1;$this",
       call$1: function(cursorName) {
         return this.$this._updateMouseCursor$0();
       }
     },
     Stage__onMouseEvent_closure: {
-      "^": "Closure:2;stagePoint",
+      "^": "Closure:1;stagePoint",
       call$1: function(d) {
         return J.update$2$x(d, 0, this.stagePoint);
       }
@@ -11998,7 +12572,7 @@
       }
     },
     Stage__onTouchEvent_closure0: {
-      "^": "Closure:2;stagePoint,touchPointID",
+      "^": "Closure:1;stagePoint,touchPointID",
       call$1: function(d) {
         return J.update$2$x(d, this.touchPointID, this.stagePoint);
       }
@@ -12049,16 +12623,16 @@
         fontBitmapData.get$renderTexture().set$filtering(C.RenderTextureFiltering_9728);
         for (t1 = [P.int], t2 = this._glyphs, i = 0; i < 64; ++i)
           t2.push(fontBitmapData.get$renderTextureQuad().cut$1(new U.Rectangle0(i * 7, 0, 7, 14, t1)));
-      }, "call$1", "get$_calculateGlyphs", 2, 0, 21]
+      }, "call$1", "get$_calculateGlyphs", 2, 0, 22]
     },
     StageOptions: {
       "^": "Object;renderEngine,inputEventMode,stageRenderMode,stageScaleMode,stageAlign,backgroundColor,transparent,antialias,maxPixelRatio,preventDefaultOnTouch,preventDefaultOnMouse,preventDefaultOnWheel,preventDefaultOnKeyboard"
     },
     _MouseButton: {
-      "^": "Object;mouseDownEventType,mouseUpEventType,mouseClickEventType,mouseDoubleClickEventType,target,buttonDown,clickTime,clickCount"
+      "^": "Object;mouseDownEventType,mouseUpEventType,mouseClickEventType,mouseDoubleClickEventType,target>,buttonDown,clickTime,clickCount"
     },
     _TouchPoint: {
-      "^": "Object;touchPointID<,primaryTouchPoint<,target,currentTarget"
+      "^": "Object;touchPointID<,primaryTouchPoint<,target>,currentTarget"
     },
     _Drag: {
       "^": "Object;"
@@ -13043,7 +13617,7 @@
         if (!t1.get$_mayAddEvent())
           H.throwExpression(t1._addEventError$0());
         t1._sendData$1(new L.RenderContextEvent());
-      }, "call$1", "get$_onContextLost", 2, 0, 11],
+      }, "call$1", "get$_onContextLost", 2, 0, 12],
       _onContextRestored$1: [function(contextEvent) {
         var t1;
         this._contextValid = true;
@@ -13054,7 +13628,7 @@
         if (!t1.get$_mayAddEvent())
           H.throwExpression(t1._addEventError$0());
         t1._sendData$1(new L.RenderContextEvent());
-      }, "call$1", "get$_onContextRestored", 2, 0, 11]
+      }, "call$1", "get$_onContextRestored", 2, 0, 12]
     },
     RenderFilter: {
       "^": "Object;"
@@ -13072,7 +13646,7 @@
       }
     },
     _globalFrameRequest_closure: {
-      "^": "Closure:35;",
+      "^": "Closure:23;",
       call$1: function(frameTime) {
         var currentFrameTime, t1, deltaTime, t2, _i;
         if (typeof frameTime !== "number")
@@ -13105,7 +13679,7 @@
         if (this._running && J.$ge$n(deltaTime, 0))
           if (typeof deltaTime === "number")
             this.advanceTime$1(deltaTime);
-      }, "call$1", "get$_onGlobalFrame", 2, 0, 24]
+      }, "call$1", "get$_onGlobalFrame", 2, 0, 13]
     },
     _MaskState: {
       "^": "Object;"
@@ -13523,7 +14097,7 @@
       "^": "Object;alpha,blendMode,matrix,matrix3D,previousContextState,_nextContextState"
     },
     RenderState: {
-      "^": "Object;currentTime,deltaTime,_engine$_renderContext,_firstContextState,_currentContextState",
+      "^": "Object;currentTime*,deltaTime,_engine$_renderContext,_firstContextState,_currentContextState",
       reset$3: function(_, matrix, alpha, blendMode) {
         var t1, t2;
         t1 = this._firstContextState;
@@ -13711,7 +14285,7 @@
     RenderTextureQuad: {
       "^": "Object;renderTexture<,sourceRectangle,offsetRectangle,rotation,pixelRatio,ixListQuad,vxListQuad,_ixList,_vxList,_hasCustomVertices",
       get$drawMatrix: function() {
-        var pr, t1, t2, t3;
+        var pr, t1, t2, t3, t4, t5, t6, t7;
         pr = this.pixelRatio;
         t1 = this.rotation;
         if (t1 === 0) {
@@ -13720,17 +14294,39 @@
           return T.Matrix$(pr, 0, 0, pr, t1.left + t2.left, t1.top + t2.top);
         } else if (t1 === 1) {
           t1 = this.sourceRectangle;
-          t2 = this.offsetRectangle;
-          return T.Matrix$(0, pr, 0 - pr, 0, t1.left + t1.width - t2.top, t1.top + t2.left);
+          t2 = t1.left;
+          t3 = t1.width;
+          t4 = this.offsetRectangle;
+          t5 = t4.top;
+          t1 = t1.top;
+          t4 = t4.left;
+          if (typeof pr !== "number")
+            return H.iae(pr);
+          return T.Matrix$(0, pr, 0 - pr, 0, t2 + t3 - t5, t1 + t4);
         } else if (t1 === 2) {
           t1 = this.sourceRectangle;
-          t2 = this.offsetRectangle;
-          t3 = 0 - pr;
-          return T.Matrix$(t3, 0, 0, t3, t1.left + t1.width - t2.left, t1.top + t1.height - t2.top);
+          t2 = t1.left;
+          t3 = t1.width;
+          t4 = this.offsetRectangle;
+          t5 = t4.left;
+          t6 = t1.top;
+          t1 = t1.height;
+          t4 = t4.top;
+          if (typeof pr !== "number")
+            return H.iae(pr);
+          t7 = 0 - pr;
+          return T.Matrix$(t7, 0, 0, t7, t2 + t3 - t5, t6 + t1 - t4);
         } else if (t1 === 3) {
           t1 = this.sourceRectangle;
-          t2 = this.offsetRectangle;
-          return T.Matrix$(0, 0 - pr, pr, 0, t1.left + t2.top, t1.top + t1.height - t2.left);
+          t2 = t1.left;
+          t3 = this.offsetRectangle;
+          t4 = t3.top;
+          t5 = t1.top;
+          t1 = t1.height;
+          t3 = t3.left;
+          if (typeof pr !== "number")
+            return H.iae(pr);
+          return T.Matrix$(0, 0 - pr, pr, 0, t2 + t4, t5 + t1 - t3);
         } else
           throw H.wrapException(new P.Error());
       },
@@ -13738,6 +14334,8 @@
         var t1, t2, rL, t3, rT, t4, oldRotation, t5, oldSourceL, oldSourceT, oldSourceR, oldSourceB, oldOffsetL, oldOffsetT, newRotation, newSourceR, newSourceB, tmpSourceL, t6, tmpSourceT, tmpSourceR, tmpSourceB, newSourceL, newSourceT, newOffsetL, newOffsetT;
         t1 = rectangle.left;
         t2 = this.pixelRatio;
+        if (typeof t2 !== "number")
+          return H.iae(t2);
         rL = C.JSNumber_methods.round$0(t1 * t2);
         t3 = rectangle.top;
         rT = C.JSNumber_methods.round$0(t3 * t2);
@@ -13823,6 +14421,8 @@
         if (t2 || t1 === 2) {
           t3 = this.vxListQuad;
           t4 = 0 - or.left;
+          if (typeof pr !== "number")
+            return H.iae(pr);
           t5 = t4 / pr;
           t3[12] = t5;
           t3[0] = t5;
@@ -13844,6 +14444,8 @@
           if (t1 === 1 || t1 === 3) {
             t3 = this.vxListQuad;
             t4 = 0 - or.left;
+            if (typeof pr !== "number")
+              return H.iae(pr);
             t5 = t4 / pr;
             t3[12] = t5;
             t3[0] = t5;
@@ -13957,11 +14559,32 @@
     }
   }], ["stagexl.errors", "package:stagexl/src/errors.dart",, T, {
     "^": "",
+    AggregateError: {
+      "^": "Error;message,errors<",
+      toString$0: function(_) {
+        var t1 = {};
+        t1.result = "AggregateError: " + this.message;
+        C.JSArray_methods.forEach$1(this.errors, new T.AggregateError_toString_closure(t1));
+        return t1.result;
+      }
+    },
+    AggregateError_toString_closure: {
+      "^": "Closure:1;_box_0",
+      call$1: function(error) {
+        var t1, result;
+        t1 = this._box_0;
+        result = t1.result + " | " + H.S(error);
+        t1.result = result;
+        return result;
+      }
+    },
     LoadError: {
       "^": "Error;message,error>",
       toString$0: function(_) {
-        var result = "LoadError: " + this.message;
-        return result;
+        var result, t1;
+        result = "LoadError: " + this.message;
+        t1 = this.error;
+        return t1 != null ? result + " " + H.S(t1) : result;
       }
     }
   }], ["stagexl.events", "package:stagexl/src/events.dart",, R, {
@@ -13995,21 +14618,24 @@
       }
     },
     EnterFrameEvent: {
-      "^": "BroadcastEvent;passedTime<,_events$_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
+      "^": "BroadcastEvent;passedTime<,_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
     },
     ExitFrameEvent: {
-      "^": "BroadcastEvent;_events$_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
+      "^": "BroadcastEvent;_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
     },
     RenderEvent: {
-      "^": "BroadcastEvent;_events$_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
+      "^": "BroadcastEvent;_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
     },
     Event: {
-      "^": "Object;_events$_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped",
+      "^": "Object;_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped",
       get$type: function(_) {
-        return this._events$_type;
+        return this._type;
       },
       get$captures: function() {
         return true;
+      },
+      get$target: function(_) {
+        return this._events$_target;
       }
     },
     EventDispatcher: {
@@ -14048,7 +14674,7 @@
         eventStreams = this._eventStreams;
         if (eventStreams == null)
           return;
-        eventStream = eventStreams.$index(0, $event._events$_type);
+        eventStream = eventStreams.$index(0, $event._type);
         if (eventStream == null)
           return;
         eventStream._dispatchEventInternal$3($event, target, eventPhase);
@@ -14061,7 +14687,7 @@
       }
     },
     EventStream: {
-      "^": "Stream;target,eventType,_subscriptions,_capturingSubscriptionCount,$ti",
+      "^": "Stream;target>,eventType,_subscriptions,_capturingSubscriptionCount,$ti",
       get$hasCapturingSubscriptions: function() {
         return this._capturingSubscriptionCount > 0;
       },
@@ -14207,13 +14833,13 @@
       "^": "Event;"
     },
     MouseEvent0: {
-      "^": "InputEvent;deltaX,deltaY,buttonDown,clickCount,localX,localY,stageX,stageY,altKey,ctrlKey,shiftKey,_isDefaultPrevented,_events$_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
+      "^": "InputEvent;deltaX,deltaY,buttonDown,clickCount,localX,localY,stageX,stageY,altKey,ctrlKey,shiftKey,_isDefaultPrevented,_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
     },
     TextEvent0: {
       "^": "Event;"
     },
     TouchEvent0: {
-      "^": "InputEvent;touchPointID<,isPrimaryTouchPoint,localX,localY,stageX,stageY,altKey,ctrlKey,shiftKey,_isDefaultPrevented,_events$_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
+      "^": "InputEvent;touchPointID<,isPrimaryTouchPoint,localX,localY,stageX,stageY,altKey,ctrlKey,shiftKey,_isDefaultPrevented,_type,_bubbles,_eventPhase,_events$_target,_currentTarget,_isPropagationStopped,_isImmediatePropagationStopped"
     }
   }], ["stagexl.geom.matrix", "package:stagexl/src/geom/matrix.dart",, T, {
     "^": "",
@@ -14371,10 +14997,10 @@
       },
       Matrix$6: function(a, b, c, d, tx, ty) {
         var t1 = this._data;
-        t1[0] = a;
-        t1[1] = b;
-        t1[2] = c;
-        t1[3] = d;
+        t1[0] = J.toDouble$0$n(a);
+        t1[1] = J.toDouble$0$n(b);
+        t1[2] = J.toDouble$0$n(c);
+        t1[3] = J.toDouble$0$n(d);
         t1[4] = tx;
         t1[5] = ty;
       },
@@ -14538,6 +15164,41 @@
       $isRectangle: 1,
       $asRectangle: null
     }
+  }], ["stagexl.internal.audio_loader", "package:stagexl/src/internal/audio_loader.dart",, R, {
+    "^": "",
+    AudioLoader: {
+      "^": "Object;audio,aggregateError,_audio_loader$_completer<,_onCanPlaySubscription,_onErrorSubscription,_urls,_loadData",
+      _onAudioCanPlay$1: [function($event) {
+        this._onCanPlaySubscription.cancel$0(0);
+        this._onErrorSubscription.cancel$0(0);
+        this._audio_loader$_completer.complete$1(0, this.audio);
+      }, "call$1", "get$_onAudioCanPlay", 2, 0, 3],
+      _onAudioError$1: [function($event) {
+        var ae = H.interceptedTypeCast(J.get$target$x($event), "$isAudioElement");
+        this.aggregateError.errors.push(new T.LoadError("Failed to load " + H.S(ae.src) + ".", ae.error));
+        this._loadNextUrl$0();
+      }, "call$1", "get$_onAudioError", 2, 0, 3],
+      _loadNextUrl$0: function() {
+        var t1, t2;
+        t1 = this._urls;
+        if (t1.length === 0) {
+          this._onCanPlaySubscription.cancel$0(0);
+          this._onErrorSubscription.cancel$0(0);
+          t1 = this.aggregateError;
+          t2 = t1.errors;
+          if (t2.length === 0)
+            t2.push(new T.LoadError("No configured audio type is supported.", null));
+          this._audio_loader$_completer.completeError$1(t1);
+        } else
+          this._loadAudioSource$1(C.JSArray_methods.removeAt$1(t1, 0));
+      },
+      _loadAudioSource$1: function(url) {
+        var t1 = this.audio;
+        t1.preload = "auto";
+        t1.src = url;
+        t1.load();
+      }
+    }
   }], ["stagexl.internal.environment", "package:stagexl/src/internal/environment.dart",, Q, {
     "^": "",
     _checkTouchEventSupport: function() {
@@ -14553,17 +15214,17 @@
   }], ["stagexl.internal.image_loader", "package:stagexl/src/internal/image_loader.dart",, N, {
     "^": "",
     ImageLoader: {
-      "^": "Object;image,_completer,_url,_onLoadSubscription,_onErrorSubscription",
+      "^": "Object;image,_image_loader$_completer,_url,_onLoadSubscription,_image_loader$_onErrorSubscription",
       _onImageLoad$1: [function($event) {
         this._onLoadSubscription.cancel$0(0);
-        this._onErrorSubscription.cancel$0(0);
-        this._completer.complete$1(0, this.image);
-      }, "call$1", "get$_onImageLoad", 2, 0, 12],
+        this._image_loader$_onErrorSubscription.cancel$0(0);
+        this._image_loader$_completer.complete$1(0, this.image);
+      }, "call$1", "get$_onImageLoad", 2, 0, 3],
       _onImageError$1: [function($event) {
         this._onLoadSubscription.cancel$0(0);
-        this._onErrorSubscription.cancel$0(0);
-        this._completer.completeError$1(new T.LoadError("Failed to load " + H.S(this.image.src) + ".", null));
-      }, "call$1", "get$_onImageError", 2, 0, 12]
+        this._image_loader$_onErrorSubscription.cancel$0(0);
+        this._image_loader$_completer.completeError$1(new T.LoadError("Failed to load " + H.S(this.image.src) + ".", null));
+      }, "call$1", "get$_onImageError", 2, 0, 3]
     }
   }], ["stagexl.internal.jenkins_hash", "package:stagexl/src/internal/jenkins_hash.dart",, O, {
     "^": "",
@@ -14616,6 +15277,640 @@
     similar: function(a, b, epsilon) {
       return a - epsilon < b && a + epsilon > b;
     }
+  }], ["stagexl.media", "package:stagexl/src/media.dart",, E, {
+    "^": "",
+    Sound_load: function(url, soundLoadOptions) {
+      var options, t1;
+      options = $.$get$Sound_defaultLoadOptions();
+      options.engine;
+      E.SoundMixer__initEngine();
+      t1 = $.SoundMixer__engineDetected;
+      switch (t1) {
+        case C.SoundEngine_0:
+          return E.WebAudioApiSound_load(url, options);
+        case C.SoundEngine_1:
+          return E.AudioElementSound_load(url, options);
+        default:
+          E.SoundMixer__initEngine();
+          t1 = new P._Future(0, $.Zone__current, null, [E.Sound]);
+          t1._asyncComplete$1(new E.MockSound());
+          return t1;
+      }
+    },
+    SoundMixer__initEngine: function() {
+      var ua, t1;
+      if ($.SoundMixer__engineDetected != null)
+        return;
+      $.SoundMixer__engineDetected = C.SoundEngine_1;
+      $.SoundMixer__audioElementMixer = new E.AudioElementMixer(1, new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, [P.num]));
+      if (!!(window.AudioContext || window.webkitAudioContext)) {
+        $.SoundMixer__engineDetected = C.SoundEngine_0;
+        $.SoundMixer__webAudioApiMixer = E.WebAudioApiMixer$(null);
+      }
+      ua = window.navigator.userAgent;
+      if (J.getInterceptor$asx(ua).contains$1(ua, "IEMobile"))
+        if (C.JSString_methods.contains$1(ua, "9.0"))
+          $.SoundMixer__engineDetected = C.SoundEngine_2;
+      if (C.JSString_methods.contains$1(ua, "iPhone") || C.JSString_methods.contains$1(ua, "iPad") || C.JSString_methods.contains$1(ua, "iPod"))
+        if (C.JSString_methods.contains$1(ua, "OS 3") || C.JSString_methods.contains$1(ua, "OS 4") || C.JSString_methods.contains$1(ua, "OS 5"))
+          $.SoundMixer__engineDetected = C.SoundEngine_2;
+      if ($.$get$AudioLoader_supportedTypes().length === 0)
+        $.SoundMixer__engineDetected = C.SoundEngine_2;
+      E.SoundMixer__initEngine();
+      t1 = $.SoundMixer__engineDetected;
+      P.print("StageXL sound engine  : " + H.S(t1));
+    },
+    AudioElementMixer: {
+      "^": "Object;_volume,_volumeChangedEvent"
+    },
+    AudioElementSound: {
+      "^": "Sound;_audioElement,_soundChannels",
+      get$length: function(_) {
+        return J.get$duration$x(this._audioElement);
+      },
+      play$2: function(_, loop, soundTransform) {
+        var duration, t1;
+        duration = J.get$duration$x(this._audioElement);
+        if (J.get$isInfinite$n(duration))
+          duration = 3600;
+        t1 = new E.AudioElementSoundChannel(null, null, null, null, null, false, false, false, 0, 0, 0, null);
+        t1._soundTransform = new E.SoundTransform(1, 0);
+        t1._audioElementSound = this;
+        t1._media$_duration = duration;
+        this._requestAudioElement$1(t1).then$1(t1.get$_onAudioElement());
+        return t1;
+      },
+      play$0: function($receiver) {
+        return this.play$2($receiver, false, null);
+      },
+      _requestAudioElement$1: function(soundChannel) {
+        var $async$goto = 0, $async$completer = P.Completer_Completer$sync(), $async$returnValue, $async$self = this, t1, t2, audioElement, t3, audioCanPlay;
+        var $async$_requestAudioElement$1 = P._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+          if ($async$errorCode === 1)
+            return P._asyncRethrow($async$result, $async$completer);
+          while (true)
+            $async$outer:
+              switch ($async$goto) {
+                case 0:
+                  // Function start
+                  for (t1 = $async$self._soundChannels, t2 = t1.get$keys(t1), t2 = t2.get$iterator(t2); t2.moveNext$0();) {
+                    audioElement = t2.get$current();
+                    if (t1.$index(0, audioElement) == null) {
+                      t1.$indexSet(0, audioElement, soundChannel);
+                      $async$returnValue = audioElement;
+                      // goto return
+                      $async$goto = 1;
+                      break $async$outer;
+                    }
+                  }
+                  audioElement = H.interceptedTypeCast(J.clone$1$x($async$self._audioElement, true), "$isAudioElement");
+                  audioElement.toString;
+                  t2 = W.Event0;
+                  t3 = new W._ElementEventStreamImpl(audioElement, "canplay", false, [t2]);
+                  audioCanPlay = t3.get$first(t3);
+                  $async$goto = audioElement.readyState === 0 ? 3 : 4;
+                  break;
+                case 3:
+                  // then
+                  $async$goto = 5;
+                  return P._asyncAwait(audioCanPlay, $async$_requestAudioElement$1);
+                case 5:
+                  // returning from await.
+                case 4:
+                  // join
+                  W._EventStreamSubscription$(audioElement, "ended", $async$self.get$_onAudioEnded(), false, t2);
+                  t1.$indexSet(0, audioElement, soundChannel);
+                  $async$returnValue = audioElement;
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                case 1:
+                  // return
+                  return P._asyncReturn($async$returnValue, $async$completer);
+              }
+        });
+        return P._asyncStart($async$_requestAudioElement$1, $async$completer);
+      },
+      _onAudioEnded$1: [function($event) {
+        var soundChannel = this._soundChannels.$index(0, J.get$target$x($event));
+        if (soundChannel != null)
+          soundChannel._onAudioEnded$0();
+      }, "call$1", "get$_onAudioEnded", 2, 0, 3],
+      static: {
+        AudioElementSound_load: function(url, soundLoadOptions) {
+          var $async$goto = 0, $async$completer = P.Completer_Completer$sync(), $async$returnValue, $async$handler = 2, $async$currentError, $async$next = [], options, audioUrls, corsEnabled, loadData, audioLoader, audioElement, options0, t1, t2, t3, t4, t5, audioLoader0, exception, $async$exception;
+          var $async$AudioElementSound_load = P._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+            if ($async$errorCode === 1) {
+              $async$currentError = $async$result;
+              $async$goto = $async$handler;
+            }
+            while (true)
+              switch ($async$goto) {
+                case 0:
+                  // Function start
+                  $async$handler = 4;
+                  options = soundLoadOptions;
+                  audioUrls = options.getOptimalAudioUrls$1(url);
+                  options.get$corsEnabled();
+                  corsEnabled = false;
+                  loadData = false;
+                  t1 = W.AudioElement_AudioElement$_(null);
+                  t2 = H.setRuntimeTypeInfo([], [P.Error]);
+                  t3 = W.AudioElement;
+                  t4 = $.Zone__current;
+                  t5 = H.setRuntimeTypeInfo([], [P.String]);
+                  audioLoader0 = new R.AudioLoader(t1, new T.AggregateError("Error loading sound.", t2), new P._AsyncCompleter(new P._Future(0, t4, null, [t3]), [t3]), null, null, t5, false);
+                  document.body.appendChild(t1);
+                  if (corsEnabled === true)
+                    t1.crossOrigin = "anonymous";
+                  C.JSArray_methods.addAll$1(t5, audioUrls);
+                  audioLoader0._loadData = loadData;
+                  t2 = W.Event0;
+                  audioLoader0._onCanPlaySubscription = W._EventStreamSubscription$(t1, "canplay", audioLoader0.get$_onAudioCanPlay(), false, t2);
+                  audioLoader0._onErrorSubscription = W._EventStreamSubscription$(t1, "error", audioLoader0.get$_onAudioError(), false, t2);
+                  audioLoader0._loadNextUrl$0();
+                  audioLoader = audioLoader0;
+                  $async$goto = 7;
+                  return P._asyncAwait(audioLoader.get$_audio_loader$_completer().future, $async$AudioElementSound_load);
+                case 7:
+                  // returning from await.
+                  audioElement = $async$result;
+                  t2 = audioElement;
+                  t1 = new H.JsLinkedHashMap(0, null, null, null, null, null, 0, [t3, E.AudioElementSoundChannel]);
+                  t3 = new E.AudioElementSound(t2, t1);
+                  E.SoundMixer__initEngine();
+                  t4 = J.get$onEnded$x(t2);
+                  W._EventStreamSubscription$(t4._html$_target, t4._eventType, t3.get$_onAudioEnded(), false, H.getTypeArgumentByIndex(t4, 0));
+                  t1.$indexSet(0, t2, null);
+                  $async$returnValue = t3;
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                  $async$handler = 2;
+                  // goto after finally
+                  $async$goto = 6;
+                  break;
+                case 4:
+                  // catch
+                  $async$handler = 3;
+                  $async$exception = $async$currentError;
+                  H.unwrapException($async$exception);
+                  options0 = soundLoadOptions;
+                  options0.get$ignoreErrors();
+                  E.SoundMixer__initEngine();
+                  t1 = new P._Future(0, $.Zone__current, null, [E.Sound]);
+                  t1._asyncComplete$1(new E.MockSound());
+                  $async$returnValue = t1;
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                  // goto after finally
+                  $async$goto = 6;
+                  break;
+                case 3:
+                  // uncaught
+                  // goto rethrow
+                  $async$goto = 2;
+                  break;
+                case 6:
+                  // after finally
+                case 1:
+                  // return
+                  return P._asyncReturn($async$returnValue, $async$completer);
+                case 2:
+                  // rethrow
+                  return P._asyncRethrow($async$currentError, $async$completer);
+              }
+          });
+          return P._asyncStart($async$AudioElementSound_load, $async$completer);
+        }
+      }
+    },
+    AudioElementSoundChannel: {
+      "^": "SoundChannel;_audioElementSound,_soundTransform,_audioElement,_volumeChangedSubscription,_completeTimer,_stopped,_paused,_loop,_startTime,_media$_duration,_media$_position,_eventStreams",
+      get$position: function(_) {
+        var currentTime, t1;
+        if (this._paused || this._stopped || this._audioElement == null)
+          return this._media$_position;
+        else {
+          currentTime = J.get$currentTime$x(this._audioElement);
+          t1 = this._startTime;
+          if (typeof currentTime !== "number")
+            return currentTime.$sub();
+          return C.JSNumber_methods.clamp$2(currentTime - t1, 0, this._media$_duration);
+        }
+      },
+      set$position: function(_, value) {
+        var position, t1;
+        position = C.JSNumber_methods.clamp$2(value, 0, this._media$_duration);
+        if (!this._stopped)
+          if (this._paused || this._audioElement == null)
+            this._media$_position = position;
+          else {
+            t1 = this._completeTimer;
+            if (!(t1 == null))
+              t1.cancel$0(0);
+            this._completeTimer = null;
+            this._media$_position = position;
+            J.set$currentTime$x(this._audioElement, this._startTime + position);
+            this._startCompleteTimer$1(this._media$_duration - this._media$_position);
+          }
+      },
+      get$paused: function(_) {
+        return this._paused;
+      },
+      set$paused: function(_, value) {
+        var t1;
+        if (!(this._paused === value)) {
+          t1 = this._audioElement;
+          if (t1 == null || this._stopped)
+            this._paused = this._stopped || value;
+          else if (value) {
+            this._media$_position = this.get$position(this);
+            this._paused = true;
+            J.pause$0$x(this._audioElement);
+            t1 = this._completeTimer;
+            if (!(t1 == null))
+              t1.cancel$0(0);
+            this._completeTimer = null;
+          } else {
+            this._paused = false;
+            J.set$currentTime$x(t1, this._startTime + this._media$_position);
+            J.play$0$x(this._audioElement);
+            this._startCompleteTimer$1(this._media$_duration - this._media$_position);
+          }
+        }
+      },
+      set$soundTransform: function(value) {
+        var t1, volume1, volume2;
+        this._soundTransform = value;
+        t1 = this._audioElement;
+        if (!(t1 == null)) {
+          volume1 = value.volume;
+          volume2 = $.SoundMixer__audioElementMixer._volume;
+          if (typeof volume1 !== "number")
+            return volume1.$mul();
+          J.set$volume$x(t1, volume1 * volume2);
+        }
+      },
+      stop$0: function(_) {
+        var t1;
+        if (this._audioElement != null) {
+          this._media$_position = this.get$position(this);
+          J.pause$0$x(this._audioElement);
+          J.set$currentTime$x(this._audioElement, 0);
+          this._audioElementSound._soundChannels.$indexSet(0, this._audioElement, null);
+          this._audioElement = null;
+        }
+        t1 = this._volumeChangedSubscription;
+        if (t1 != null) {
+          t1.cancel$0(0);
+          this._volumeChangedSubscription = null;
+        }
+        if (!this._stopped) {
+          this._stopped = true;
+          this._paused = true;
+          t1 = this._completeTimer;
+          if (!(t1 == null))
+            t1.cancel$0(0);
+          this._completeTimer = null;
+          this.dispatchEventRaw$3(new R.Event("complete", false, C.EventPhase_1, null, null, false, false), this, C.EventPhase_1);
+        }
+      },
+      _onAudioElement$1: [function(audioElement) {
+        var mixer, t1, t2;
+        mixer = $.SoundMixer__audioElementMixer;
+        if (this._stopped)
+          this._audioElementSound._soundChannels.$indexSet(0, audioElement, null);
+        else {
+          this._audioElement = audioElement;
+          t1 = this._soundTransform.volume;
+          t2 = mixer._volume;
+          if (typeof t1 !== "number")
+            return t1.$mul();
+          J.set$volume$x(audioElement, t1 * t2);
+          t2 = mixer._volumeChangedEvent;
+          this._volumeChangedSubscription = new P._BroadcastStream(t2, [H.getTypeArgumentByIndex(t2, 0)]).listen$1(this.get$_onVolumeChanged());
+          if (!this._paused) {
+            J.set$currentTime$x(this._audioElement, this._startTime + this._media$_position);
+            J.play$0$x(this._audioElement);
+            this._startCompleteTimer$1(this._media$_duration - this._media$_position);
+          }
+        }
+      }, "call$1", "get$_onAudioElement", 2, 0, 25],
+      _startCompleteTimer$1: function(time) {
+        this._completeTimer = P.Timer_Timer(P.Duration$(0, 0, 0, C.JSNumber_methods.toInt$0(C.JSNumber_methods.clamp$2(time, 0, this._media$_duration) * 1000), 0, 0), this.get$_onCompleteTimer());
+      },
+      _onCompleteTimer$0: [function() {
+        if (!this._paused)
+          this.stop$0(0);
+      }, "call$0", "get$_onCompleteTimer", 0, 0, 2],
+      _onVolumeChanged$1: [function(volume) {
+        var t1, t2;
+        t1 = this._audioElement;
+        t2 = this._soundTransform.volume;
+        if (typeof t2 !== "number")
+          return t2.$mul();
+        if (typeof volume !== "number")
+          return H.iae(volume);
+        J.set$volume$x(t1, t2 * volume);
+      }, "call$1", "get$_onVolumeChanged", 2, 0, 13],
+      _onAudioEnded$0: function() {
+        this.stop$0(0);
+      }
+    },
+    MockSound: {
+      "^": "Sound;",
+      get$length: function(_) {
+        return 0 / 0;
+      },
+      play$2: function(_, loop, soundTransform) {
+        var t1 = new E.MockSoundChannel(null, false, false, false, 0, 0, 0, null, null);
+        t1._mockSound = this;
+        t1._soundTransform = new E.SoundTransform(1, 0);
+        return t1;
+      },
+      play$0: function($receiver) {
+        return this.play$2($receiver, false, null);
+      }
+    },
+    MockSoundChannel: {
+      "^": "SoundChannel;_mockSound,_stopped,_paused,_loop,_startTime,_media$_duration,_media$_position,_soundTransform,_eventStreams",
+      get$position: function(_) {
+        return 0;
+      },
+      set$position: function(_, value) {
+        return;
+      },
+      get$paused: function(_) {
+        return this._paused;
+      },
+      set$paused: function(_, value) {
+        this._paused = this._stopped || value;
+      },
+      set$soundTransform: function(value) {
+        this._soundTransform = value;
+      }
+    },
+    WebAudioApiMixer: {
+      "^": "Object;_inputNode,_volumeNode",
+      applySoundTransform$1: function(soundTransform) {
+        var time, t1, value;
+        time = $.$get$WebAudioApiMixer_audioContext().currentTime;
+        t1 = soundTransform.volume;
+        H.checkNum(t1);
+        value = Math.pow(t1, 2);
+        this._volumeNode.gain.setValueAtTime(value, time);
+      },
+      WebAudioApiMixer$1: function(inputNode) {
+        var t1;
+        this._inputNode = inputNode == null ? $.$get$WebAudioApiMixer_audioContext().destination : inputNode;
+        t1 = J.createGain$0$x($.$get$WebAudioApiMixer_audioContext());
+        this._volumeNode = t1;
+        t1.connect(this._inputNode, 0, 0);
+      },
+      static: {
+        WebAudioApiMixer$: function(inputNode) {
+          var t1 = new E.WebAudioApiMixer(null, null);
+          t1.WebAudioApiMixer$1(inputNode);
+          return t1;
+        }
+      }
+    },
+    WebAudioApiSound: {
+      "^": "Sound;_audioBuffer",
+      get$length: function(_) {
+        return J.get$duration$x(this._audioBuffer);
+      },
+      play$2: function(_, loop, soundTransform) {
+        var t1, t2, t3;
+        t1 = J.get$duration$x(this._audioBuffer);
+        t2 = new E.WebAudioApiSoundChannel(null, null, null, null, null, false, true, false, 0, 0, 0, 0, null);
+        t3 = new E.SoundTransform(1, 0);
+        t2._soundTransform = t3;
+        t2._webAudioApiSound = this;
+        t2._media$_duration = J.toDouble$0$n(t1);
+        t1 = E.WebAudioApiMixer$($.SoundMixer__webAudioApiMixer._volumeNode);
+        t2._mixer = t1;
+        t1.applySoundTransform$1(t3);
+        t2.set$paused(0, false);
+        return t2;
+      },
+      play$0: function($receiver) {
+        return this.play$2($receiver, false, null);
+      },
+      static: {
+        WebAudioApiSound_load: function(url, soundLoadOptions) {
+          var $async$goto = 0, $async$completer = P.Completer_Completer$sync(), $async$returnValue, $async$handler = 2, $async$currentError, $async$next = [], audioContext, aggregateError, audioUrl, httpRequest, audioData, audioBuffer, e, loadError, audioUrls, t1, _i, t2, exception, $async$exception;
+          var $async$WebAudioApiSound_load = P._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
+            if ($async$errorCode === 1) {
+              $async$currentError = $async$result;
+              $async$goto = $async$handler;
+            }
+            while (true)
+              switch ($async$goto) {
+                case 0:
+                  // Function start
+                  audioUrls = soundLoadOptions.getOptimalAudioUrls$1(url);
+                  audioContext = $.$get$WebAudioApiMixer_audioContext();
+                  aggregateError = new T.AggregateError("Error loading sound.", H.setRuntimeTypeInfo([], [P.Error]));
+                  t1 = audioUrls.length, _i = 0;
+                case 3:
+                  // for condition
+                  if (!(_i < audioUrls.length)) {
+                    // goto after for
+                    $async$goto = 5;
+                    break;
+                  }
+                  audioUrl = audioUrls[_i];
+                  $async$handler = 7;
+                  $async$goto = 10;
+                  return P._asyncAwait(W.HttpRequest_request(audioUrl, null, null, null, null, "arraybuffer", null, null), $async$WebAudioApiSound_load);
+                case 10:
+                  // returning from await.
+                  httpRequest = $async$result;
+                  audioData = H.interceptedTypeCast(J.get$response$x(httpRequest), "$isByteBuffer");
+                  $async$goto = 11;
+                  return P._asyncAwait(J.decodeAudioData$1$x(audioContext, audioData), $async$WebAudioApiSound_load);
+                case 11:
+                  // returning from await.
+                  audioBuffer = $async$result;
+                  t2 = new E.WebAudioApiSound(audioBuffer);
+                  E.SoundMixer__initEngine();
+                  $async$returnValue = t2;
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                  $async$handler = 2;
+                  // goto after finally
+                  $async$goto = 9;
+                  break;
+                case 7:
+                  // catch
+                  $async$handler = 6;
+                  $async$exception = $async$currentError;
+                  e = H.unwrapException($async$exception);
+                  loadError = new T.LoadError("Failed to load " + H.S(audioUrl), e);
+                  aggregateError.get$errors().push(loadError);
+                  // goto after finally
+                  $async$goto = 9;
+                  break;
+                case 6:
+                  // uncaught
+                  // goto rethrow
+                  $async$goto = 2;
+                  break;
+                case 9:
+                  // after finally
+                case 4:
+                  // for update
+                  audioUrls.length === t1 || (0, H.throwConcurrentModificationError)(audioUrls), ++_i;
+                  // goto for condition
+                  $async$goto = 3;
+                  break;
+                case 5:
+                  // after for
+                  E.SoundMixer__initEngine();
+                  t1 = new P._Future(0, $.Zone__current, null, [E.Sound]);
+                  t1._asyncComplete$1(new E.MockSound());
+                  $async$returnValue = t1;
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                case 1:
+                  // return
+                  return P._asyncReturn($async$returnValue, $async$completer);
+                case 2:
+                  // rethrow
+                  return P._asyncRethrow($async$currentError, $async$completer);
+              }
+          });
+          return P._asyncStart($async$WebAudioApiSound_load, $async$completer);
+        }
+      }
+    },
+    WebAudioApiSoundChannel: {
+      "^": "SoundChannel;_webAudioApiSound,_soundTransform,_mixer,_sourceNode,_sourceNodeEndedSubscription,_stopped,_paused,_loop,_startTime,_media$_duration,_media$_position,_timeOffset,_eventStreams",
+      get$position: function(_) {
+        var currentTime, t1;
+        if (this._paused || this._stopped)
+          return this._media$_position;
+        else {
+          currentTime = $.$get$WebAudioApiMixer_audioContext().currentTime;
+          t1 = this._timeOffset;
+          if (typeof currentTime !== "number")
+            return currentTime.$sub();
+          t1 = C.JSDouble_methods.clamp$2(currentTime - t1, 0, this._media$_duration);
+          return t1;
+        }
+      },
+      set$position: function(_, value) {
+        var position = C.JSNumber_methods.clamp$2(value, 0, this._media$_duration);
+        if (!this._stopped)
+          if (this._paused)
+            this._media$_position = position;
+          else {
+            this.set$paused(0, true);
+            this._media$_position = position;
+            this.set$paused(0, false);
+          }
+      },
+      get$paused: function(_) {
+        return this._paused;
+      },
+      set$paused: function(_, value) {
+        var t1, t2, t3, t4;
+        if (!(this._paused === value))
+          if (this._stopped)
+            this._paused = true;
+          else if (value) {
+            this._media$_position = this.get$position(this);
+            this._paused = true;
+            t1 = this._sourceNodeEndedSubscription;
+            if (!(t1 == null))
+              t1.cancel$0(0);
+            t1 = this._sourceNode;
+            (t1 && C.AudioBufferSourceNode_methods).stop$1(t1, 0);
+          } else {
+            this._paused = false;
+            t1 = $.$get$WebAudioApiMixer_audioContext();
+            t2 = t1.createBufferSource();
+            this._sourceNode = t2;
+            t2.buffer = this._webAudioApiSound._audioBuffer;
+            t2.loop = false;
+            t2.connect(this._mixer._volumeNode, 0, 0);
+            t2 = this._sourceNode;
+            t3 = this._startTime;
+            t4 = this._media$_position;
+            (t2 && C.AudioBufferSourceNode_methods).start$3(t2, 0, t3 + t4, this._media$_duration - t4);
+            t4 = this._sourceNode;
+            t4.toString;
+            this._sourceNodeEndedSubscription = W._EventStreamSubscription$(t4, "ended", this.get$_onEnded(), false, W.Event0);
+            t1 = t1.currentTime;
+            t4 = this._media$_position;
+            if (typeof t1 !== "number")
+              return t1.$sub();
+            this._timeOffset = t1 - t4;
+          }
+      },
+      set$soundTransform: function(value) {
+        this._soundTransform = value;
+        this._mixer.applySoundTransform$1(value);
+      },
+      _onEnded$1: [function(e) {
+        if (!this._paused && !this._stopped && true) {
+          this._media$_position = this.get$position(this);
+          this._stopped = true;
+          this._paused = true;
+          this.dispatchEventRaw$3(new R.Event("complete", false, C.EventPhase_1, null, null, false, false), this, C.EventPhase_1);
+        }
+      }, "call$1", "get$_onEnded", 2, 0, 3]
+    },
+    Sound: {
+      "^": "Object;"
+    },
+    SoundChannel: {
+      "^": "EventDispatcher;",
+      pause$0: function(_) {
+        this.set$paused(0, true);
+      }
+    },
+    SoundEngine: {
+      "^": "Object;index,_media$_name",
+      toString$0: function(_) {
+        return this._media$_name;
+      }
+    },
+    SoundLoadOptions: {
+      "^": "Object;mp3,mp4,ogg,opus,ac3,wav,alternativeUrls,ignoreErrors<,corsEnabled<,engine",
+      getOptimalAudioUrls$1: function(primaryUrl) {
+        var t1, availableTypes, urls, regex, primaryMatch, _i, availableType;
+        t1 = $.$get$AudioLoader_supportedTypes();
+        t1.toString;
+        availableTypes = H.setRuntimeTypeInfo(t1.slice(0), [H.getTypeArgumentByIndex(t1, 0)]);
+        C.JSArray_methods.remove$1(availableTypes, "opus");
+        urls = H.setRuntimeTypeInfo([], [P.String]);
+        regex = P.RegExp_RegExp("([A-Za-z0-9]+)$", true, false);
+        primaryMatch = regex.firstMatch$1(primaryUrl);
+        if (primaryMatch == null)
+          return urls;
+        t1 = primaryMatch._match;
+        if (1 >= t1.length)
+          return H.ioore(t1, 1);
+        if (C.JSArray_methods.remove$1(availableTypes, t1[1]))
+          urls.push(primaryUrl);
+        for (t1 = availableTypes.length, _i = 0; _i < availableTypes.length; availableTypes.length === t1 || (0, H.throwConcurrentModificationError)(availableTypes), ++_i) {
+          availableType = availableTypes[_i];
+          if (typeof availableType !== "string")
+            H.throwExpression(H.argumentErrorValue(availableType));
+          urls.push(H.stringReplaceAllUnchecked(primaryUrl, regex, availableType));
+        }
+        return urls;
+      }
+    },
+    SoundTransform: {
+      "^": "Object;volume',pan"
+    }
   }], ["stagexl.resources", "package:stagexl/src/resources.dart",, O, {
     "^": "",
     ResourceManager: {
@@ -14650,6 +15945,13 @@
         });
         return P._asyncStart($async$load$0, $async$completer);
       },
+      get$finishedResources: function() {
+        var t1, t2;
+        t1 = this._resourceMap;
+        t1 = t1.get$values(t1);
+        t2 = H.getRuntimeTypeArgument(t1, "Iterable", 0);
+        return P.List_List$from(new H.WhereIterable(t1, new O.ResourceManager_finishedResources_closure(), [t2]), true, t2);
+      },
       get$pendingResources: function() {
         var t1, t2;
         t1 = this._resourceMap;
@@ -14663,29 +15965,119 @@
         t1 = t1.get$values(t1);
         t2 = H.getRuntimeTypeArgument(t1, "Iterable", 0);
         return P.List_List$from(new H.WhereIterable(t1, new O.ResourceManager_failedResources_closure(), [t2]), true, t2);
+      },
+      _addResource$4: function(kind, $name, url, loader) {
+        var key, resource, t1;
+        key = kind + "." + $name;
+        resource = O.ResourceManagerResource$(kind, $name, url, loader);
+        t1 = this._resourceMap;
+        if (t1.containsKey$1(0, key))
+          throw H.wrapException(new P.StateError("ResourceManager already contains a resource called '" + $name + "'"));
+        else
+          t1.$indexSet(0, key, resource);
+        resource._completer.future.then$1(new O.ResourceManager__addResource_closure(this));
+      },
+      _getResourceValue$2: function(kind, $name) {
+        var resource, t1;
+        resource = this._resourceMap.$index(0, kind + "." + $name);
+        if (resource == null)
+          throw H.wrapException(new P.StateError("Resource '" + $name + "' does not exist."));
+        else {
+          t1 = J.getInterceptor$x(resource);
+          if (t1.get$value(resource) != null)
+            return t1.get$value(resource);
+          else if (t1.get$error(resource) != null)
+            throw H.wrapException(t1.get$error(resource));
+          else
+            throw H.wrapException(new P.StateError("Resource '" + $name + "' has not finished loading yet."));
+        }
       }
     },
     ResourceManager_load_closure: {
-      "^": "Closure:2;",
+      "^": "Closure:1;",
       call$1: function(r) {
         return J.get$complete$x(r);
       }
     },
+    ResourceManager_finishedResources_closure: {
+      "^": "Closure:1;",
+      call$1: function(r) {
+        return J.get$value$x(r) != null;
+      }
+    },
     ResourceManager_pendingResources_closure: {
-      "^": "Closure:2;",
+      "^": "Closure:1;",
       call$1: function(r) {
         var t1 = J.getInterceptor$x(r);
         return t1.get$value(r) == null && t1.get$error(r) == null;
       }
     },
     ResourceManager_failedResources_closure: {
-      "^": "Closure:2;",
+      "^": "Closure:1;",
       call$1: function(r) {
         return J.get$error$x(r) != null;
       }
     },
+    ResourceManager__addResource_closure: {
+      "^": "Closure:1;$this",
+      call$1: function(_) {
+        var t1, finished, t2;
+        t1 = this.$this;
+        finished = t1.get$finishedResources().length;
+        t2 = t1._resourceMap;
+        t2 = t2.get$length(t2);
+        t1 = t1._progressEvent;
+        if (!t1.get$_mayAddEvent())
+          H.throwExpression(t1._addEventError$0());
+        t1._sendData$1(finished / t2);
+      }
+    },
     ResourceManagerResource: {
-      "^": "Object;"
+      "^": "Object;kind,name,url>,_resources$_value,_error,_completer",
+      toString$0: function(_) {
+        return "ResourceManagerResource [kind=" + this.kind + ", name=" + this.name + ", url = " + this.url + "]";
+      },
+      get$value: function(_) {
+        return this._resources$_value;
+      },
+      get$error: function(_) {
+        return this._error;
+      },
+      get$complete: function(_) {
+        return this._completer.future;
+      },
+      ResourceManagerResource$4: function(kind, $name, url, loader) {
+        loader.then$1(new O.ResourceManagerResource_closure(this)).catchError$1(new O.ResourceManagerResource_closure0(this)).whenComplete$1(new O.ResourceManagerResource_closure1(this));
+      },
+      complete$1: function($receiver, arg0) {
+        return this.get$complete(this).call$1(arg0);
+      },
+      static: {
+        ResourceManagerResource$: function(kind, $name, url, loader) {
+          var t1 = new O.ResourceManagerResource(kind, $name, url, null, null, new P._AsyncCompleter(new P._Future(0, $.Zone__current, null, [null]), [null]));
+          t1.ResourceManagerResource$4(kind, $name, url, loader);
+          return t1;
+        }
+      }
+    },
+    ResourceManagerResource_closure: {
+      "^": "Closure:1;$this",
+      call$1: function(resource) {
+        this.$this._resources$_value = resource;
+      }
+    },
+    ResourceManagerResource_closure0: {
+      "^": "Closure:1;$this",
+      call$1: function(error) {
+        this.$this._error = error;
+      }
+    },
+    ResourceManagerResource_closure1: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        var t1 = this.$this;
+        t1._completer.complete$1(0, t1);
+      }
     }
   }], ["stagexl.text", "package:stagexl/src/text.dart",, Y, {
     "^": "",
@@ -14702,7 +16094,7 @@
     _FontStyleMetrics: {
       "^": "Object;ascent<,descent<,height>",
       _FontStyleMetrics$1: function(textFormat) {
-        var text, block, div, fontStyle, t1, exception, t2;
+        var text, block, div, fontStyle, t1, exception;
         fontStyle = textFormat.get$_cssFontStyle();
         text = W._ElementFactoryProvider_createElement_tag("span", null);
         block = W._ElementFactoryProvider_createElement_tag("div", null);
@@ -14730,12 +16122,7 @@
           this.ascent = C.JSInt_methods._tdivFast$1(t1 * 7, 8);
           this.descent = C.JSInt_methods._tdivFast$1(t1 * 2, 8);
         } finally {
-          t1 = div;
-          t2 = J.getInterceptor$x(t1);
-          if (t2.get$parentNode(t1) != null) {
-            t2.get$parentNode(t1);
-            t2.get$parentNode(t1).removeChild(t1);
-          }
+          J.remove$0$ax(div);
         }
       },
       static: {
@@ -14747,7 +16134,7 @@
       }
     },
     TextField: {
-      "^": "InteractiveObject;_text,_defaultTextFormat,_autoSize,_type,_caretIndex,_caretLine,_caretTime,_caretX,_caretY,_caretWidth,_caretHeight,_wordWrap,_multiline,_displayAsPassword,_background,_border,_passwordChar,_backgroundColor,_borderColor,_maxChars,_width,_height,_textWidth,_textHeight,_textLineMetrics,_refreshPending,_cacheAsBitmap,_renderTexture,_renderTextureQuad,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_x,_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
+      "^": "InteractiveObject;_text,_defaultTextFormat,_autoSize,_text$_type,_caretIndex,_caretLine,_caretTime,_caretX,_caretY,_caretWidth,_caretHeight,_wordWrap,_multiline,_displayAsPassword,_background,_border,_passwordChar,_backgroundColor,_borderColor,_maxChars,_width,_height,_textWidth,_textHeight,_textLineMetrics,_refreshPending,_cacheAsBitmap,_renderTexture,_renderTextureQuad,doubleClickEnabled,mouseEnabled,mouseCursor,tabEnabled,tabIndex,displayObjectID,_x,_y,_pivotX,_pivotY,_scaleX,_scaleY,_skewX,_skewY,_rotation,_alpha,_visible,_off,_mask,_blendMode,_filters,_cache,_display$_name,_parent,_transformationMatrix,_transformationMatrixRefresh,userData,_eventStreams",
       get$renderTexture: function() {
         return this._renderTexture;
       },
@@ -14801,7 +16188,7 @@
         this._refreshCache$1(renderState._currentContextState.matrix);
         renderState._engine$_renderContext.renderTextureQuad$2(renderState, this._renderTextureQuad);
         this._caretTime = this._caretTime + renderState.deltaTime;
-        if (this._type === "input")
+        if (this._text$_type === "input")
           this.get$stage() != null;
       },
       _refreshTextLineMetrics$0: function() {
@@ -14922,7 +16309,7 @@
           }
           textLineMetrics._text$_y += heightOffset;
         }
-        if (this._type === "input") {
+        if (this._text$_type === "input") {
           for (line = t2 - 1, t2 = this._caretIndex; line >= 0; --line) {
             textLineMetrics = t1[line];
             t3 = textLineMetrics._textIndex;
@@ -15039,7 +16426,7 @@
       },
       _onKeyDown$1: [function(keyboardEvent) {
         var text, textLength, textLineMetrics, caretIndex, caretLine, t1, caretIndexNew, tlm, tlmFrom, t2, tlmTo;
-        if (this._type === "input") {
+        if (this._text$_type === "input") {
           this._refreshTextLineMetrics$0();
           text = this._text;
           textLength = text.length;
@@ -15127,7 +16514,7 @@
       }, "call$1", "get$_onKeyDown", 2, 0, 26],
       _onTextInput$1: [function(textEvent) {
         var t1, t2, caretIndex, newText;
-        if (this._type === "input") {
+        if (this._text$_type === "input") {
           t1 = J.getInterceptor$x(textEvent);
           t1.preventDefault$0(textEvent);
           t2 = this._text;
@@ -15268,36 +16655,37 @@
               t4.push(t5);
               t2 = new O.ResourceManager(new H.JsLinkedHashMap(0, null, null, null, null, null, 0, [P.String, O.ResourceManagerResource]), new P._AsyncBroadcastStreamController(null, null, 0, null, null, null, null, t2));
               $.resources = t2;
+              t2._addResource$4("Sound", "song", "music/song.ogg", E.Sound_load("music/song.ogg", null));
               $async$goto = 2;
-              return P._asyncAwait(t2.load$0(0), $async$main);
+              return P._asyncAwait($.resources.load$0(0), $async$main);
             case 2:
               // returning from await.
               $.random = C.C__JSRandom;
-              t2 = new N.Game(null, null);
-              t2.setLevel$1(N.BaseLevel$());
+              t2 = new N.Game(null, null, null, null, null, null, null);
+              t3 = H.setRuntimeTypeInfo([], [A.DisplayObject]);
+              t4 = $.DisplayObject__nextID;
+              $.DisplayObject__nextID = t4 + 1;
+              t2.startMenu = new A.Sprite(null, null, null, t3, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], [A.BitmapFilter]), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+              t2.makeStartMenu$0();
+              $.stage.addChild$1(t2.startMenu);
               t2.upPressed = false;
               $.stage.on$1(0, "enterFrame").listen$1(t2.get$enterFrame());
-              t3 = W.KeyboardEvent;
-              W._EventStreamSubscription$(t1, "keydown", t2.get$keyDown(), false, t3);
-              W._EventStreamSubscription$(t1, "keyup", t2.get$keyUp(), false, t3);
+              t4 = W.KeyboardEvent;
+              W._EventStreamSubscription$(t1, "keydown", t2.get$keyDown(), false, t4);
+              W._EventStreamSubscription$(t1, "keyup", t2.get$keyUp(), false, t4);
               $.game = t2;
               // implicit return
               return P._asyncReturn(null, $async$completer);
           }
       });
       return P._asyncStart($async$main, $async$completer);
-    }, "call$0", "main__main$closure", 0, 0, 23],
+    }, "call$0", "main__main$closure", 0, 0, 24],
     BaseLevel: {
-      "^": "Level;blockString,blocks,respawnBlocks,player,scrollX,countdownText,countdownTime,sprite",
+      "^": "Level;blockString,winningX,blocks,respawnBlocks,player,scrollX,countdownText,countdownTime,miniLevelIndex,deathCount,wonText,music,musicChannel,playerMusicOffset,sprite",
       resetCountdown$0: function() {
         this.countdownText.set$x(0, this.player.x + 0.5);
         this.countdownText.set$y(0, this.player.y - 5);
-        this.countdownText.set$pivotX(5);
-        this.countdownText.set$pivotY(2);
-        var t1 = this.countdownText;
-        t1._width = 10;
-        t1._refreshPending |= 3;
-        this.countdownTime = 3;
+        this.countdownTime = 3.01;
       },
       leftPressed$0: function() {
       },
@@ -15509,7 +16897,7 @@
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
                   t8._graphics = t7;
                 }
-                command = new U.GraphicsCommandLineTo(1, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.7)), null);
+                command = new U.GraphicsCommandLineTo(1, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.5)), null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
@@ -15519,7 +16907,7 @@
                   t7 = new U.Graphics(H.setRuntimeTypeInfo([], t1), H.setRuntimeTypeInfo([], t1), null);
                   t8._graphics = t7;
                 }
-                command = new U.GraphicsCommandLineTo(0.6, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.7)), null);
+                command = new U.GraphicsCommandLineTo(0.6, J.toDouble$0$n(J.$sub$n(J.$negate$n(blockHeight), 0.5)), null);
                 command._drawing$_graphics = t7;
                 t7._originalCommands.push(command);
                 C.JSArray_methods.set$length(t7._compiledCommands, 0);
@@ -15616,85 +17004,125 @@
         }
       },
       update$1: function(_, time) {
-        var t1, t2, t3, collidingBlock, alive, t4, t5, t6;
+        var t1, before, after, t2, t3, alive, t4, t5, t6;
+        t1 = this.musicChannel;
+        if (t1.get$paused(t1)) {
+          this.musicChannel.set$soundTransform(new E.SoundTransform(1, 0));
+          $.game.fadeSound$2(null, this.musicChannel);
+        }
         t1 = this.countdownTime;
         if (typeof t1 !== "number")
           return t1.$gt();
         if (t1 > 0) {
-          t1 -= time;
+          if (this.playerMusicOffset == null) {
+            t1 = this.musicChannel;
+            this.playerMusicOffset = t1.get$position(t1) - this.player.x / 13;
+          }
+          before = J.ceil$0$n(this.countdownTime);
+          t1 = this.countdownTime;
+          if (typeof t1 !== "number")
+            return t1.$sub();
+          t1 -= time * 13 / 8;
           this.countdownTime = t1;
-          this.countdownText.set$text(0, C.JSInt_methods.toString$0(C.JSNumber_methods.ceil$0(t1)));
+          after = C.JSNumber_methods.ceil$0(t1);
+          if (after !== before) {
+            t1 = this.countdownText;
+            if (after > 0)
+              t1.set$text(0, C.JSInt_methods.toString$0(after));
+            else
+              t1.set$text(0, "GO");
+            t1 = this.countdownText;
+            t1.set$scaleY(1);
+            t1.set$scaleX(1);
+            this.countdownText.set$alpha(0, 1);
+            t1 = $.stage.juggler;
+            t2 = K.Tween$(this.countdownText, 0.5, K.animation_Transition_easeOutQuadratic$closure());
+            t3 = t2.get$animate(t2);
+            t3._tween._createTweenProperty$2(t3, 4)._targetValue = 0.7;
+            t3 = t2.get$animate(t2);
+            t3._tween._createTweenProperty$2(t3, 5)._targetValue = 0.7;
+            t3 = t2.get$animate(t2);
+            t3._tween._createTweenProperty$2(t3, 9)._targetValue = 0;
+            t1.add$1(0, t2);
+          }
         } else {
           t1 = this.player;
-          t2 = this.blocks;
-          t3 = t1.velocityY;
-          if (typeof t3 !== "number")
-            return t3.$add();
-          t3 += 150 * time;
-          t1.velocityY = t3;
-          t1.y = t1.y + t3 * time;
-          collidingBlock = t1.getCollidingBlock$1(t2);
-          if (collidingBlock != null) {
-            t1.velocityY = 0;
-            t3 = collidingBlock.height;
-            if (typeof t3 !== "number")
-              return H.iae(t3);
-            t1.y = 18 - t3 - 1;
-            t1.onGround = true;
-            alive = !collidingBlock.spikes || false;
-            if ($.game.upPressed === true)
-              t1.velocityY = -30;
+          if (t1.x < this.winningX) {
+            alive = t1.updatePhysics$2(time, this.blocks);
+            this.updateSprite$0();
+            this.addBlocks$1(true);
+            this.removeOffscreenBlocks$0();
+            if (!alive) {
+              t1 = this.player;
+              t2 = this.respawnBlocks;
+              if (0 >= t2.length)
+                return H.ioore(t2, 0);
+              t2 = t2[0];
+              t3 = t2.x;
+              t2 = t2.height;
+              if (typeof t2 !== "number")
+                return H.iae(t2);
+              t1.resetPhysics$2(t3, 18 - t2 - 1);
+              t2 = $.game;
+              t3 = $.$get$MiniLevel_LEVELS();
+              t1 = this.miniLevelIndex;
+              if (t1 >>> 0 !== t1 || t1 >= 4)
+                return H.ioore(t3, t1);
+              t1 = new N.MiniLevel(null, t3[t1], null, null, this, null, null, null);
+              t3 = [A.DisplayObject];
+              t4 = H.setRuntimeTypeInfo([], t3);
+              t5 = $.DisplayObject__nextID;
+              $.DisplayObject__nextID = t5 + 1;
+              t6 = [A.BitmapFilter];
+              t5 = new A.Sprite(null, null, null, t4, true, true, false, true, "auto", true, 0, t5, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+              t1.sprite = t5;
+              t3 = H.setRuntimeTypeInfo([], t3);
+              t4 = $.DisplayObject__nextID;
+              $.DisplayObject__nextID = t4 + 1;
+              t6 = new A.Sprite(null, null, null, t3, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+              t1.blockSprite = t6;
+              t5.addChild$1(t6);
+              t1.reset$0(0);
+              t6 = t1.sprite;
+              t5 = Y.TextField$("press [R] to restart", new Y.TextFormat("Comfortaa", 1, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+              t5.set$x(0, 0);
+              t5.set$y(0, 16);
+              t5._width = 32;
+              t5._refreshPending |= 3;
+              t6.addChild$1(t5);
+              t1.ready = false;
+              t1.transitionFromBaseLevel$1(1);
+              t2.setLevel$1(t1);
+              t1 = this.miniLevelIndex;
+              if (typeof t1 !== "number")
+                return t1.$add();
+              ++t1;
+              this.miniLevelIndex = t1;
+              if (t1 >= 4)
+                this.miniLevelIndex = 0;
+              t1 = this.deathCount;
+              if (typeof t1 !== "number")
+                return t1.$add();
+              ++t1;
+              this.deathCount = t1;
+              this.wonText.set$text(0, "YOU DID IT!\nyou died " + t1 + " times\nthank you for playing <3");
+              $.game.fadeSound$3$onComplete(this.musicChannel, null, new N.BaseLevel_update_closure(this));
+            }
           } else {
-            t1.onGround = false;
-            alive = true;
-          }
-          t3 = t1.x;
-          t4 = t1.velocityX;
-          if (typeof t4 !== "number")
-            return t4.$mul();
-          t1.x = t3 + t4 * time;
-          if (t1.getCollidingBlock$1(t2) != null)
-            alive = false;
-          t1.updateSprite$0();
-          this.updateSprite$0();
-          this.addBlocks$1(true);
-          this.removeOffscreenBlocks$0();
-          if (!alive) {
-            t1 = this.player;
-            t2 = this.respawnBlocks;
-            if (0 >= t2.length)
-              return H.ioore(t2, 0);
-            t2 = t2[0];
-            t3 = t2.x;
-            t2 = t2.height;
+            t2 = t1.velocityX;
             if (typeof t2 !== "number")
-              return H.iae(t2);
-            t1.resetPhysics$2(t3, 18 - t2 - 1);
-            t2 = $.game;
-            t3 = new N.MiniLevel(null, "    #####\r\n    #Po #\r\n    #o oG\r\n    #   #\r\n    #####\r\n    ", null, null, this, null);
-            t1 = [A.DisplayObject];
-            t4 = H.setRuntimeTypeInfo([], t1);
-            t5 = $.DisplayObject__nextID;
-            $.DisplayObject__nextID = t5 + 1;
-            t6 = [A.BitmapFilter];
-            t5 = new A.Sprite(null, null, null, t4, true, true, false, true, "auto", true, 0, t5, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-            t3.sprite = t5;
-            t1 = H.setRuntimeTypeInfo([], t1);
-            t4 = $.DisplayObject__nextID;
-            $.DisplayObject__nextID = t4 + 1;
-            t6 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t6), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-            t3.blockSprite = t6;
-            t5.addChild$1(t6);
-            t3.reset$0(0);
-            t6 = t3.sprite;
-            t5 = Y.TextField$("press [R] to restart", new Y.TextFormat("Comfortaa", 1, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
-            t5.set$x(0, 0);
-            t5.set$y(0, 16);
-            t5._width = 32;
-            t5._refreshPending |= 3;
-            t6.addChild$1(t5);
-            t3.transitionFromBaseLevel$1(1);
-            t2.setLevel$1(t3);
+              return t2.$sub();
+            t2 -= 0.3;
+            t1.velocityX = t2;
+            if (t2 < 0)
+              t1.velocityX = 0;
+            if (t1.y > 9)
+              t1.accelerationY = -85;
+            else
+              t1.accelerationY = 85;
+            t1.updatePhysics$2(time, this.blocks);
+            this.updateSprite$0();
+            P.print("win");
           }
         }
       },
@@ -15702,82 +17130,107 @@
         var t1 = -this.player.x + 5;
         this.scrollX = t1;
         this.sprite.set$x(0, t1);
-      },
-      BaseLevel$0: function() {
-        var t1, t2, t3, t4, command;
-        t1 = [A.DisplayObject];
-        t2 = H.setRuntimeTypeInfo([], t1);
-        t3 = $.DisplayObject__nextID;
-        $.DisplayObject__nextID = t3 + 1;
-        t4 = [A.BitmapFilter];
-        this.sprite = new A.Sprite(null, null, null, t2, true, true, false, true, "auto", true, 0, t3, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-        this.blockString = "333333r3333333333333333333333344r4444444444445555556666s444444434s4s33333333r33333111111112222333344444444s";
-        t3 = [N.BaseLevelBlock];
-        this.blocks = H.setRuntimeTypeInfo([], t3);
-        this.respawnBlocks = H.setRuntimeTypeInfo([], t3);
-        t3 = new N.BaseLevelPlayer(null, 6, 14, null, null, null);
-        t1 = H.setRuntimeTypeInfo([], t1);
-        t2 = $.DisplayObject__nextID;
-        $.DisplayObject__nextID = t2 + 1;
-        t4 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], t4), null, "", null, T.Matrix$fromIdentity(), true, null, null);
-        t3.sprite = t4;
-        t2 = t4.get$graphics();
-        t2.toString;
-        command = U.GraphicsCommandRect$(0, 0, 1, 1);
-        command._setGraphics$1(t2);
-        t2._originalCommands.push(command);
-        C.JSArray_methods.set$length(t2._compiledCommands, 0);
-        t2._bounds = null;
-        t4.get$graphics().fillColor$1(4281959622);
-        t3.resetPhysics$2(6, 14);
-        t3.updateSprite$0();
-        this.player = t3;
-        this.sprite.addChild$1(t3.sprite);
-        this.updateSprite$0();
-        this.addBlocks$1(false);
-        this.countdownText = Y.TextField$("", new Y.TextFormat("Comfortaa", 4, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
-        this.resetCountdown$0();
-        this.sprite.addChild$1(this.countdownText);
-      },
-      static: {
-        BaseLevel$: function() {
-          var t1 = new N.BaseLevel(null, null, null, null, null, null, null, null);
-          t1.BaseLevel$0();
-          return t1;
-        }
+      }
+    },
+    BaseLevel_update_closure: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        var t1, t2, t3;
+        t1 = this.$this;
+        t2 = t1.musicChannel;
+        t3 = t1.player.x;
+        t1 = t1.playerMusicOffset;
+        if (typeof t1 !== "number")
+          return H.iae(t1);
+        t1 = t3 / 13 + t1;
+        t2.set$position(0, t1);
+        return t1;
       }
     },
     BaseLevelPlayer: {
-      "^": "Object;sprite<,x>,y>,velocityX,velocityY,onGround",
+      "^": "Object;sprite<,x>,y>,velocityX,velocityY,accelerationY,onGround",
       resetPhysics$2: function(x, y) {
         this.x = x;
         this.y = y;
         this.velocityX = 13;
         this.velocityY = 0;
+        this.accelerationY = 170;
         this.onGround = false;
+      },
+      updatePhysics$2: function(time, blocks) {
+        var t1, t2, collidingBlock, alive;
+        t1 = this.velocityY;
+        t2 = this.accelerationY;
+        if (typeof t2 !== "number")
+          return t2.$mul();
+        if (typeof t1 !== "number")
+          return t1.$add();
+        t2 = t1 + t2 * time;
+        this.velocityY = t2;
+        this.y = this.y + t2 * time;
+        collidingBlock = this.getCollidingBlock$1(blocks);
+        if (collidingBlock != null) {
+          this.velocityY = 0;
+          t1 = collidingBlock.height;
+          if (typeof t1 !== "number")
+            return H.iae(t1);
+          this.y = 18 - t1 - 1;
+          this.onGround = true;
+          alive = !collidingBlock.spikes || false;
+          if ($.game.upPressed === true)
+            this.velocityY = -30;
+        } else {
+          this.onGround = false;
+          alive = true;
+        }
+        t1 = this.x;
+        t2 = this.velocityX;
+        if (typeof t2 !== "number")
+          return t2.$mul();
+        this.x = t1 + t2 * time;
+        if (this.getCollidingBlock$1(blocks) != null)
+          alive = false;
+        this.updateSprite$0();
+        return alive;
       },
       getCollidingBlock$1: function(blocks) {
         var t1, spikesBlock, _i, t2, block, t3, t4;
         for (t1 = blocks.length, spikesBlock = null, _i = 0; t2 = blocks.length, _i < t2; t2 === t1 || (0, H.throwConcurrentModificationError)(blocks), ++_i) {
           block = blocks[_i];
-          t3 = this.x;
-          t4 = block.x;
-          if (t3 > t4 - 1)
-            if (t3 < t4 + 1) {
-              t3 = this.y;
-              t4 = block.height;
-              if (typeof t4 !== "number")
-                return H.iae(t4);
-              t4 = t3 + 1 > 18 - t4;
-              t3 = t4;
-            } else
+          if (block.spikes) {
+            t3 = this.x;
+            t4 = block.x;
+            if (t3 + 1 > t4 + 0.3)
+              if (t3 < t4 + 1 - 0.3) {
+                t3 = this.y;
+                t4 = block.height;
+                if (typeof t4 !== "number")
+                  return H.iae(t4);
+                t4 = t3 + 1 > 18 - t4 + 0.3;
+                t3 = t4;
+              } else
+                t3 = false;
+            else
               t3 = false;
-          else
-            t3 = false;
-          if (t3) {
-            if (!block.spikes)
+            if (t3)
+              spikesBlock = block;
+          } else {
+            t3 = this.x;
+            t4 = block.x;
+            if (t3 + 1 > t4)
+              if (t3 < t4 + 1) {
+                t3 = this.y;
+                t4 = block.height;
+                if (typeof t4 !== "number")
+                  return H.iae(t4);
+                t4 = t3 + 1 > 18 - t4;
+                t3 = t4;
+              } else
+                t3 = false;
+            else
+              t3 = false;
+            if (t3)
               return block;
-            spikesBlock = block;
           }
         }
         if (spikesBlock != null)
@@ -15785,56 +17238,256 @@
         return;
       },
       updateSprite$0: function() {
-        this.sprite.set$x(0, this.x);
-        this.sprite.set$y(0, this.y);
+        this.sprite.set$x(0, this.x + 0.5);
+        this.sprite.set$y(0, this.y + 0.5);
+      },
+      BaseLevelPlayer$2: function(x, y) {
+        var t1, t2, command;
+        t1 = H.setRuntimeTypeInfo([], [A.DisplayObject]);
+        t2 = $.DisplayObject__nextID;
+        $.DisplayObject__nextID = t2 + 1;
+        t2 = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], [A.BitmapFilter]), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+        this.sprite = t2;
+        t2 = t2.get$graphics();
+        t2.toString;
+        command = U.GraphicsCommandRect$(0, 0, 1, 1);
+        command._setGraphics$1(t2);
+        t2._originalCommands.push(command);
+        C.JSArray_methods.set$length(t2._compiledCommands, 0);
+        t2._bounds = null;
+        this.sprite.get$graphics().fillColor$1(4281959622);
+        this.sprite.set$pivotX(0.5);
+        this.sprite.set$pivotY(0.5);
+        this.resetPhysics$2(this.x, this.y);
+        this.updateSprite$0();
+      },
+      static: {
+        BaseLevelPlayer$: function(x, y) {
+          var t1 = new N.BaseLevelPlayer(null, x, y, null, null, null, null);
+          t1.BaseLevelPlayer$2(x, y);
+          return t1;
+        }
       }
     },
     BaseLevelBlock: {
       "^": "Object;x>,height>,spikes,respawn,sprite<"
     },
     Game: {
-      "^": "Object;currentLevel,upPressed",
+      "^": "Object;startMenu,currentLevel,upPressed,fadingOutSoundChannel,fadingInSoundChannel,fadingProgress,onFadeComplete",
+      makeStartMenu$0: function() {
+        var t1, t2, startButton, command;
+        t1 = H.setRuntimeTypeInfo([], [A.DisplayObject]);
+        t2 = $.DisplayObject__nextID;
+        $.DisplayObject__nextID = t2 + 1;
+        startButton = new A.Sprite(null, null, null, t1, true, true, false, true, "auto", true, 0, t2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], [A.BitmapFilter]), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+        t2 = startButton.get$graphics();
+        t2.toString;
+        command = U.GraphicsCommandRect$(12, 7.5, 8, 3);
+        command._setGraphics$1(t2);
+        t2._originalCommands.push(command);
+        C.JSArray_methods.set$length(t2._compiledCommands, 0);
+        t2._bounds = null;
+        startButton.get$graphics().fillColor$1(4281959622);
+        startButton.on$1(0, "mouseOver").listen$1(new N.Game_makeStartMenu_closure(startButton, 8, 3, 4285115365));
+        startButton.on$1(0, "mouseOut").listen$1(new N.Game_makeStartMenu_closure0(startButton, 8, 3, 4281959622));
+        startButton.on$1(0, "click").listen$1(new N.Game_makeStartMenu_closure1(this));
+        startButton.mouseCursor = "pointer";
+        t2 = Y.TextField$("START", new Y.TextFormat("Comfortaa", 2, 4291611852, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+        t2.set$x(0, 12);
+        t2.set$y(0, 7.8);
+        t2._width = 8;
+        t1 = t2._refreshPending |= 3;
+        t2._height = 2.4;
+        t2._refreshPending = t1 | 3;
+        t2.mouseCursor = "pointer";
+        startButton.addChild$1(t2);
+        this.startMenu.addChild$1(startButton);
+        t2 = this.startMenu;
+        t1 = Y.TextField$("[arrow keys] or [WASD] to move", new Y.TextFormat("Comfortaa", 1, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+        t1.set$x(0, 0);
+        t1.set$y(0, 16);
+        t1._width = 32;
+        t1._refreshPending |= 3;
+        t2.addChild$1(t1);
+      },
       setLevel$1: function(level) {
         $.stage.removeChildren$0();
         this.currentLevel = level;
         $.stage.addChild$1(level.sprite);
       },
+      fadeSound$3$onComplete: function(channelOut, channelIn, onComplete) {
+        this.fadingOutSoundChannel = channelOut;
+        this.fadingInSoundChannel = channelIn;
+        this.fadingProgress = 0;
+        this.onFadeComplete = onComplete;
+        if (channelIn != null)
+          channelIn.set$paused(0, false);
+      },
+      fadeSound$2: function(channelOut, channelIn) {
+        return this.fadeSound$3$onComplete(channelOut, channelIn, null);
+      },
       enterFrame$1: [function($event) {
-        this.currentLevel.update$1(0, $event.get$passedTime());
+        var t1, t2;
+        t1 = this.currentLevel;
+        if (t1 != null)
+          t1.update$1(0, $event.get$passedTime());
+        t1 = this.fadingProgress;
+        if (t1 != null) {
+          t2 = this.fadingOutSoundChannel;
+          if (t2 != null)
+            t2.set$soundTransform(new E.SoundTransform(1 - t1, 0));
+          t1 = this.fadingInSoundChannel;
+          if (t1 != null)
+            t1.set$soundTransform(new E.SoundTransform(this.fadingProgress, 0));
+          t1 = this.fadingProgress;
+          t2 = $event.get$passedTime();
+          if (typeof t1 !== "number")
+            return t1.$add();
+          t2 = t1 + t2;
+          this.fadingProgress = t2;
+          if (t2 > 1) {
+            this.fadingProgress = 1;
+            t1 = this.fadingOutSoundChannel;
+            if (t1 != null)
+              t1.set$paused(0, true);
+            this.fadingInSoundChannel = null;
+            this.fadingOutSoundChannel = null;
+            this.fadingProgress = null;
+            t1 = this.onFadeComplete;
+            if (t1 != null)
+              t1.call$0();
+          }
+        }
       }, "call$1", "get$enterFrame", 2, 0, 29],
       keyDown$1: [function($event) {
         switch (J.get$keyCode$x($event)) {
           case 37:
             this.currentLevel.leftPressed$0();
             break;
+          case 65:
+            this.currentLevel.leftPressed$0();
+            break;
           case 38:
+            this.upPressed = true;
+            this.currentLevel.upPressed$0();
+            break;
+          case 87:
             this.upPressed = true;
             this.currentLevel.upPressed$0();
             break;
           case 39:
             this.currentLevel.rightPressed$0();
             break;
+          case 68:
+            this.currentLevel.rightPressed$0();
+            break;
           case 40:
+            this.currentLevel.downPressed$0();
+            break;
+          case 83:
             this.currentLevel.downPressed$0();
             break;
           case 82:
             this.currentLevel.rPressed$0();
             break;
         }
-      }, "call$1", "get$keyDown", 2, 0, 5],
+      }, "call$1", "get$keyDown", 2, 0, 7],
       keyUp$1: [function($event) {
         switch (J.get$keyCode$x($event)) {
           case 38:
             this.upPressed = false;
             break;
+          case 87:
+            this.upPressed = false;
+            break;
         }
-      }, "call$1", "get$keyUp", 2, 0, 5]
+      }, "call$1", "get$keyUp", 2, 0, 7]
+    },
+    Game_makeStartMenu_closure: {
+      "^": "Closure:1;startButton,buttonWidth,buttonHeight,buttonColorHover",
+      call$1: function(_) {
+        var t1, t2, t3, t4, command;
+        t1 = this.startButton;
+        t2 = t1.get$graphics();
+        t3 = this.buttonWidth;
+        t4 = this.buttonHeight;
+        t2.toString;
+        command = U.GraphicsCommandRect$((32 - t3) / 2, (18 - t4) / 2, t3, t4);
+        command._setGraphics$1(t2);
+        t2._originalCommands.push(command);
+        C.JSArray_methods.set$length(t2._compiledCommands, 0);
+        t2._bounds = null;
+        t1.get$graphics().fillColor$1(this.buttonColorHover);
+      }
+    },
+    Game_makeStartMenu_closure0: {
+      "^": "Closure:1;startButton,buttonWidth,buttonHeight,buttonColor",
+      call$1: function(_) {
+        var t1, t2, t3, t4, command;
+        t1 = this.startButton;
+        t2 = t1.get$graphics();
+        t3 = this.buttonWidth;
+        t4 = this.buttonHeight;
+        t2.toString;
+        command = U.GraphicsCommandRect$((32 - t3) / 2, (18 - t4) / 2, t3, t4);
+        command._setGraphics$1(t2);
+        t2._originalCommands.push(command);
+        C.JSArray_methods.set$length(t2._compiledCommands, 0);
+        t2._bounds = null;
+        t1.get$graphics().fillColor$1(this.buttonColor);
+      }
+    },
+    Game_makeStartMenu_closure1: {
+      "^": "Closure:1;$this",
+      call$1: function(_) {
+        var t1, t2, t3, t4;
+        t1 = this.$this;
+        $.stage.removeChild$1(t1.startMenu);
+        t2 = new N.BaseLevel(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+        t3 = H.setRuntimeTypeInfo([], [A.DisplayObject]);
+        t4 = $.DisplayObject__nextID;
+        $.DisplayObject__nextID = t4 + 1;
+        t4 = new A.Sprite(null, null, null, t3, true, true, false, true, "auto", true, 0, t4, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, true, false, null, null, H.setRuntimeTypeInfo([], [A.BitmapFilter]), null, "", null, T.Matrix$fromIdentity(), true, null, null);
+        t2.sprite = t4;
+        t2.blockString = "333333r333333333333333333333333333333333334444444455555555533s333333333333334s33333333333332s2s33r3333334444444455555555666666667s666666661s1s666666667s666666661s1s666r66666777777888888999999333333333334s333334s333334s333334s333334s444445s555556s66666111r11111112s11111111112s2s11112s1111111111s1s1111s1s111r11111122222233333344444455555566666677777788889s33333333444455556666777788889r8765432111111s1s111s1s111111333555776543211r1111112s11111222222333333444445s44445s44445s44222222223s3s22222222223s3s22r222222223s3s33334s4s44445s5s55556s6s6666333r33333334s333334s333334s333334s333334s4s333334444466666888889s9s88889s9s888883s3s3s3s3s333333s3s333r333333333344445s5s444455555566666677777s7s333333333334s33334s33334s333r333311111122222233333344445555666677778s777778s7777779s555556s333r3333331s1s1s33334s4s33331s1s1s33333311111222233334444555566667777888899999s";
+        t2.winningX = 765;
+        t3 = [N.BaseLevelBlock];
+        t2.blocks = H.setRuntimeTypeInfo([], t3);
+        t2.respawnBlocks = H.setRuntimeTypeInfo([], t3);
+        t3 = N.BaseLevelPlayer$(6, 14);
+        t2.player = t3;
+        t4.addChild$1(t3.sprite);
+        t2.updateSprite$0();
+        t2.addBlocks$1(false);
+        t3 = Y.TextField$("", new Y.TextFormat("Comfortaa", 4, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+        t2.countdownText = t3;
+        t3.set$pivotX(5);
+        t2.countdownText.set$pivotY(2);
+        t3 = t2.countdownText;
+        t3._width = 10;
+        t3._refreshPending |= 3;
+        t2.resetCountdown$0();
+        t2.sprite.addChild$1(t2.countdownText);
+        t2.miniLevelIndex = 0;
+        t2.deathCount = 0;
+        t3 = Y.TextField$("YOU DID IT!\nyou died 0 times\nthank you for playing <3", new Y.TextFormat("Comfortaa", 1, 4281545523, 0, 4278190080, null, 400, false, false, false, "center", "top", 0, 0, 0, 0, 0, 0));
+        t3.set$x(0, t2.winningX);
+        t3.set$y(0, 4);
+        t3._width = 32;
+        t3._refreshPending |= 3;
+        t2.wonText = t3;
+        t2.sprite.addChild$1(t3);
+        t3 = H.interceptedTypeCast($.resources._getResourceValue$2("Sound", "song"), "$isSound");
+        t2.music = t3;
+        t2.musicChannel = t3.play$0(0);
+        t1.setLevel$1(t2);
+      }
     },
     Level: {
       "^": "Object;sprite<"
     },
     MiniLevel: {
-      "^": "Level;blockSprite,blockString,player,blocks,baseLevel,sprite",
+      "^": "Level;blockSprite,blockString,player,blocks,baseLevel,ready,won,sprite",
       transitionFromBaseLevel$1: function(duration) {
         var t1, restoreBaseLevelSprite, t2, t3, t4, _i, block, t5, origX, origY, t6, t7, t8, tweenProperty, playerX, playerY;
         t1 = this.baseLevel;
@@ -15887,19 +17540,14 @@
         playerY = t2._y;
         t2.set$x(0, t1.player.sprite._x + t1.sprite._x - this.blockSprite._x);
         this.player.sprite.set$y(0, t1.player.sprite._y - this.blockSprite._y);
-        this.player.sprite.set$pivotX(0);
-        this.player.sprite.set$pivotY(0);
         t2 = $.stage.juggler;
-        t3 = K.Tween$(this.player.sprite, duration, K.animation_Transition_easeInOutQuadratic$closure());
+        t3 = K.Tween$(this.player.sprite, duration + 0.2, K.animation_Transition_easeInOutQuadratic$closure());
         t5 = t3.get$animate(t3);
         t5._tween._createTweenProperty$2(t5, 0)._targetValue = playerX;
         t5 = t3.get$animate(t3);
         t5._tween._createTweenProperty$2(t5, 1)._targetValue = playerY;
-        t5 = t3.get$animate(t3);
-        t5._tween._createTweenProperty$2(t5, 2)._targetValue = 0.5;
-        t5 = t3.get$animate(t3);
-        t5._tween._createTweenProperty$2(t5, 3)._targetValue = 0.5;
         t3.set$delay(0, 0.4);
+        t3._onComplete = new N.MiniLevel_transitionFromBaseLevel_closure0(this);
         t2.add$1(0, t3);
         t1.player.sprite._visible = false;
         for (t1 = this.blocks, t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, H.throwConcurrentModificationError)(t1), ++_i)
@@ -15948,7 +17596,7 @@
               if (!t8._started)
                 t8._tweenPropertyList.push(tweenProperty);
               tweenProperty._targetValue = 1;
-              t6 = 0.6 + $.random.nextDouble$0() * 0.2;
+              t6 = 0.4 + $.random.nextDouble$0() * 0.2;
               if (!t7._started) {
                 t7._currentTime = t7._currentTime + t7._delay - t6;
                 t7._delay = t6;
@@ -16021,19 +17669,13 @@
         t5._tween._createTweenProperty$2(t5, 0)._targetValue = t1.player.sprite._x + t1.sprite._x - this.blockSprite._x;
         t5 = t3.get$animate(t3);
         t5._tween._createTweenProperty$2(t5, 1)._targetValue = t1.player.sprite._y - this.blockSprite._y;
-        t1 = t3.get$animate(t3);
-        t1._tween._createTweenProperty$2(t1, 2)._targetValue = 0;
-        t1 = t3.get$animate(t3);
-        t1._tween._createTweenProperty$2(t1, 3)._targetValue = 0;
         t3.set$delay(0, 0.4);
         t3._onComplete = new N.MiniLevel_transitionToBaseLevel_closure(this);
         t2.add$1(0, t3);
         for (t1 = this.blocks, t2 = t1.length, _i = 0; _i < t1.length; t1.length === t2 || (0, H.throwConcurrentModificationError)(t1), ++_i)
           for (t3 = C.JSArray_methods.get$iterator(t1[_i]); t3.moveNext$0();) {
             block = t3.get$current();
-            t5 = J.getInterceptor(block);
-            H.printString("" + !!t5.$isMiniLevelGoal);
-            if (block != null && !t5.$isMiniLevelPlayer) {
+            if (block != null && !(block instanceof N.MiniLevelPlayer)) {
               t5 = $.stage.juggler;
               t6 = block.get$sprite();
               t7 = new K.Tween(t6, K.animation_Transition_easeOutQuadratic$closure(), H.setRuntimeTypeInfo([], t4), null, null, null, 0, 0, 0, false, false);
@@ -16146,7 +17788,7 @@
                   t3._graphics = t4;
                   t3 = t4;
                 }
-                command = new U.GraphicsCommandCircle(0.5, 0.5, 0.5, false, null);
+                command = new U.GraphicsCommandCircle(0.5, 0.5, 0.4, false, null);
                 command._drawing$_graphics = t3;
                 t3._originalCommands.push(command);
                 C.JSArray_methods.set$length(t3._compiledCommands, 0);
@@ -16160,7 +17802,7 @@
                   t3._graphics = t4;
                   t3 = t4;
                 }
-                command = new U.GraphicsCommandFillColor(4293243700, null);
+                command = new U.GraphicsCommandFillColor(4293900340, null);
                 command._drawing$_graphics = t3;
                 t3._originalCommands.push(command);
                 C.JSArray_methods.set$length(t3._compiledCommands, 0);
@@ -16184,29 +17826,40 @@
         t1.set$y(0, (18 - t1.get$boundsTransformed().height) / 2);
       },
       leftPressed$0: function() {
-        this.player.move$3(-1, 0, this.blocks);
-        if (this.player.won === true)
-          this.transitionToBaseLevel$1(1);
+        if (this.ready === true && this.won !== true) {
+          this.player.move$3(-1, 0, this.blocks);
+          this.checkWon$0();
+        }
       },
       upPressed$0: function() {
-        this.player.move$3(0, -1, this.blocks);
-        if (this.player.won === true)
-          this.transitionToBaseLevel$1(1);
+        if (this.ready === true && this.won !== true) {
+          this.player.move$3(0, -1, this.blocks);
+          this.checkWon$0();
+        }
       },
       rightPressed$0: function() {
-        this.player.move$3(1, 0, this.blocks);
-        if (this.player.won === true)
-          this.transitionToBaseLevel$1(1);
+        if (this.ready === true && this.won !== true) {
+          this.player.move$3(1, 0, this.blocks);
+          this.checkWon$0();
+        }
       },
       downPressed$0: function() {
-        this.player.move$3(0, 1, this.blocks);
-        if (this.player.won === true)
-          this.transitionToBaseLevel$1(1);
+        if (this.ready === true && this.won !== true) {
+          this.player.move$3(0, 1, this.blocks);
+          this.checkWon$0();
+        }
       },
       rPressed$0: function() {
-        this.reset$0(0);
+        if (this.ready === true && this.won !== true)
+          this.reset$0(0);
       },
       update$1: function(_, time) {
+      },
+      checkWon$0: function() {
+        if (this.player.won === true) {
+          this.won = true;
+          this.transitionToBaseLevel$1(1);
+        }
       }
     },
     MiniLevel_transitionFromBaseLevel_restoreBaseLevelSprite: {
@@ -16223,6 +17876,13 @@
       "^": "Closure:0;restoreBaseLevelSprite,block,origX,origY",
       call$0: function() {
         return this.restoreBaseLevelSprite.call$3(this.block.get$sprite(), this.origX, this.origY);
+      }
+    },
+    MiniLevel_transitionFromBaseLevel_closure0: {
+      "^": "Closure:0;$this",
+      call$0: function() {
+        this.$this.ready = true;
+        return true;
       }
     },
     MiniLevel_transitionToBaseLevel_closure: {
@@ -16343,9 +18003,9 @@
         var t1, t2;
         t1 = K.Tween$(this.sprite, 0.5, K.animation_Transition_easeInOutQuadratic$closure());
         t2 = t1.get$animate(t1);
-        t2._tween._createTweenProperty$2(t2, 4)._targetValue = 0.8;
+        t2._tween._createTweenProperty$2(t2, 4)._targetValue = 0.6;
         t2 = t1.get$animate(t1);
-        t2._tween._createTweenProperty$2(t2, 5)._targetValue = 0.8;
+        t2._tween._createTweenProperty$2(t2, 5)._targetValue = 0.6;
         t1._onComplete = new N.MiniLevelPlayer_createPulsationTween_closure(this);
         return t1;
       }
@@ -16358,9 +18018,9 @@
         t2 = this.$this;
         t3 = K.Tween$(t2.sprite, 0.5, K.animation_Transition_easeInOutQuadratic$closure());
         t4 = t3.get$animate(t3);
-        t4._tween._createTweenProperty$2(t4, 4)._targetValue = 1;
+        t4._tween._createTweenProperty$2(t4, 4)._targetValue = 0.8;
         t4 = t3.get$animate(t3);
-        t4._tween._createTweenProperty$2(t4, 5)._targetValue = 1;
+        t4._tween._createTweenProperty$2(t4, 5)._targetValue = 0.8;
         t3._onComplete = new N.MiniLevelPlayer_createPulsationTween__closure(t2);
         return t1.add$1(0, t3);
       }
@@ -16501,6 +18161,9 @@
       return receiver;
     return J.getNativeInterceptor(receiver);
   };
+  J.set$currentTime$x = function(receiver, value) {
+    return J.getInterceptor$x(receiver).set$currentTime(receiver, value);
+  };
   J.set$display$x = function(receiver, value) {
     return J.getInterceptor$x(receiver).set$display(receiver, value);
   };
@@ -16516,6 +18179,9 @@
   J.set$verticalAlign$x = function(receiver, value) {
     return J.getInterceptor$x(receiver).set$verticalAlign(receiver, value);
   };
+  J.set$volume$x = function(receiver, value) {
+    return J.getInterceptor$x(receiver).set$volume(receiver, value);
+  };
   J.set$width$x = function(receiver, value) {
     return J.getInterceptor$x(receiver).set$width(receiver, value);
   };
@@ -16525,8 +18191,17 @@
   J.get$context2D$x = function(receiver) {
     return J.getInterceptor$x(receiver).get$context2D(receiver);
   };
+  J.get$currentTime$x = function(receiver) {
+    return J.getInterceptor$x(receiver).get$currentTime(receiver);
+  };
+  J.get$duration$x = function(receiver) {
+    return J.getInterceptor$x(receiver).get$duration(receiver);
+  };
   J.get$error$x = function(receiver) {
     return J.getInterceptor$x(receiver).get$error(receiver);
+  };
+  J.get$isInfinite$n = function(receiver) {
+    return J.getInterceptor$n(receiver).get$isInfinite(receiver);
   };
   J.get$iterator$ax = function(receiver) {
     return J.getInterceptor$ax(receiver).get$iterator(receiver);
@@ -16540,11 +18215,23 @@
   J.get$offsetTop$x = function(receiver) {
     return J.getInterceptor$x(receiver).get$offsetTop(receiver);
   };
+  J.get$onEnded$x = function(receiver) {
+    return J.getInterceptor$x(receiver).get$onEnded(receiver);
+  };
+  J.get$response$x = function(receiver) {
+    return J.getInterceptor$x(receiver).get$response(receiver);
+  };
   J.get$style$x = function(receiver) {
     return J.getInterceptor$x(receiver).get$style(receiver);
   };
+  J.get$target$x = function(receiver) {
+    return J.getInterceptor$x(receiver).get$target(receiver);
+  };
   J.get$url$x = function(receiver) {
     return J.getInterceptor$x(receiver).get$url(receiver);
+  };
+  J.get$value$x = function(receiver) {
+    return J.getInterceptor$x(receiver).get$value(receiver);
   };
   J.$add$ns = function(receiver, a0) {
     if (typeof receiver == "number" && typeof a0 == "number")
@@ -16607,11 +18294,23 @@
   J.append$1$x = function(receiver, a0) {
     return J.getInterceptor$x(receiver).append$1(receiver, a0);
   };
+  J.ceil$0$n = function(receiver) {
+    return J.getInterceptor$n(receiver).ceil$0(receiver);
+  };
+  J.clone$1$x = function(receiver, a0) {
+    return J.getInterceptor$x(receiver).clone$1(receiver, a0);
+  };
   J.complete$1$x = function(receiver, a0) {
     return J.getInterceptor$x(receiver).complete$1(receiver, a0);
   };
   J.contains$2$asx = function(receiver, a0, a1) {
     return J.getInterceptor$asx(receiver).contains$2(receiver, a0, a1);
+  };
+  J.createGain$0$x = function(receiver) {
+    return J.getInterceptor$x(receiver).createGain$0(receiver);
+  };
+  J.decodeAudioData$1$x = function(receiver, a0) {
+    return J.getInterceptor$x(receiver).decodeAudioData$1(receiver, a0);
   };
   J.elementAt$1$ax = function(receiver, a0) {
     return J.getInterceptor$ax(receiver).elementAt$1(receiver, a0);
@@ -16622,8 +18321,17 @@
   J.map$1$ax = function(receiver, a0) {
     return J.getInterceptor$ax(receiver).map$1(receiver, a0);
   };
+  J.pause$0$x = function(receiver) {
+    return J.getInterceptor$x(receiver).pause$0(receiver);
+  };
+  J.play$0$x = function(receiver) {
+    return J.getInterceptor$x(receiver).play$0(receiver);
+  };
   J.preventDefault$0$x = function(receiver) {
     return J.getInterceptor$x(receiver).preventDefault$0(receiver);
+  };
+  J.remove$0$ax = function(receiver) {
+    return J.getInterceptor$ax(receiver).remove$0(receiver);
   };
   J.round$0$n = function(receiver) {
     return J.getInterceptor$n(receiver).round$0(receiver);
@@ -16662,7 +18370,9 @@
     return list;
   };
   var $ = Isolate.$isolateProperties;
+  C.AudioBufferSourceNode_methods = P.AudioBufferSourceNode.prototype;
   C.CanvasElement_methods = W.CanvasElement.prototype;
+  C.HttpRequest_methods = W.HttpRequest.prototype;
   C.Interceptor_methods = J.Interceptor.prototype;
   C.JSArray_methods = J.JSArray.prototype;
   C.JSDouble_methods = J.JSDouble.prototype;
@@ -16703,6 +18413,9 @@
   C.RenderTextureFiltering_9728 = new L.RenderTextureFiltering(9728);
   C.RenderTextureFiltering_9729 = new L.RenderTextureFiltering(9729);
   C.RenderTextureWrapping_33071 = new L.RenderTextureWrapping(33071);
+  C.SoundEngine_0 = new E.SoundEngine(0, "SoundEngine.WebAudioApi");
+  C.SoundEngine_1 = new E.SoundEngine(1, "SoundEngine.AudioElement");
+  C.SoundEngine_2 = new E.SoundEngine(2, "SoundEngine.Mockup");
   C.StageAlign_0 = new A.StageAlign(0, "StageAlign.TOP_LEFT");
   C.StageAlign_1 = new A.StageAlign(1, "StageAlign.TOP");
   C.StageAlign_2 = new A.StageAlign(2, "StageAlign.TOP_RIGHT");
@@ -16749,6 +18462,9 @@
   $._globalFrameTime = 17976931348623157e292;
   $._globalFrameCallbackId = -1;
   $.InputEvent_current = null;
+  $.SoundMixer__engineDetected = null;
+  $.SoundMixer__webAudioApiMixer = null;
+  $.SoundMixer__audioElementMixer = null;
   $.Mouse__cursorHidden = false;
   $.Mouse__cursorName = "auto";
   $.stage = null;
@@ -16864,12 +18580,35 @@
     return [];
   }, "_exitFrameSubscriptions", "_renderSubscriptions", "$get$_renderSubscriptions", function() {
     return [];
-  }, "_renderSubscriptions", "devicePixelRatio", "$get$devicePixelRatio", function() {
+  }, "_renderSubscriptions", "AudioLoader_supportedTypes", "$get$AudioLoader_supportedTypes", function() {
+    var supportedTypes, audio, valid;
+    supportedTypes = H.setRuntimeTypeInfo([], [P.String]);
+    audio = W.AudioElement_AudioElement(null);
+    valid = ["maybe", "probably"];
+    if (C.JSArray_methods.indexOf$1(valid, audio.canPlayType("audio/ogg; codecs=opus")) !== -1)
+      supportedTypes.push("opus");
+    if (C.JSArray_methods.indexOf$1(valid, audio.canPlayType("audio/mpeg")) !== -1)
+      supportedTypes.push("mp3");
+    if (C.JSArray_methods.indexOf$1(valid, audio.canPlayType("audio/mp4")) !== -1)
+      supportedTypes.push("mp4");
+    if (C.JSArray_methods.indexOf$1(valid, audio.canPlayType("audio/ogg")) !== -1)
+      supportedTypes.push("ogg");
+    if (C.JSArray_methods.indexOf$1(valid, audio.canPlayType("audio/ac3")) !== -1)
+      supportedTypes.push("ac3");
+    if (C.JSArray_methods.indexOf$1(valid, audio.canPlayType("audio/wav")) !== -1)
+      supportedTypes.push("wav");
+    P.print("StageXL audio types   : " + H.S(supportedTypes));
+    return C.JSArray_methods.toList$1$growable(supportedTypes, false);
+  }, "AudioLoader_supportedTypes", "devicePixelRatio", "$get$devicePixelRatio", function() {
     var devicePixelRatio = W.window().devicePixelRatio;
     return typeof devicePixelRatio !== "number" ? 1 : devicePixelRatio;
   }, "devicePixelRatio", "isTouchEventSupported", "$get$isTouchEventSupported", function() {
     return Q._checkTouchEventSupport();
-  }, "isTouchEventSupported", "_dummyCanvas", "$get$_dummyCanvas", function() {
+  }, "isTouchEventSupported", "WebAudioApiMixer_audioContext", "$get$WebAudioApiMixer_audioContext", function() {
+    return new (window.AudioContext || window.webkitAudioContext)();
+  }, "WebAudioApiMixer_audioContext", "Sound_defaultLoadOptions", "$get$Sound_defaultLoadOptions", function() {
+    return new E.SoundLoadOptions(true, true, true, false, true, true, null, true, false, null);
+  }, "Sound_defaultLoadOptions", "_dummyCanvas", "$get$_dummyCanvas", function() {
     return W.CanvasElement_CanvasElement(16, 16);
   }, "_dummyCanvas", "_dummyCanvasContext", "$get$_dummyCanvasContext", function() {
     var t1 = $.$get$_dummyCanvas();
@@ -16882,15 +18621,16 @@
     return P.StreamController_StreamController$broadcast(null, null, false, P.String);
   }, "Mouse__cursorChangedEvent", "Mouse_onCursorChanged", "$get$Mouse_onCursorChanged", function() {
     var t1 = $.$get$Mouse__cursorChangedEvent();
-    t1.toString;
-    return new P._BroadcastStream(t1, [H.getTypeArgumentByIndex(t1, 0)]);
+    return t1.get$stream(t1);
   }, "Mouse_onCursorChanged", "BaseLevel_BLOCK_REGEXP", "$get$BaseLevel_BLOCK_REGEXP", function() {
     return P.RegExp_RegExp("(\\d)([rs]?)", true, false);
-  }, "BaseLevel_BLOCK_REGEXP"]);
+  }, "BaseLevel_BLOCK_REGEXP", "MiniLevel_LEVELS", "$get$MiniLevel_LEVELS", function() {
+    return ["    #####\r\n    #Po #\r\n    #o oG\r\n    #   #\r\n    #####\r\n    ", "    ######\r\n    # o  #\r\n    #o o G\r\n    #Poo #\r\n    ######\r\n    ", "    #######\r\n    ## Po #\r\n    # oo ##\r\n    ## ooG\r\n    ##  o #\r\n    ## ####\r\n    #######\r\n    ", "    ######\r\n    ## o #\r\n    # oo #\r\n    # # ##\r\n    #  oG\r\n    ## o##\r\n    ## oP#\r\n    ## o #\r\n    ######\r\n    "];
+  }, "MiniLevel_LEVELS"]);
   Isolate = Isolate.$finishIsolateConstructor(Isolate);
   $ = new Isolate();
   init.metadata = [null, 0];
-  init.types = [{func: 1}, {func: 1, v: true}, {func: 1, args: [,]}, {func: 1, ret: P.num, args: [P.num]}, {func: 1, args: [,,]}, {func: 1, v: true, args: [W.KeyboardEvent]}, {func: 1, v: true, args: [{func: 1, v: true}]}, {func: 1, args: [, P.StackTrace]}, {func: 1, v: true, opt: [,]}, {func: 1, v: true, args: [P.Object], opt: [P.StackTrace]}, {func: 1, ret: P.String, args: [P.int]}, {func: 1, v: true, args: [P.ContextEvent]}, {func: 1, v: true, args: [W.Event0]}, {func: 1, args: [,], opt: [,]}, {func: 1, ret: W.Node}, {func: 1, args: [P.String,,]}, {func: 1, args: [P.num, P.num]}, {func: 1, v: true, args: [W.MouseEvent]}, {func: 1, v: true, args: [W.WheelEvent]}, {func: 1, v: true, args: [W.TouchEvent]}, {func: 1, args: [{func: 1, v: true}]}, {func: 1, v: true, args: [A.BitmapData]}, {func: 1, args: [, P.String]}, {func: 1, ret: [P.Future, P.Null]}, {func: 1, v: true, args: [P.num]}, {func: 1, args: [P.int,,]}, {func: 1, v: true, args: [R.KeyboardEvent0]}, {func: 1, v: true, args: [R.TextEvent0]}, {func: 1, v: true, args: [R.MouseEvent0]}, {func: 1, v: true, args: [R.EnterFrameEvent]}, {func: 1, v: true, args: [A.Sprite, P.num, P.num]}, {func: 1, ret: P.num}, {func: 1, v: true, args: [, P.StackTrace]}, {func: 1, ret: P.String, args: [W.EventTarget]}, {func: 1, args: [P.String]}, {func: 1, args: [P.num]}];
+  init.types = [{func: 1}, {func: 1, args: [,]}, {func: 1, v: true}, {func: 1, v: true, args: [W.Event0]}, {func: 1, ret: P.num, args: [P.num]}, {func: 1, args: [,,]}, {func: 1, v: true, args: [P.Object], opt: [P.StackTrace]}, {func: 1, v: true, args: [W.KeyboardEvent]}, {func: 1, v: true, args: [{func: 1, v: true}]}, {func: 1, args: [, P.StackTrace]}, {func: 1, v: true, opt: [,]}, {func: 1, ret: P.String, args: [P.int]}, {func: 1, v: true, args: [P.ContextEvent]}, {func: 1, v: true, args: [P.num]}, {func: 1, args: [,], opt: [,]}, {func: 1, args: [, P.String]}, {func: 1, args: [P.String,,]}, {func: 1, args: [P.num, P.num]}, {func: 1, v: true, args: [W.MouseEvent]}, {func: 1, v: true, args: [W.WheelEvent]}, {func: 1, v: true, args: [, P.StackTrace]}, {func: 1, args: [P.int,,]}, {func: 1, v: true, args: [A.BitmapData]}, {func: 1, args: [P.num]}, {func: 1, ret: [P.Future, P.Null]}, {func: 1, v: true, args: [W.AudioElement]}, {func: 1, v: true, args: [R.KeyboardEvent0]}, {func: 1, v: true, args: [R.TextEvent0]}, {func: 1, v: true, args: [R.MouseEvent0]}, {func: 1, v: true, args: [R.EnterFrameEvent]}, {func: 1, v: true, args: [A.Sprite, P.num, P.num]}, {func: 1, ret: P.num}, {func: 1, args: [P.String]}, {func: 1, v: true, args: [P.Object]}, {func: 1, ret: P.String, args: [W.EventTarget]}, {func: 1, args: [{func: 1, v: true}]}, {func: 1, v: true, args: [W.TouchEvent]}];
   function convertToFastObject(properties) {
     function MyClass() {
     }
