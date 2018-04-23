@@ -68,6 +68,7 @@ class MiniLevel extends Level {
   MiniLevelPlayer player;
   List<List<MiniLevelBlock>> blocks;
   BaseLevel baseLevel;
+  bool ready;
   bool won;
 
   MiniLevel(this.blockString, this.baseLevel) {
@@ -81,6 +82,7 @@ class MiniLevel extends Level {
         ..y = Game.HEIGHT - 2
         ..width = Game.WIDTH
     );
+    ready = false;
     transitionFromBaseLevel(1);
   }
 
@@ -115,6 +117,7 @@ class MiniLevel extends Level {
         ..animate.x.to(playerX)
         ..animate.y.to(playerY)
         ..delay = 0.4
+        ..onComplete = () => ready = true
     );
     baseLevel.player.sprite.visible = false;
     
@@ -229,35 +232,35 @@ class MiniLevel extends Level {
   }
 
   void leftPressed() {
-    if (!won) {
+    if (ready && !won) {
       player.move(-1, 0, blocks);
       checkWon();
     }
   }
 
   void upPressed() {
-    if (!won) {
+    if (ready && !won) {
       player.move(0, -1, blocks);
       checkWon();
     }
   }
 
   void rightPressed() {
-    if (!won) {
+    if (ready && !won) {
       player.move(1, 0, blocks);
       checkWon();
     }
   }
 
   void downPressed() {
-    if (!won) {
+    if (ready && !won) {
       player.move(0, 1, blocks);
       checkWon();
     }
   }
 
   void rPressed() {
-    if (!won) {
+    if (ready && !won) {
       reset();
     }
   }

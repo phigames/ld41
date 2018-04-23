@@ -31,6 +31,8 @@ class BaseLevel extends Level {
   TextField countdownText;
   num countdownTime;
   int miniLevelIndex;
+  int deathCount;
+  TextField wonText;
   Sound music;
   SoundChannel musicChannel;
   num playerMusicOffset;
@@ -43,6 +45,7 @@ class BaseLevel extends Level {
     respawnBlocks = new List<BaseLevelBlock>();
     //player = new BaseLevelPlayer(respawnBlocks[0].x, Game.HEIGHT - respawnBlocks[0].height - 1);
     player = new BaseLevelPlayer(LEFT_MARGIN + 1, Game.HEIGHT - 4);
+    //player = new BaseLevelPlayer(700, 7);
     sprite.addChild(player.sprite);
     updateSprite();
     addBlocks(false);
@@ -53,6 +56,12 @@ class BaseLevel extends Level {
     resetCountdown();
     sprite.addChild(countdownText);
     miniLevelIndex = 0;
+    deathCount = 0;
+    wonText = new TextField("YOU DID IT!\nyou died $deathCount times\nthank you for playing <3", new TextFormat("Comfortaa", 1, BaseLevelBlock.COLOR_BLOCK, align: "center"))
+      ..x = winningX
+      ..y = 4
+      ..width = Game.WIDTH;
+    sprite.addChild(wonText);
     music = resources.getSound('song');
     musicChannel = music.play();
   }
@@ -113,7 +122,7 @@ class BaseLevel extends Level {
   void update(num time) {
     if (musicChannel.paused) {
       musicChannel.soundTransform = new SoundTransform(1);
-      musicChannel.resume();
+      game.fadeSound(null, musicChannel);
     }
     if (countdownTime > 0) {
       if (playerMusicOffset == null) {
@@ -150,6 +159,8 @@ class BaseLevel extends Level {
           if (miniLevelIndex >= MiniLevel.LEVELS.length) {
             miniLevelIndex = 0;
           }
+          deathCount++;
+          wonText.text = "YOU DID IT!\nyou died $deathCount times\nthank you for playing <3";
           game.fadeSound(musicChannel, null, onComplete: () => musicChannel.position = player.x / BaseLevelPlayer.SPEED + playerMusicOffset);
         }
       } else {
@@ -207,14 +218,14 @@ class BaseLevelPlayer {
   }
 
   void float() {
-    velocityX -= 0.1;
+    velocityX -= 0.3;
     if (velocityX < 0) {
       velocityX = 0;
     }
     if (y > Game.HEIGHT / 2) {
-      accelerationY = -GRAVITY;
+      accelerationY = -GRAVITY / 2;
     } else {
-      accelerationY = GRAVITY;
+      accelerationY = GRAVITY / 2;
     }
   }
 
