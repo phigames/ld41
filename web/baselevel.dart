@@ -33,8 +33,8 @@ class BaseLevel extends Level {
   int miniLevelIndex;
   int deathCount;
   TextField wonText;
-  Sound music;
-  SoundChannel musicChannel;
+  Sound music, ticktack;
+  SoundChannel musicChannel, ticktackChannel;
   num playerMusicOffset;
 
   BaseLevel() {
@@ -64,6 +64,8 @@ class BaseLevel extends Level {
     sprite.addChild(wonText);
     music = resources.getSound('song');
     musicChannel = music.play();
+    ticktack = resources.getSound('ticktack');
+    ticktackChannel = ticktack.play(true)..pause();
   }
 
   void resetCountdown() {
@@ -115,6 +117,7 @@ class BaseLevel extends Level {
       sprite.removeChild(removedBlock.sprite);
       if (removedBlock.respawn) {
         respawnBlocks.remove(removedBlock);
+        respawnBlocks[0].animate();
       }
     }
   }
@@ -122,7 +125,7 @@ class BaseLevel extends Level {
   void update(num time) {
     if (musicChannel.paused) {
       musicChannel.soundTransform = new SoundTransform(1);
-      game.fadeSound(null, musicChannel);
+      game.fadeSound(ticktackChannel, musicChannel);
     }
     if (countdownTime > 0) {
       if (playerMusicOffset == null) {
@@ -161,7 +164,7 @@ class BaseLevel extends Level {
           }
           deathCount++;
           wonText.text = "YOU DID IT!\nyou died $deathCount times\nthank you for playing <3";
-          game.fadeSound(musicChannel, null, onComplete: () => musicChannel.position = player.x / BaseLevelPlayer.SPEED + playerMusicOffset);
+          game.fadeSound(musicChannel, ticktackChannel, onComplete: () => musicChannel.position = player.x / BaseLevelPlayer.SPEED + playerMusicOffset);
         }
       } else {
         player.float();
@@ -296,9 +299,12 @@ class BaseLevelBlock {
   static const int COLOR_SPIKES = 0xFF666666;
   static const int COLOR_RESPAWN = 0xFF666666;
 
+  static final Sound checkpointSound = resources.getSound('checkpoint');
+
   int x, height;
   bool spikes, respawn;
   Sprite sprite;
+  Sprite checkpointSprite;
 
   BaseLevelBlock(this.x, this.height, this.spikes, this.respawn, bool animate) {
     sprite = new Sprite();
@@ -317,14 +323,18 @@ class BaseLevelBlock {
       sprite.graphics.rect(0, 0, 1, -height);
       sprite.graphics.fillColor(COLOR_BLOCK);
       if (respawn) {
-        sprite.graphics.beginPath();
-        sprite.graphics.moveTo(0.4, -height);
-        sprite.graphics.lineTo(0.4, -height - 1);
-        sprite.graphics.lineTo(1, -height - 0.5);
-        sprite.graphics.lineTo(0.6, -height - 0.5);
-        sprite.graphics.lineTo(0.6, -height);
-        sprite.graphics.closePath();
-        sprite.graphics.fillColor(COLOR_RESPAWN);
+        checkpointSprite = new Sprite();
+        checkpointSprite.x = 0;
+        checkpointSprite.y = -height;
+        checkpointSprite.graphics.beginPath();
+        checkpointSprite.graphics.moveTo(0.4, 0);
+        checkpointSprite.graphics.lineTo(0.4, 0 - 1);
+        checkpointSprite.graphics.lineTo(1, 0 - 0.5);
+        checkpointSprite.graphics.lineTo(0.6, 0 - 0.5);
+        checkpointSprite.graphics.lineTo(0.6, 0);
+        checkpointSprite.graphics.closePath();
+        checkpointSprite.graphics.fillColor(COLOR_RESPAWN);
+        sprite.addChild(checkpointSprite);
       }
     }
     sprite.x = x;
@@ -336,6 +346,21 @@ class BaseLevelBlock {
           ..animate.rotation.to(0)
           ..delay = 0.1
       );
+    }
+  }
+
+  void animate() {
+    if (respawn) {
+      stage.juggler.add(
+        new Tween(checkpointSprite, 0.2, Transition.easeOutQuadratic)
+          ..animate.y.by(-3)
+          ..onComplete = () =>
+            stage.juggler.add(
+              new Tween(checkpointSprite, 0.2, Transition.easeOutQuadratic)
+                ..animate.y.by(3)
+            )
+      );
+      checkpointSound.play();
     }
   }
 

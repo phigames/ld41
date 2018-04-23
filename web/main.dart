@@ -30,6 +30,8 @@ Future<Null> main() async {
   
   resources = new ResourceManager();
   resources.addSound('song', 'music/song.ogg');
+  resources.addSound('ticktack', 'music/ticktack.ogg');
+  resources.addSound('checkpoint', 'music/checkpoint.ogg');
 
   await resources.load();
 
